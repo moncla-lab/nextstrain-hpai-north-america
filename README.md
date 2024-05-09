@@ -1,5 +1,6 @@
 # nextstrain-hpai-north-america
-scripts and config files for nextstrain builds for HPAI in north america
+
+This repo is for scripts and config files for nextstrain builds for HPAI in North America.
 
 This repository contains files for constructing nextstrain builds for high path avian influenza found [here](https://nextstrain.org/groups/moncla-lab/h5nx/north-america/ha).
 
