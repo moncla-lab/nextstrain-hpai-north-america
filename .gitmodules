@@ -1,0 +1,12 @@
+[submodule "h5-data-updates"]
+	path = h5-data-updates
+	url = git@github.com:moncla-lab/h5-data-updates
+[submodule "nextstrain-ceirr"]
+	path = nextstrain-ceirr
+	url = https://github.com/moncla-lab/nextstrain-ceirr
+[submodule "nextstrain_ceirr"]
+	path = nextstrain_ceirr
+	url = https://github.com/moncla-lab/nextstrain-ceirr
+[submodule "GenoFLU-multi"]
+	path = GenoFLU-multi
+	url = https://github.com/moncla-lab/GenoFLU-multi

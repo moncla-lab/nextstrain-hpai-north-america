@@ -1,3 +1,6 @@
+from nextstrain_ceirr.ceirr import *
+from na_hpai import *
+
 """This file specifies the entire avian-flu pipeline that will be run, with
 specific parameters for subsampling, tree building, and visualization. In this
 build, you will generate 1 tree: an H5N1 tree for the HA genes. In this simple
@@ -11,6 +14,8 @@ add those to these lists, separated by commas"""
 # it will take too long to run all 8 gene segments, but I've included all the files to do so.
 # the other segments are pb1, pa, ha, np, mp, and ns
 SEGMENTS = ["pb1","pb2","na","pa","ha","np","mp","ns"]
+NUMBER_OF_GENOTYPES = 15
+GENOTYPES_TO_INCLUDE = ['D1.1', 'D1.2']
 
 """This rule tells Snakemake that at the end of the pipeline, you should have
 generated JSON files in the auspice folder for each subtype and segment."""
@@ -24,8 +29,8 @@ sequence header. Specify here files denoting specific strains to include or drop
 references sequences, and files for auspice visualization (colors)"""
 rule files:
     params:
-        input_sequences = "data/sequences_h5nx_{segment}.fasta",
-        input_metadata = "data/merged_meta_{segment}_04-03.tsv",
+        input_sequences = "data/h5nx/{segment}/sequences.fasta",
+        input_metadata = "data/h5nx/metadata-with-clade.tsv",
         dropped_strains = "config/exclude_strains.txt",
         include_strains = "config/include_strains.txt",
         reference = "config/reference_sequence_{segment}_A_goose_CR_2021.gb", #H3N8 from 1997
@@ -36,6 +41,65 @@ rule files:
 
 files = rules.files.params
 
+"""This rule unzips the h5nx.zip from the h5-data-updates submodule.
+"""
+rule unzip_h5_data:
+    input:
+        "h5-data-updates/h5nx.zip"
+    output:
+        metadata=files.input_metadata,
+        sequences=expand(files.input_sequences, segment=SEGMENTS)
+    shell:
+        'unzip -o h5-data-updates/h5nx.zip -d data/'
+
+"""GenoFlu requires all segments be present in order to proceed with an annotation.
+This organizes the data into a subset of complete genomes accordingly.
+"""
+rule genoflu_dataflow:
+    input:
+        rules.unzip_h5_data.output.sequences
+    output:
+        expand("data/genoflu/{segment}.fasta", segment=SEGMENTS)
+    run:
+        genoflu_dataflow()
+
+"""Compute GenoFlu annotations by running GenoFlu-multi on subset of complete genomes.
+"""
+rule genoflu_run:
+    input:
+        rules.genoflu_dataflow.output
+    output:
+        'data/genoflu/results/results.tsv'
+    shell:
+        '''
+            # this avoids a quirk of the GenoFlu package... avoids UnboundLocalError related to excel_stats
+            rm -rf data/genoflu/temp/
+            python GenoFLU-multi/bin/genoflu-multi.py -n 12 -f data/genoflu
+        '''
+
+"""This post-processes the GenoFlu data to include only lineages that either dominate
+or are specifically included to avoid visual clutter.
+"""
+rule genoflu_postprocess:
+    input:
+        metadata=files.input_metadata,
+        genoflu=rules.genoflu_run.output[0]
+    output:
+        metadata='results/metadata-with-genoflu.tsv',
+        counts='results/genoflu/results/counts.tsv'
+    run:
+        genoflu_postprocess(
+            input.metadata, input.genoflu, output.metadata, output.counts,
+            NUMBER_OF_GENOTYPES, GENOTYPES_TO_INCLUDE
+        )
+
+rule metadata_annotation:
+    input:
+        rules.genoflu_postprocess.output.metadata
+    output:
+        'results/metadata.tsv',
+    run:
+        metadata_annotation(input[0], output[0])
 
 """In this section of the Snakefile, rules are specified for each step of the pipeline.
 Each rule has inputs, outputs, parameters, and the specific text for the commands in
@@ -230,6 +294,16 @@ rule traits:
             --confidence
         """
 
+"""This makes a segment specific config for GenoFlu segment lineages.
+"""
+rule auspice_config:
+    input:
+        files.auspice_config
+    output:
+        "config/{segment}/auspice_config.json"
+    run:
+        auspice_segment_config(input[0], output[0], wildcards.segment)
+
 """This rule exports the results of the pipeline into JSON format, which is required
 for visualization in auspice. To make changes to the categories of metadata
 that are colored, or how the data is visualized, alter the auspice_config files"""
@@ -239,8 +313,8 @@ rule export:
         tree = rules.refine.output.tree,
         metadata = files.input_metadata,
         node_data = [rules.refine.output.node_data,rules.traits.output.node_data,rules.ancestral.output.node_data,rules.translate.output.node_data],
-        auspice_config = files.auspice_config,
-	    colors = files.colors,
+        auspice_config = rules.auspice_config.output[0],
+        colors = files.colors,
         description = files.description
 
     output:
@@ -254,7 +328,7 @@ rule export:
             --auspice-config {input.auspice_config} \
             --description {input.description} \
             --include-root-sequence \
-	    --colors {input.colors} \
+            --colors {input.colors} \
             --output {output.auspice_json}
         """
 

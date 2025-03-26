@@ -54,7 +54,7 @@
       "title": "Order",
       "type": "categorical"
     },
-              {
+    {
       "key": "species_group",
       "title": "Species- Grouped",
       "type": "categorical"
@@ -67,6 +67,16 @@
     {
       "key": "division",
       "title": "Division",
+      "type": "categorical"
+    },
+    {
+      "key": "genoflu_bin",
+      "title": "Genoflu annotation (major)",
+      "type": "categorical"
+    },
+    {
+      "key": "Genotype",
+      "title": "Genoflu annotation (all)",
       "type": "categorical"
     }
   ],
