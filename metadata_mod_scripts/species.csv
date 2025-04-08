@@ -32,7 +32,6 @@ animal,animal,animal,animal
 steller's_eider,stellars_eider,duck,anseriformes
 anseriformes_sp.,avian,avian,anseriformes
 ruddy_shelduck,ruddy_shelduck,duck,anseriformes
-white_peckin_duck,pekin_duck,duck,anseriformes
 dendrocygna_viduata,white-faced_whistling_duck,duck,anseriformes
 anas_querquedula,gargeny,duck,anseriformes
 anas_crecca,green-winged_teal,duck,anseriformes
@@ -58,7 +57,6 @@ cascadeduck,cascade_duck,duck,anseriformes
 common_goldeneye,common_goldeneye,duck,anseriformes
 commongoldeneye,common_goldeneye,duck,anseriformes
 common_pochard,common_pochard,duck,anseriformes
-commonpochard,common_pochard,duck,anseriformes
 commonteal,Eurasian_teal,duck,anseriformes
 dack,duck,duck,anseriformes
 domestic_duck,duck,duck,anseriformes
@@ -101,7 +99,6 @@ pochard,common_pochard,duck,anseriformes
 rbpochard,red-chested_pochard,duck,anseriformes
 ringneckedduck,ring-necked_duck,duck,anseriformes
 rubbyshelduck,Ruddy_shelduck,duck,anseriformes
-ruddy_shelduck,Ruddy_shelduck,duck,anseriformes
 ruddyshelduck,Ruddy_shelduck,duck,anseriformes
 teal,teal_duck,duck,anseriformes
 tufted_duck,Tufted_duck,duck,anseriformes
@@ -256,9 +253,6 @@ dk,avian,avian,avian
 gf,avian,avian,avian
 bird,avian,avian,avian
 avian,avian,avian,avian
-ck,avian,avian,avian
-gf,avian,avian,avian
-gs,avian,avian,avian
 ph,avian,avian,avian
 eg,avian,avian,avian
 sck,avian,avian,avian
@@ -413,7 +407,6 @@ bantam,bantam,fowl,galliformes
 bronzeturkey,bronze_turkey,turkey,galliformes
 commonpheasant,common_pheasant,pheasant,galliformes
 domesticturkey,turkey,turkey,galliformes
-domesticturkey,turkey,turkey,galliformes
 fowl,fowl,fowl,galliformes
 goldenpheasant,golden_pheasant,pheasant,galliformes
 greenpeafowl,green_peafowl,peafowl,galliformes
@@ -438,7 +431,6 @@ partridge,partridge,partridge,galliformes
 peacock,peacock,peafowl,galliformes
 wildturkey,wild_turkey,turkey,galliformes
 wild_chicken,chicken,chicken,galliformes
-korean_native_chicken,korean_native_chicken,chicken,galliformes
 coturnix,quail,quail,galliformes
 waterchicken,common_moorhen,moorhen,gruiformes
 commoncoot,common_coot,coot,gruiformes

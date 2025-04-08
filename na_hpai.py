@@ -85,11 +85,11 @@ def auspice_segment_config(input_config_path, output_config_path, segment):
         config = json.load(input_file)
     
     genoflu_segment_config = {
-        "key": "genoflu_{segment}_lineage",
-        "title": f'GenoFlu {segment} lineage',
+        "key": f"genoflu_{segment}_lineage",
+        "title": f'GenoFlu {segment.upper()} lineage',
         "type": "categorical"
     }
-    config['colorings'] += genoflu_segment_config
+    config['colorings'] += [genoflu_segment_config]
     with open(output_config_path, 'w') as output_file:
-        json.dump(config, output_file)
+        json.dump(config, output_file, indent=2)
     

@@ -138,7 +138,7 @@ rule filter:
         """
     input:
         sequences = files.input_sequences,
-        metadata = files.input_metadata,
+        metadata = rules.metadata_annotation.output[0],
         include = files.include_strains,
         exclude = files.dropped_strains
     output:
@@ -216,7 +216,7 @@ rule refine:
     input:
         tree = rules.tree.output.tree,
         alignment = rules.align.output,
-        metadata = files.input_metadata
+        metadata = rules.metadata_annotation.output[0]
     output:
         tree = "results/tree_{segment}.nwk",
         node_data = "results/branch-lengths_{segment}.json"
@@ -279,7 +279,7 @@ rule traits:
     message: "Inferring ancestral traits for {params.columns!s}"
     input:
         tree = rules.refine.output.tree,
-        metadata = files.input_metadata
+        metadata = rules.metadata_annotation.output[0]
     output:
         node_data = "results/traits_{segment}.json",
     params:
@@ -311,7 +311,7 @@ rule export:
     message: "Exporting data files for for auspice"
     input:
         tree = rules.refine.output.tree,
-        metadata = files.input_metadata,
+        metadata = rules.metadata_annotation.output[0],
         node_data = [rules.refine.output.node_data,rules.traits.output.node_data,rules.ancestral.output.node_data,rules.translate.output.node_data],
         auspice_config = rules.auspice_config.output[0],
         colors = files.colors,
