@@ -1,6 +1,10 @@
 from nextstrain_ceirr.ceirr import *
 from na_hpai import *
 
+wildcard_constraints:
+    region="[^/]+",
+    subset="[^/]+"
+
 """This file specifies the entire avian-flu pipeline that will be run, with
 specific parameters for subsampling, tree building, and visualization. In this
 build, you will generate 1 tree: an H5N1 tree for the HA genes. In this simple
@@ -125,6 +129,32 @@ def min_length(w):
     return(length)
 
 
+each_exclude = "host=laboratoryderived host=ferret host=unknown host=other host=host country=? region=? h5_label_clade!=2.3.4.4b"
+asia_exclude = "region='north america' region='africa' region='antarctica' region='south america' region='europe'"
+
+exclude_where = {
+    'na': {
+        'na': "region!='north america'", 
+        'europe': "region!=notaregion", # this is a hack to exclude everything
+        'asia': "region!=notaregion"
+    },
+    'global': {
+        'na': "region!='north america'",
+        'europe': "region!='europe'",
+        'asia': asia_exclude
+    }
+}
+
+
+def exclude_by_region(wildcards):
+    return each_exclude + ' ' + exclude_where[wildcards.region][wildcards.subset]
+
+
+def sequences_per_group(wildcards):
+    spg_dict = {'na': 25, 'europe': 1, 'asia': 5}
+    return spg_dict[wildcards.subset]
+
+
 """This rule specifies how to subsample data for the build, which is highly
 customizable based on your desired tree."""
 rule filter:
@@ -142,16 +172,17 @@ rule filter:
         include = files.include_strains,
         exclude = files.dropped_strains
     output:
-        sequences = "results/filtered_{segment}.fasta"
+        sequences = "results/{region}/{subset}/filtered_{segment}.fasta"
     params:
         group_by = "month host location",
-        sequences_per_group = 25,
+        sequences_per_group = sequences_per_group,
         min_date = 2021,
         min_length = min_length,  # instead of specifying one parameter value, we can use a function to specify minimum lengths that are unique to each segment
-        exclude_where = "host=laboratoryderived host=ferret host=unknown host=other host=host country=? region=? region!='north america' h5_label_clade!=2.3.4.4b"
+        exclude_where = exclude_by_region
 
     shell:
         """
+        set +e;
         augur filter \
             --sequences {input.sequences} \
             --metadata {input.metadata} \
@@ -166,6 +197,21 @@ rule filter:
             --non-nucleotide
         """
 
+rule concatenate:
+    message:
+        """
+        Concatenating {wildcards.region} to full FASTA
+        """
+    input:
+        expand(
+            "results/{{region}}/{subset}/filtered_{{segment}}.fasta",
+            subset=['na', 'europe', 'asia']
+        )
+    output:
+        sequences="results/{region}/filtered_{segment}.fasta"
+    shell:
+        "cat {input} > {output.sequences}"
+
 rule align:
     message:
         """
@@ -173,10 +219,10 @@ rule align:
           - filling gaps with N
         """
     input:
-        sequences = rules.filter.output.sequences,
+        sequences = rules.concatenate.output.sequences,
         reference = files.reference
     output:
-        alignment = "results/aligned_{segment}.fasta"
+        alignment = "results/{region}/aligned_{segment}.fasta"
     shell:
         """
         augur align \
@@ -193,7 +239,7 @@ rule tree:
     input:
         alignment = rules.align.output.alignment
     output:
-        tree = "results/tree-raw_{segment}.nwk"
+        tree = "results/{region}/tree-raw_{segment}.nwk"
     params:
         method = "iqtree"
     shell:
@@ -218,8 +264,8 @@ rule refine:
         alignment = rules.align.output,
         metadata = rules.metadata_annotation.output[0]
     output:
-        tree = "results/tree_{segment}.nwk",
-        node_data = "results/branch-lengths_{segment}.json"
+        tree = "results/{region}/tree_{segment}.nwk",
+        node_data = "results/{region}/branch-lengths_{segment}.json"
     params:
         coalescent = "const",
         date_inference = "marginal",
@@ -245,7 +291,7 @@ rule ancestral:
         tree = rules.refine.output.tree,
         alignment = rules.align.output
     output:
-        node_data = "results/nt-muts_{segment}.json"
+        node_data = "results/{region}/nt-muts_{segment}.json"
     params:
         inference = "joint"
     shell:
@@ -265,7 +311,7 @@ rule translate:
         node_data = rules.ancestral.output.node_data,
         reference = files.reference
     output:
-        node_data = "results/aa-muts_{segment}.json"
+        node_data = "results/{region}/aa-muts_{segment}.json"
     shell:
         """
         augur translate \
@@ -281,7 +327,7 @@ rule traits:
         tree = rules.refine.output.tree,
         metadata = rules.metadata_annotation.output[0]
     output:
-        node_data = "results/traits_{segment}.json",
+        node_data = "results/{region}/traits_{segment}.json",
     params:
         columns = "host region country division flyway Domestic_Status",
     shell:
@@ -318,7 +364,7 @@ rule export:
         description = files.description
 
     output:
-        auspice_json = "auspice/h5nx_{segment}.json"
+        auspice_json = "auspice/h5nx_{region}_{segment}.json"
     shell:
         """
         augur export v2 \
