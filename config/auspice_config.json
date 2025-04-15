@@ -41,7 +41,7 @@
       "type": "categorical"
     },
           {
-      "key": "Domestic_Status",
+      "key": "domestic_status",
       "title": "Domestic Status",
       "type": "categorical"
     },
@@ -87,7 +87,7 @@
   ],
   "display_defaults": {
     "map_triplicate": true,
-    "color_by": "country"
+    "color_by": "region"
   },
   "filters": [
     "host",
@@ -95,7 +95,7 @@
     "country",
     "subtype",
     "division",
-    "Domestic_Status",
+    "domestic_status",
     "flyway",
     "order"
   ]

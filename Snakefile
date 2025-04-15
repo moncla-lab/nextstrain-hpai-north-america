@@ -25,7 +25,11 @@ GENOTYPES_TO_INCLUDE = ['D1.1', 'D1.2']
 generated JSON files in the auspice folder for each subtype and segment."""
 rule all:
     input:
-        auspice_json = expand("auspice/h5nx_{segment}.json", segment=SEGMENTS)
+        auspice_json = expand(
+            "auspice/h5nx_{region}_{segment}.json",
+            region=['na', 'global'],
+            segment=SEGMENTS
+        )
 
 """Specify all input files here. For this build, you'll start with input sequences
 from the example_data folder, which contain metadata information in the
@@ -182,7 +186,6 @@ rule filter:
 
     shell:
         """
-        set +e;
         augur filter \
             --sequences {input.sequences} \
             --metadata {input.metadata} \
@@ -194,7 +197,7 @@ rule filter:
             --min-date {params.min_date} \
             --exclude-where {params.exclude_where} \
             --min-length {params.min_length} \
-            --non-nucleotide
+            --non-nucleotide || true # this tells Snakemake to ignore errors thrown by augur filter for an empty result
         """
 
 rule concatenate:
