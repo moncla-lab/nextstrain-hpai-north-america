@@ -1,4 +1,3 @@
-from nextstrain_ceirr.ceirr import *
 from na_hpai import *
 
 wildcard_constraints:
