@@ -19,7 +19,7 @@ auspice view --datasetDir auspice
 Install dependencies:
 
 ```
-conda create -n nextstrain-hpai pandas biopython blast snakemake nextstrain jq
+conda create -n nextstrain-hpai pandas biopython blast snakemake nextstrain openpyxl
 ```
 
 Clone with submodules:
@@ -34,7 +34,7 @@ git submodule update --init
 
 ### Updating submodules when data changes:
 ```
-git submodule update --remote.   # then add, commit, and push like usual
+git submodule update --remote   # then add, commit, and push like usual
 ```
 
 ### For maintainers:
