@@ -138,11 +138,13 @@ asia_exclude = "region='north america' region='africa' region='antarctica' regio
 exclude_where = {
     'na': {
         'na': "region!='north america'", 
+        'sa': "region!=notaregion", # this is a hack to exclude everything
         'europe': "region!=notaregion", # this is a hack to exclude everything
         'asia': "region!=notaregion"
     },
     'global': {
         'na': "region!='north america'",
+        'sa': "region!='south america'",
         'europe': "region!='europe'",
         'asia': asia_exclude
     }
@@ -154,7 +156,7 @@ def exclude_by_region(wildcards):
 
 
 def sequences_per_group(wildcards):
-    spg_dict = {'na': 25, 'europe': 1, 'asia': 5}
+    spg_dict = {'na': 25, 'sa': 10, 'europe': 1, 'asia': 5}
     return spg_dict[wildcards.subset]
 
 
@@ -207,7 +209,7 @@ rule concatenate:
     input:
         expand(
             "results/{{region}}/{subset}/filtered_{{segment}}.fasta",
-            subset=['na', 'europe', 'asia']
+            subset=['na', 'sa', 'europe', 'asia']
         )
     output:
         sequences="results/{region}/filtered_{segment}.fasta"
