@@ -2,19 +2,9 @@
 
 This repository contains files for constructing nextstrain builds with additional metadata designations relevant to the current high path avian influenza in North America found [here](https://nextstrain.org/groups/moncla-lab/h5nx/north-america/ha). For a walk through of these data and some of these additional metadata analyses, check out our [nexstrain narrative](https://nextstrain.org/groups/moncla-lab/narratives/h5nx/north-america-2021-present)!
 
-## Usage
-
-### Run pipeline:
-```bash
-snakemake -j $NUMBER_OF_JOBS all
-```
-
-### View results:
-```bash
-auspice view --datasetDir auspice
-```
-
 ## Installation
+
+Make sure you have installed [Bioconda](https://bioconda.github.io/) and configured it correctly as described in the link.
 
 Install dependencies:
 
@@ -30,7 +20,28 @@ cd nextstrain-hpai-north-america
 git submodule update --init
 ```
 
+## Usage
+
+### Activate the environment
+
+```bash
+conda activate nextstrain-hpai-north-america
+```
+
+### Run pipeline:
+
+```bash
+snakemake -j $NUMBER_OF_JOBS all
+```
+
+### View results:
+```bash
+auspice view --datasetDir auspice
+```
+
 ## Submodule Management
+
+This repository utilizes [Git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) to reuse code that is used in several projects.
 
 ### Updating submodules when data changes:
 ```
