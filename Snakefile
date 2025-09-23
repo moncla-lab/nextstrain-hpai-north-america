@@ -354,6 +354,37 @@ rule auspice_config:
     run:
         auspice_segment_config(input[0], output[0], wildcards.segment)
 
+"""This is a custom rule developed for the avian influenza builds and is not part
+of the Nextstrain architecture. It uses custom python scripts to determine the
+sequence of amino acids at the HA cleavage site, and annotate those sequences
+for whether they contain a furin cleavage site."""
+rule cleavage_site:
+    message: "determining sequences that harbor furin cleavage sites"
+    input:
+        alignment = "results/aligned_{subtype}_ha.fasta"
+    output:
+        cleavage_site_annotations = "results/cleavage-site_{subtype}_ha.json",
+        cleavage_site_sequences = "results/cleavage-site-sequences_{subtype}_ha.json"
+    shell:
+        """
+        python scripts/annotate-ha-cleavage-site.py \
+            --alignment {input.alignment} \
+            --furin_site_motif {output.cleavage_site_annotations} \
+            --cleavage_site_sequence {output.cleavage_site_sequences}
+        """
+
+
+"""This function allows us to annotate HA sequences with cleavage site information,
+without trying to apply it to the other segments"""
+def node_data_by_wildcards(w):
+    """for ha, include cleavage site data during export; for other segments, do not"""
+    if w.segment == "ha":
+        node_data = [rules.refine.output.node_data,rules.traits.output.node_data,rules.ancestral.output.node_data,rules.translate.output.node_data,rules.cleavage_site.output.cleavage_site_annotations,rules.cleavage_site.output.cleavage_site_sequences]
+    else:
+        node_data = [rules.refine.output.node_data,rules.traits.output.node_data,rules.ancestral.output.node_data,rules.translate.output.node_data]
+    return(node_data)
+
+
 """This rule exports the results of the pipeline into JSON format, which is required
 for visualization in auspice. To make changes to the categories of metadata
 that are colored, or how the data is visualized, alter the auspice_config files"""
@@ -362,7 +393,7 @@ rule export:
     input:
         tree = rules.refine.output.tree,
         metadata = rules.metadata_annotation.output[0],
-        node_data = [rules.refine.output.node_data,rules.traits.output.node_data,rules.ancestral.output.node_data,rules.translate.output.node_data],
+        node_data = node_data_by_wildcards,
         auspice_config = rules.auspice_config.output[0],
         colors = files.colors,
         description = files.description
