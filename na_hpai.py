@@ -111,6 +111,9 @@ def metadata_annotation(input_metadata_tsv, output_metadata_tsv):
 
     add_species_group(metadata)
 
+    # Add refined genotype column
+    metadata = genoflu_postprocess(metadata)
+
     metadata.to_csv(output_metadata_tsv, index=False, sep="\t")
 
 
@@ -128,85 +131,30 @@ def auspice_segment_config(input_config_path, output_config_path, segment):
         json.dump(config, output_file, indent=2)
 
 
-def genoflu_dataflow():
-    seq_dicts = {}
-    all_headers = set()
-    for segment in SEGMENTS:
-        fasta_file = f"data/h5nx/{segment}/sequences.fasta"
-        seq_dict = {record.id: record for record in SeqIO.parse(fasta_file, "fasta")}
-        seq_dicts[segment] = seq_dict
-        if not all_headers:
-            all_headers = set(seq_dict.keys())
-        else:
-            all_headers.intersection_update(seq_dict.keys())
-    sorted_headers = sorted(all_headers)
-    for segment in SEGMENTS:
-        output_file = f"data/genoflu/{segment}.fasta"
-        with open(output_file, "w") as out_f:
-            for header in sorted_headers:
-                SeqIO.write(seq_dicts[segment][header], out_f, "fasta")
-
-
-def parse_genoflu_genotypes_list(annotation):
-    result = {segment: None for segment in SEGMENTS}
-    if pd.isna(annotation):
-        return result
-    for entry in annotation.split(", "):
-        genoflu_gene_key, value = entry.split(":")
-        ml_gene_key = genoflu_gene_key.strip().lower()
-        if ml_gene_key in result:
-            result[ml_gene_key] = value.strip()
-    return result
-
-
 def genoflu_refine_genotype(row):
-    if not row["region"] in ["North America", "South America"]:
-        return "Not Americas"
-    if pd.isna(row["Genotype"]):
-        return "Missing segments"
-    was_assigned = not "Not assigned:" in row["Genotype"]
-    if was_assigned:
-        return row["Genotype"]
-    elif row["country"] == "Usa":
-        return "Unassigned-US"
-    else:
-        return "Unassigned"
+    """Refine genotype: keep A*/B*/C*/D*/Minor* patterns, map unassigned by region"""
+    genotype = row["genoflu"]
+
+    # Check if it's empty or unassigned
+    if pd.isna(genotype) or genotype == "" or "Not assigned" in genotype or "Unseen constellation" in genotype:
+        # Check region to determine Americas vs not
+        region = row.get("region", "")
+        if "America" in region:
+            return "Unassigned-Americas"
+        else:
+            return "Unassigned-Not Americas"
+
+    # Keep A*, B*, C*, D*, Minor* patterns as-is
+    return genotype
 
 
-def genoflu_postprocess(
-    input_metadata_tsv,
-    input_genoflu_tsv,
-    output_metadata_tsv,
-    counts_tsv,
-    number_of_genotypes=9,
-    included_genotypes=[],
-):
-    metadata_df = pd.read_csv(input_metadata_tsv, sep="\t")
-    genoflu_df = pd.read_csv(input_genoflu_tsv, sep="\t")
-    merged_df = metadata_df.merge(
-        genoflu_df, left_on="strain", right_on="Strain", how="left"
-    )
-    merged_df.rename(
-        columns={"Genotype List Used, >=98.0%": "Genotype List Used >=98%"},
-        inplace=True,
-    )
-    merged_df["Genotype"] = merged_df.apply(genoflu_refine_genotype, axis=1)
-    counts = merged_df["Genotype"].value_counts()
-    print("Top Genoflu genotypes:", counts.to_string())
-    number_to_bin = number_of_genotypes - len(included_genotypes)
-    parsed_list = [
-        parse_genoflu_genotypes_list(row)
-        for row in merged_df["Genotype List Used >=98%"]
-    ]
-    for segment in SEGMENTS:
-        merged_df[f"genoflu_{segment}_lineage"] = [
-            row[f"{segment}"] for row in parsed_list
-        ]
-    top = counts.head(number_to_bin).index
-    desired_genotypes = list(top) + included_genotypes
-    merged_df["genoflu_bin"] = merged_df["Genotype"].where(
-        merged_df["Genotype"].isin(desired_genotypes),
-        "Not dominant genotype",
-    )
-    counts.to_csv(counts_tsv, sep="\t", header=False)
-    merged_df.to_csv(output_metadata_tsv, index=False, sep="\t")
+def genoflu_postprocess(metadata_df):
+    """Add genotype_ml column by refining raw genoflu annotations"""
+    # Apply genotype refinement
+    metadata_df["genotype_ml"] = metadata_df.apply(genoflu_refine_genotype, axis=1)
+
+    # Print genotype counts for debugging
+    counts = metadata_df["genotype_ml"].value_counts()
+    print("Refined genotype counts:", counts.to_string())
+
+    return metadata_df

@@ -17,8 +17,6 @@ add those to these lists, separated by commas"""
 # it will take too long to run all 8 gene segments, but I've included all the files to do so.
 # the other segments are pb1, pa, ha, np, mp, and ns
 SEGMENTS = ["pb1","pb2","na","pa","ha","np","mp","ns"]
-NUMBER_OF_GENOTYPES = 15
-GENOTYPES_TO_INCLUDE = ['D1.1', 'D1.2']
 
 """This rule tells Snakemake that at the end of the pipeline, you should have
 generated JSON files in the auspice folder for each subtype and segment."""
@@ -64,50 +62,9 @@ rule unzip_h5_data:
     shell:
         'unzip -o h5-data-updates/h5nx.zip -d data/'
 
-"""GenoFlu requires all segments be present in order to proceed with an annotation.
-This organizes the data into a subset of complete genomes accordingly.
-"""
-rule genoflu_dataflow:
-    input:
-        rules.unzip_h5_data.output.sequences
-    output:
-        expand("data/genoflu/{segment}.fasta", segment=SEGMENTS)
-    run:
-        genoflu_dataflow()
-
-"""Compute GenoFlu annotations by running GenoFlu-multi on subset of complete genomes.
-"""
-rule genoflu_run:
-    input:
-        rules.genoflu_dataflow.output
-    output:
-        'data/genoflu/results/results.tsv'
-    shell:
-        '''
-            # this avoids a quirk of the GenoFlu package... avoids UnboundLocalError related to excel_stats
-            rm -rf data/genoflu/temp/
-            python GenoFLU-multi/bin/genoflu-multi.py -n 12 -f data/genoflu
-        '''
-
-"""This post-processes the GenoFlu data to include only lineages that either dominate
-or are specifically included to avoid visual clutter.
-"""
-rule genoflu_postprocess:
-    input:
-        metadata=files.input_metadata,
-        genoflu=rules.genoflu_run.output[0]
-    output:
-        metadata='results/metadata-with-genoflu.tsv',
-        counts='results/genoflu/results/counts.tsv'
-    run:
-        genoflu_postprocess(
-            input.metadata, input.genoflu, output.metadata, output.counts,
-            NUMBER_OF_GENOTYPES, GENOTYPES_TO_INCLUDE
-        )
-
 rule metadata_annotation:
     input:
-        rules.genoflu_postprocess.output.metadata
+        files.input_metadata
     output:
         'results/metadata.tsv',
     run:
