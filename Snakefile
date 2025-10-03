@@ -70,6 +70,23 @@ rule metadata_annotation:
     run:
         metadata_annotation(input[0], output[0])
 
+rule generate_genotype_colors:
+    input:
+        rules.metadata_annotation.output[0]
+    output:
+        'results/genotype_colors.tsv'
+    run:
+        generate_genotype_colors(input[0], output[0])
+
+rule combine_colors:
+    input:
+        static = files.colors,
+        genotype = rules.generate_genotype_colors.output[0]
+    output:
+        'results/colors.tsv'
+    shell:
+        'cat {input.static} {input.genotype} > {output}'
+
 """In this section of the Snakefile, rules are specified for each step of the pipeline.
 Each rule has inputs, outputs, parameters, and the specific text for the commands in
 bash. Rules reference each other, so altering one rule may require changing another
@@ -379,7 +396,7 @@ rule export:
         metadata = rules.metadata_annotation.output[0],
         node_data = node_data_by_wildcards,
         auspice_config = rules.auspice_config.output[0],
-        colors = files.colors,
+        colors = rules.combine_colors.output,
         description = files.description
 
     output:

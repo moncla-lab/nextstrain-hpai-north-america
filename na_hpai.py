@@ -1,7 +1,9 @@
 import json
 
+import numpy as np
 import pandas as pd
 from Bio import SeqIO
+import matplotlib.colors as mcolors
 
 SEGMENTS = ["pb1", "pb2", "na", "pa", "ha", "np", "mp", "ns"]
 
@@ -158,3 +160,46 @@ def genoflu_postprocess(metadata_df):
     print("Refined genotype counts:", counts.to_string())
 
     return metadata_df
+
+
+def generate_genotype_colors(metadata_tsv, output_tsv):
+    """Generate colors for all genotypes in genotype_ml column"""
+    metadata = pd.read_csv(metadata_tsv, sep="\t")
+    unique_genotypes = metadata["genotype_ml"].dropna().unique()
+
+    # Categorize genotypes
+    major = sorted([g for g in unique_genotypes if g[0] in "ABCD" and not g.startswith("Minor")])
+    minor = [g for g in unique_genotypes if g.startswith("Minor")]
+    unassigned_americas = "Unassigned-Americas" in unique_genotypes
+    unassigned_not_americas = "Unassigned-Not Americas" in unique_genotypes
+
+    colors = []
+
+    # Major genotypes: continuous gradient
+    if major:
+        color_hex_list = [
+            "#4042C7", "#4274CE", "#5199B7", "#69B091", "#88BB6C",
+            "#ADBD51", "#CEB541", "#E39B39", "#E56C2F", "#DC2F24"
+        ]
+        custom_cmap = mcolors.LinearSegmentedColormap.from_list("custom_gradient", color_hex_list)
+        normalized_values = np.linspace(0, 1, len(major))
+
+        for i, genotype in enumerate(major):
+            rgba_color = custom_cmap(normalized_values[i])
+            hex_color = mcolors.to_hex(rgba_color)
+            colors.append(f"genotype_ml\t{genotype}\t{hex_color}")
+
+    # Minor genotypes: single grey color
+    if minor:
+        for genotype in minor:
+            colors.append(f"genotype_ml\t{genotype}\t#808080")
+
+    # Unassigned categories
+    if unassigned_americas:
+        colors.append("genotype_ml\tUnassigned-Americas\t#FFFFFF")
+    if unassigned_not_americas:
+        colors.append("genotype_ml\tUnassigned-Not Americas\t#000000")
+
+    # Write to file
+    with open(output_tsv, "w") as f:
+        f.write("\n".join(colors) + "\n")
