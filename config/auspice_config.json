@@ -98,5 +98,10 @@
     "domestic_status",
     "flyway",
     "order"
+  ],
+  "panels": [
+    "tree",
+    "map",
+    "frequencies"
   ]
 }

@@ -28,6 +28,11 @@ rule all:
             "auspice/h5nx_{region}_{segment}.json",
             region=['na', 'global'],
             segment=SEGMENTS
+        ),
+        tip_frequencies = expand(
+            "auspice/h5nx_{region}_{segment}_tip-frequencies.json",
+            region=['na', 'global'],
+            segment=SEGMENTS
         )
 
 """Specify all input files here. For this build, you'll start with input sequences
@@ -354,6 +359,28 @@ rule auspice_config:
     run:
         auspice_segment_config(input[0], output[0], wildcards.segment)
 
+"""Calculate tip frequencies for visualization"""
+rule tip_frequencies:
+    message: "Estimating tip frequencies for {wildcards.segment}"
+    input:
+        tree = rules.refine.output.tree,
+        metadata = rules.metadata_annotation.output[0]
+    output:
+        "auspice/h5nx_{region}_{segment}_tip-frequencies.json"
+    params:
+        min_date = "2022",
+        pivot_interval = 1
+    shell:
+        """
+        augur frequencies \
+            --method kde \
+            --metadata {input.metadata} \
+            --tree {input.tree} \
+            --min-date {params.min_date} \
+            --pivot-interval {params.pivot_interval} \
+            --output {output}
+        """
+
 """This is a custom rule developed for the avian influenza builds and is not part
 of the Nextstrain architecture. It uses custom python scripts to determine the
 sequence of amino acids at the HA cleavage site, and annotate those sequences
@@ -361,10 +388,10 @@ for whether they contain a furin cleavage site."""
 rule cleavage_site:
     message: "determining sequences that harbor furin cleavage sites"
     input:
-        alignment = "results/aligned_{subtype}_ha.fasta"
+        alignment = "results/{region}/aligned_ha.fasta"
     output:
-        cleavage_site_annotations = "results/cleavage-site_{subtype}_ha.json",
-        cleavage_site_sequences = "results/cleavage-site-sequences_{subtype}_ha.json"
+        cleavage_site_annotations = "results/{region}/cleavage-site_ha.json",
+        cleavage_site_sequences = "results/{region}/cleavage-site-sequences_ha.json"
     shell:
         """
         python scripts/annotate-ha-cleavage-site.py \

@@ -8,6 +8,8 @@ the actual sequence at the cleavage sites. These can both be used in augur expor
 that the annotation and sequence show up in auspice as a color by.
 """
 
+from collections import Counter
+
 import Bio
 from Bio import SeqIO
 import json
@@ -56,16 +58,21 @@ def return_ha2_start_position(aa_sequence):
 
 
 def find_universal_start(alignment_file):
-    """Scans the entire alignment to find the earliest 'ATG' start codon."""
-    min_start_pos = float("inf")
+    """Finds the most common 'ATG' start codon position across all sequences."""
+
+    start_positions = []
     for seq in SeqIO.parse(alignment_file, "fasta"):
         nt_sequence = str(seq.seq).upper().replace("-", "N")
         start_codon_pos = nt_sequence.find("ATG")
-        if start_codon_pos != -1 and start_codon_pos < min_start_pos:
-            min_start_pos = start_codon_pos
+        if start_codon_pos != -1:
+            start_positions.append(start_codon_pos)
 
-    # Return a valid start position or 0 if no ATG was found
-    return min_start_pos if min_start_pos != float("inf") else 0
+    if not start_positions:
+        return 0
+
+    # Count positions and return the most common one (the majority vote)
+    most_common_start = Counter(start_positions).most_common(1)[0][0]
+    return most_common_start
 
 
 def output_furin_site_aa_sequence(ha2_nt_start, nt_sequence):
@@ -114,7 +121,7 @@ def output_furin_cleavage_site_jsons(alignment, output_json1, output_json2):
 
         # translate to amino acids and find the start of HA2 in aa and nt coordinates
         aa_sequence = translate_nucleotide_to_aa(nt_sequence)
-        print(aa_sequence)
+        # print(aa_sequence)
 
         start_pos_ha2_nt = return_ha2_start_position(aa_sequence)
 
