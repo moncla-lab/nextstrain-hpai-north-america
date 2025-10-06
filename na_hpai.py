@@ -129,24 +129,43 @@ def auspice_segment_config(input_config_path, output_config_path, segment):
         "type": "categorical",
     }
     config["colorings"] += [genoflu_segment_config]
+
+    # Add FCS colorings for HA segment only
+    if segment == "ha":
+        fcs_annotation_config = {
+            "key": "furin_cleavage_motif",
+            "title": "Furin cleavage site",
+            "type": "categorical",
+        }
+        fcs_sequence_config = {
+            "key": "cleavage_site_sequence",
+            "title": "Cleavage site sequence",
+            "type": "categorical",
+        }
+        config["colorings"] += [fcs_annotation_config, fcs_sequence_config]
+
     with open(output_config_path, "w") as output_file:
         json.dump(config, output_file, indent=2)
 
 
 def genoflu_refine_genotype(row):
-    """Refine genotype: keep A*/B*/C*/D*/Minor* patterns, map unassigned by region"""
+    """Refine genotype: keep A*/B*/C*/D* patterns, collapse Minor*, map unassigned by region"""
     genotype = row["genoflu"]
 
+    # Collapse all Minor* to just "Minor"
+    if isinstance(genotype, str) and genotype.startswith("Minor"):
+        return "Minor"
+
     # Check if it's empty or unassigned
-    if pd.isna(genotype) or genotype == "" or "Not assigned" in genotype or "Unseen constellation" in genotype:
+    if pd.isna(genotype) or genotype == "" or "Not assigned" in str(genotype) or "Unseen constellation" in str(genotype):
         # Check region to determine Americas vs not
         region = row.get("region", "")
-        if "America" in region:
+        if "America" in str(region):
             return "Unassigned-Americas"
         else:
             return "Unassigned-Not Americas"
 
-    # Keep A*, B*, C*, D*, Minor* patterns as-is
+    # Keep A*, B*, C*, D* patterns as-is
     return genotype
 
 
@@ -168,8 +187,8 @@ def generate_genotype_colors(metadata_tsv, output_tsv):
     unique_genotypes = metadata["genotype_ml"].dropna().unique()
 
     # Categorize genotypes
-    major = sorted([g for g in unique_genotypes if g[0] in "ABCD" and not g.startswith("Minor")])
-    minor = [g for g in unique_genotypes if g.startswith("Minor")]
+    major = sorted([g for g in unique_genotypes if g[0] in "ABCD" and g != "Minor"])
+    has_minor = "Minor" in unique_genotypes
     unassigned_americas = "Unassigned-Americas" in unique_genotypes
     unassigned_not_americas = "Unassigned-Not Americas" in unique_genotypes
 
@@ -189,16 +208,15 @@ def generate_genotype_colors(metadata_tsv, output_tsv):
             hex_color = mcolors.to_hex(rgba_color)
             colors.append(f"genotype_ml\t{genotype}\t{hex_color}")
 
-    # Minor genotypes: single grey color
-    if minor:
-        for genotype in minor:
-            colors.append(f"genotype_ml\t{genotype}\t#808080")
+    # Minor: very light grey (almost white)
+    if has_minor:
+        colors.append(f"genotype_ml\tMinor\t#F0F0F0")
 
     # Unassigned categories
     if unassigned_americas:
-        colors.append("genotype_ml\tUnassigned-Americas\t#FFFFFF")
+        colors.append("genotype_ml\tUnassigned-Americas\t#404040")
     if unassigned_not_americas:
-        colors.append("genotype_ml\tUnassigned-Not Americas\t#000000")
+        colors.append("genotype_ml\tUnassigned-Not Americas\t#808080")
 
     # Write to file
     with open(output_tsv, "w") as f:
