@@ -64,11 +64,18 @@ rule unzip_h5_data:
 
 rule metadata_annotation:
     input:
-        files.input_metadata
+        metadata=files.input_metadata,
+        species="metadata_mod_scripts/species.csv",
+        flyways="metadata_mod_scripts/flyway_regions.csv"
     output:
         'results/metadata.tsv',
     run:
-        metadata_annotation(input[0], output[0])
+        metadata_annotation(
+            input.metadata,
+            output[0],
+            input.species,
+            input.flyways
+        )
 
 rule generate_genotype_colors:
     input:

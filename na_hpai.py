@@ -97,21 +97,25 @@ def add_species_group(df):
     df.loc[df["order"].isin(other_avian_list), "species_group"] = "Other- Avian"
 
 
-def metadata_annotation(input_metadata_tsv, output_metadata_tsv):
+def metadata_annotation(input_metadata_tsv, output_metadata_tsv, species_csv=None, flyways_csv=None):
     metadata = pd.read_csv(input_metadata_tsv, sep="\t")
 
-    metadata["Animal"] = metadata.strain.apply(extract_animal)
-    species = pd.read_csv("metadata_mod_scripts/species.csv").rename(
-        columns={"annotated": "Animal"}
-    )
-    metadata = pd.merge(metadata, species, how="left", on=["Animal"])
+    # Only process species and flyways if paths are provided
+    if species_csv or flyways_csv:
+        metadata["Animal"] = metadata.strain.apply(extract_animal)
 
-    flyways = pd.read_csv("metadata_mod_scripts/flyway_regions.csv")
-    metadata = pd.merge(metadata, flyways, how="left", on=["location"])
+        if species_csv:
+            species = pd.read_csv(species_csv).rename(
+                columns={"annotated": "Animal"}
+            )
+            metadata = pd.merge(metadata, species, how="left", on=["Animal"])
 
-    add_orders(metadata)
+        if flyways_csv:
+            flyways = pd.read_csv(flyways_csv)
+            metadata = pd.merge(metadata, flyways, how="left", on=["location"])
 
-    add_species_group(metadata)
+        add_orders(metadata)
+        add_species_group(metadata)
 
     # Add refined genotype column
     metadata = genoflu_postprocess(metadata)
