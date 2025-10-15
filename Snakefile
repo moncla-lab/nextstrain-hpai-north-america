@@ -23,13 +23,13 @@ generated JSON files in the auspice folder for each subtype and segment."""
 rule all:
     input:
         auspice_json = expand(
-            "auspice/h5nx_{region}_{segment}.json",
-            region=['na', 'global'],
+            "auspice/{region}_{segment}.json",
+            region=['north-america-only', 'global-context'],
             segment=SEGMENTS
         ),
         tip_frequencies = expand(
-            "auspice/h5nx_{region}_{segment}_tip-frequencies.json",
-            region=['na', 'global'],
+            "auspice/{region}_{segment}_tip-frequencies.json",
+            region=['north-america-only', 'global-context'],
             segment=SEGMENTS
         )
 
@@ -115,13 +115,13 @@ each_exclude = "host=laboratoryderived host=ferret host=unknown host=other host=
 asia_exclude = "region='north america' region='africa' region='antarctica' region='south america' region='europe'"
 
 exclude_where = {
-    'na': {
-        'na': "region!='north america'", 
+    'north-america-only': {
+        'na': "region!='north america'",
         'sa': "region!=notaregion", # this is a hack to exclude everything
         'europe': "region!=notaregion", # this is a hack to exclude everything
         'asia': "region!=notaregion"
     },
-    'global': {
+    'global-context': {
         'na': "region!='north america'",
         'sa': "region!='south america'",
         'europe': "region!='europe'",
@@ -340,7 +340,7 @@ rule tip_frequencies:
         tree = rules.refine.output.tree,
         metadata = rules.metadata_annotation.output[0]
     output:
-        "auspice/h5nx_{region}_{segment}_tip-frequencies.json"
+        "auspice/{region}_{segment}_tip-frequencies.json"
     params:
         min_date = "2022",
         pivot_interval = 1
@@ -400,7 +400,7 @@ rule export:
         description = files.description
 
     output:
-        auspice_json = "auspice/h5nx_{region}_{segment}.json"
+        auspice_json = "auspice/{region}_{segment}.json"
     shell:
         """
         augur export v2 \
