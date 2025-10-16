@@ -39,18 +39,24 @@ snakemake -j $NUMBER_OF_JOBS all
 auspice view --datasetDir auspice
 ```
 
+### Upload results
+
+```
+nextstrain remote upload nextstrain.org/groups/moncla-lab/h5nx-northamerica ./auspice/*
+```
+
 ## Submodule Management
 
 This repository utilizes [Git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) to reuse code that is used in several projects.
 
 ### Updating submodules when data changes:
 ```
-git submodule update --remote   # then add, commit, and push like usual
+git submodule update --remote
 ```
+Then add, commit, and push like usual.
 
 ### For maintainers:
-- **h5-data-updates**: Contains shared Genoflu analysis functions. Changes here affect both CEIRR and North America pipelines.
-- **GenoFLU-multi**: External tool for influenza genotyping. Update only when new versions are released.
+- **h5-data-updates**: A submodule that contains shared Genoflu analysis functions. Changes here affect both CEIRR and North America pipelines.
 - **metadata\_mod\_scripts**: Contains flyway and species classification data specific to North America analysis.
 
 ## Metadata Enhancement

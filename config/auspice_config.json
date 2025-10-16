@@ -1,7 +1,9 @@
 {
   "title": "HPAI outbreak in North America 2021-present",
   "maintainers": [
-    {"name": "Anna Jaeger. Made possible by the avian influenza team at USDA"}
+    {
+      "name": "Anna Jaeger and Stephen Shank. Made possible by the avian influenza team at USDA"
+    }
   ],
   "build_url": "",
   "data_provenance": [
@@ -35,21 +37,22 @@
       "title": "Host",
       "type": "categorical"
     },
-      {
+    {
       "key": "h5_label_clade",
       "title": "Clade",
       "type": "categorical"
     },
-          {
+    {
       "key": "domestic_status",
       "title": "Domestic Status",
       "type": "categorical"
     },
-          {
+    {
       "key": "flyway",
       "title": "Flyway",
       "type": "categorical"
-    },          {
+    },
+    {
       "key": "order",
       "title": "Order",
       "type": "categorical"
@@ -59,7 +62,7 @@
       "title": "Species- Grouped",
       "type": "categorical"
     },
-          {
+    {
       "key": "geo_region_na",
       "title": "Region_NA",
       "type": "categorical"
