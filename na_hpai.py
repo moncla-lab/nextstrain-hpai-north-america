@@ -123,9 +123,10 @@ def auspice_segment_config(input_config_path, output_config_path, segment):
     with open(input_config_path) as input_file:
         config = json.load(input_file)
 
+    segment_key = segment.upper()
     genoflu_segment_config = {
-        "key": f"genoflu_{segment}_lineage",
-        "title": f"GenoFlu {segment.upper()} lineage",
+        "key": f"genoflu_{segment_key}",
+        "title": f"GenoFlu {segment_key} lineage",
         "type": "categorical",
     }
     config["colorings"] += [genoflu_segment_config]
@@ -157,7 +158,12 @@ def genoflu_refine_genotype(row):
         return "Minor"
 
     # Check if it's empty or unassigned
-    if pd.isna(genotype) or genotype == "" or "Not assigned" in str(genotype) or "Unseen constellation" in str(genotype):
+    if (
+        pd.isna(genotype)
+        or genotype == ""
+        or "Not assigned" in str(genotype)
+        or "Unseen constellation" in str(genotype)
+    ):
         # Check region to determine Americas vs not
         region = row.get("region", "")
         if "America" in str(region):
@@ -197,10 +203,20 @@ def generate_genotype_colors(metadata_tsv, output_tsv):
     # Major genotypes: continuous gradient
     if major:
         color_hex_list = [
-            "#4042C7", "#4274CE", "#5199B7", "#69B091", "#88BB6C",
-            "#ADBD51", "#CEB541", "#E39B39", "#E56C2F", "#DC2F24"
+            "#4042C7",
+            "#4274CE",
+            "#5199B7",
+            "#69B091",
+            "#88BB6C",
+            "#ADBD51",
+            "#CEB541",
+            "#E39B39",
+            "#E56C2F",
+            "#DC2F24",
         ]
-        custom_cmap = mcolors.LinearSegmentedColormap.from_list("custom_gradient", color_hex_list)
+        custom_cmap = mcolors.LinearSegmentedColormap.from_list(
+            "custom_gradient", color_hex_list
+        )
         normalized_values = np.linspace(0, 1, len(major))
 
         for i, genotype in enumerate(major):
