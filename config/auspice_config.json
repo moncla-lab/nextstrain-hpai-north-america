@@ -43,6 +43,11 @@
       "type": "categorical"
     },
     {
+      "key": "subtype",
+      "title": "Subtype",
+      "type": "categorical"
+    },
+    {
       "key": "domestic_status",
       "title": "Domestic Status",
       "type": "categorical"
