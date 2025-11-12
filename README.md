@@ -9,7 +9,7 @@ Make sure you have installed [Bioconda](https://bioconda.github.io/) and configu
 Install dependencies:
 
 ```
-conda create -n nextstrain-hpai pandas biopython blast snakemake nextstrain openpyxl
+conda env create -f environment.yml
 ```
 
 Clone with submodules:

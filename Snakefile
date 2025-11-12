@@ -116,17 +116,22 @@ asia_exclude = "region='north america' region='africa' region='antarctica' regio
 
 exclude_where = {
     'north-america-only': {
-        'na': "region!='north america'",
-        'sa': "region!=notaregion", # this is a hack to exclude everything
-        'europe': "region!=notaregion", # this is a hack to exclude everything
-        'asia': "region!=notaregion"
+        'na-cattle': "region!='north america' host!='Cattle'",
+        'na-noncattle': "region!='north america' host='Cattle'",
     },
     'global-context': {
-        'na': "region!='north america'",
+        'na-cattle': "region!='north america' host!='Cattle'",
+        'na-noncattle': "region!='north america' host='Cattle'",
         'sa': "region!='south america'",
         'europe': "region!='europe'",
         'asia': asia_exclude
     }
+}
+
+# Define which subsets to include in each build
+SUBSETS_BY_REGION = {
+    'north-america-only': ['na-cattle', 'na-noncattle'],
+    'global-context': ['na-cattle', 'na-noncattle', 'sa', 'europe', 'asia']
 }
 
 
@@ -135,8 +140,22 @@ def exclude_by_region(wildcards):
 
 
 def sequences_per_group(wildcards):
-    spg_dict = {'na': 25, 'sa': 10, 'europe': 1, 'asia': 5}
+    spg_dict = {
+        'na-cattle': 100,      # High sampling for cattle
+        'na-noncattle': 25,    # Normal sampling for other North American sequences
+        'sa': 10,
+        'europe': 1,
+        'asia': 5
+    }
     return spg_dict[wildcards.subset]
+
+
+def group_by_strategy(wildcards):
+    """Use different grouping for cattle (no month, to handle ambiguous dates)"""
+    if wildcards.subset == 'na-cattle':
+        return "host location"  # No month grouping for cattle (handles ambiguous dates)
+    else:
+        return "month host location"  # Normal grouping for others
 
 
 """This rule specifies how to subsample data for the build, which is highly
@@ -158,7 +177,7 @@ rule filter:
     output:
         sequences = "results/{region}/{subset}/filtered_{segment}.fasta"
     params:
-        group_by = "month host location",
+        group_by = group_by_strategy,  # Dynamic grouping strategy
         sequences_per_group = sequences_per_group,
         min_date = 2021,
         min_length = min_length,  # instead of specifying one parameter value, we can use a function to specify minimum lengths that are unique to each segment
@@ -186,14 +205,14 @@ rule concatenate:
         Concatenating {wildcards.region} to full FASTA
         """
     input:
-        expand(
+        lambda wildcards: expand(
             "results/{{region}}/{subset}/filtered_{{segment}}.fasta",
-            subset=['na', 'sa', 'europe', 'asia']
+            subset=SUBSETS_BY_REGION[wildcards.region]
         )
     output:
         sequences="results/{region}/filtered_{segment}.fasta"
     shell:
-        "cat {input} > {output.sequences}"
+        "cat {input} | seqkit rmdup -n > {output.sequences}"
 
 rule align:
     message:
