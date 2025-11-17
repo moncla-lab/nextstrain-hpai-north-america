@@ -30,8 +30,10 @@ conda activate nextstrain-hpai-north-america
 
 ### Run pipeline:
 
+To set the number of jobs to run, use the `-j $NUMBER_OF_JOBS` flag. To set the number of cores to run in parallel, use `--cores` with 4, 8, or 10 depending on your computer. 
+
 ```bash
-snakemake -j $NUMBER_OF_JOBS all
+snakemake --cores $NUMBER_OF_CORES all
 ```
 
 ### View results:
