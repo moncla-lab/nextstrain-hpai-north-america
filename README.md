@@ -15,7 +15,7 @@ conda create -n nextstrain-hpai pandas biopython blast snakemake nextstrain open
 Clone with submodules:
 
 ```
-git clone https://github.com/moncla-lab/nextstrain-hpai-north-america
+git clone https://github.com/moncla-lab/nextstrain-hpai
 cd nextstrain-hpai-north-america
 git submodule update --init
 ```
