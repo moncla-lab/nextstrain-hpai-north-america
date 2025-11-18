@@ -1,9 +1,12 @@
 {
-  "title": "HPAI outbreak in North America 2021-present",
+  "title": "HPAI H5Nx in North America 2021-present",
   "maintainers": [
     {
-      "name": "Anna Jaeger and Stephen Shank. Made possible by the avian influenza team at USDA"
-    }
+      "name": "Anna Jaeger, Stephen Shank, and the Moncla lab", "url": "https://lmoncla.github.io/monclalab/"
+    },
+    {
+      "name": "Made possible by the avian influenza team at USDA, and all the scientists generating and sharing avian influenza data" 
+    }   
   ],
   "build_url": "",
   "data_provenance": [
