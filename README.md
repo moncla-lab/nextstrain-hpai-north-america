@@ -15,7 +15,7 @@ conda env create -f environment.yml
 Clone with submodules:
 
 ```
-git clone https://github.com/moncla-lab/nextstrain-hpai-north-america
+git clone https://github.com/moncla-lab/nextstrain-hpai
 cd nextstrain-hpai-north-america
 git submodule update --init
 ```
@@ -30,8 +30,10 @@ conda activate nextstrain-hpai-north-america
 
 ### Run pipeline:
 
+To set the number of jobs to run, use the `-j $NUMBER_OF_JOBS` flag. To set the number of cores to run in parallel, use `--cores` with 4, 8, or 10 depending on your computer. 
+
 ```bash
-snakemake -j $NUMBER_OF_JOBS all
+snakemake --cores $NUMBER_OF_CORES all
 ```
 
 ### View results:

@@ -1,1 +1,3 @@
 ##add strains to this file to exclude specific data from your build##
+
+A/dairycow/California/24033172003/2022 # incorrect date, nothing in cattle until 2024
