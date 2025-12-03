@@ -116,11 +116,13 @@ asia_exclude = "region='north america' region='africa' region='antarctica' regio
 
 exclude_where = {
     'north-america-only': {
-        'na-cattle': "region!='north america' host!='Cattle'",
+        'na-cattle-resolved': None,  # Uses --query instead
+        'na-cattle-unresolved': None,  # Uses --query instead
         'na-noncattle': "region!='north america' host='Cattle'",
     },
     'global-context': {
-        'na-cattle': "region!='north america' host!='Cattle'",
+        'na-cattle-resolved': None,
+        'na-cattle-unresolved': None,
         'na-noncattle': "region!='north america' host='Cattle'",
         'sa': "region!='south america'",
         'europe': "region!='europe'",
@@ -130,19 +132,23 @@ exclude_where = {
 
 # Define which subsets to include in each build
 SUBSETS_BY_REGION = {
-    'north-america-only': ['na-cattle', 'na-noncattle'],
-    'global-context': ['na-cattle', 'na-noncattle', 'sa', 'europe', 'asia']
+    'north-america-only': ['na-cattle-resolved', 'na-cattle-unresolved', 'na-noncattle'],
+    'global-context': ['na-cattle-resolved', 'na-cattle-unresolved', 'na-noncattle', 'sa', 'europe', 'asia']
 }
 
 
 def exclude_by_region(wildcards):
-    return each_exclude + ' ' + exclude_where[wildcards.region][wildcards.subset]
+    subset_exclude = exclude_where[wildcards.region][wildcards.subset]
+    if subset_exclude is None:
+        return each_exclude
+    return each_exclude + ' ' + subset_exclude
 
 
 def sequences_per_group(wildcards):
     spg_dict = {
-        'na-cattle': 100,      # High sampling for cattle
-        'na-noncattle': 25,    # Normal sampling for other North American sequences
+        'na-cattle-resolved': 100,    # High sampling for well-resolved cattle
+        'na-cattle-unresolved': 1000, # Grab most poorly-resolved cattle
+        'na-noncattle': 25,           # Normal sampling for other North American sequences
         'sa': 10,
         'europe': 1,
         'asia': 5
@@ -151,11 +157,20 @@ def sequences_per_group(wildcards):
 
 
 def group_by_strategy(wildcards):
-    """Use different grouping for cattle (no month, to handle ambiguous dates)"""
-    if wildcards.subset == 'na-cattle':
-        return "host location"  # No month grouping for cattle (handles ambiguous dates)
+    """Use different grouping for unresolved cattle (no month/location)"""
+    if wildcards.subset == 'na-cattle-unresolved':
+        return "host"  # One big bucket for poorly-resolved cattle
     else:
         return "month host location"  # Normal grouping for others
+
+
+def query_param(wildcards):
+    """Return full --query argument string for cattle subsets, empty string for others"""
+    queries = {
+        'na-cattle-resolved': "--query \"host == 'Cattle' and region == 'North America' and location != 'Usa' and not date.str.contains('XX')\"",
+        'na-cattle-unresolved': "--query \"host == 'Cattle' and region == 'North America' and (location == 'Usa' or date.str.contains('XX'))\"",
+    }
+    return queries.get(wildcards.subset, "")
 
 
 """This rule specifies how to subsample data for the build, which is highly
@@ -181,7 +196,8 @@ rule filter:
         sequences_per_group = sequences_per_group,
         min_date = 2021,
         min_length = min_length,  # instead of specifying one parameter value, we can use a function to specify minimum lengths that are unique to each segment
-        exclude_where = exclude_by_region
+        exclude_where = exclude_by_region,
+        query = query_param  # Returns full --query arg for cattle subsets, empty string for others
 
     shell:
         """
@@ -196,7 +212,8 @@ rule filter:
             --min-date {params.min_date} \
             --exclude-where {params.exclude_where} \
             --min-length {params.min_length} \
-            --non-nucleotide || true # this tells Snakemake to ignore errors thrown by augur filter for an empty result
+            --non-nucleotide \
+            {params.query} || true
         """
 
 rule concatenate:
