@@ -121,19 +121,20 @@ exclude_where = {
         'na-noncattle': "region!='north america' host='Cattle'",
     },
     'global-context': {
-        'na-cattle-resolved': None,
-        'na-cattle-unresolved': None,
-        'na-noncattle': "region!='north america' host='Cattle'",
-        'sa': "region!='south america'",
-        'europe': "region!='europe'",
-        'asia': asia_exclude
+        'h5n5': None,  # Uses --query instead
+        'na-cattle-resolved': "subtype='h5n5'",  # Exclude H5N5 (handled by h5n5 bucket)
+        'na-cattle-unresolved': "subtype='h5n5'",
+        'na-noncattle': "region!='north america' host='Cattle' subtype='h5n5'",
+        'sa': "region!='south america' subtype='h5n5'",
+        'europe': "region!='europe' subtype='h5n5'",
+        'asia': asia_exclude + " subtype='h5n5'"
     }
 }
 
 # Define which subsets to include in each build
 SUBSETS_BY_REGION = {
     'north-america-only': ['na-cattle-resolved', 'na-cattle-unresolved', 'na-noncattle'],
-    'global-context': ['na-cattle-resolved', 'na-cattle-unresolved', 'na-noncattle', 'sa', 'europe', 'asia']
+    'global-context': ['h5n5', 'na-cattle-resolved', 'na-cattle-unresolved', 'na-noncattle', 'sa', 'europe', 'asia']
 }
 
 
@@ -146,6 +147,7 @@ def exclude_by_region(wildcards):
 
 def sequences_per_group(wildcards):
     spg_dict = {
+        'h5n5': 500,                  # High sampling for rare H5N5 subtype
         'na-cattle-resolved': 100,    # High sampling for well-resolved cattle
         'na-cattle-unresolved': 1000, # Grab most poorly-resolved cattle
         'na-noncattle': 25,           # Normal sampling for other North American sequences
@@ -159,14 +161,17 @@ def sequences_per_group(wildcards):
 def group_by_strategy(wildcards):
     """Use different grouping for unresolved cattle (no month/location)"""
     if wildcards.subset == 'na-cattle-unresolved':
-        return "host"  # One big bucket for poorly-resolved cattle
+        return "host subtype"  # One big bucket for poorly-resolved cattle
+    elif wildcards.subset == 'h5n5':
+        return "month host location"  # No subtype grouping needed (already filtered to h5n5)
     else:
-        return "month host location"  # Normal grouping for others
+        return "month host location subtype"  # Normal grouping for others
 
 
 def query_param(wildcards):
-    """Return full --query argument string for cattle subsets, empty string for others"""
+    """Return full --query argument string for special subsets, empty string for others"""
     queries = {
+        'h5n5': "--query \"subtype == 'h5n5'\"",
         'na-cattle-resolved': "--query \"host == 'Cattle' and region == 'North America' and location != 'Usa' and not date.str.contains('XX')\"",
         'na-cattle-unresolved': "--query \"host == 'Cattle' and region == 'North America' and (location == 'Usa' or date.str.contains('XX'))\"",
     }
