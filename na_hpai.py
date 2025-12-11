@@ -2,7 +2,7 @@ import json
 
 import numpy as np
 import pandas as pd
-from Bio import SeqIO
+from Bio import Phylo, SeqIO
 import matplotlib.colors as mcolors
 
 SEGMENTS = ["pb1", "pb2", "na", "pa", "ha", "np", "mp", "ns"]
@@ -237,3 +237,24 @@ def generate_genotype_colors(metadata_tsv, output_tsv):
     # Write to file
     with open(output_tsv, "w") as f:
         f.write("\n".join(colors) + "\n")
+
+
+def extract_metadata_post_filter(sequences_fasta, metadata_tsv, output_tsv):
+    """Extract metadata for strains that survived filtering and concatenation."""
+    strains = set()
+    with open(sequences_fasta) as f:
+        for line in f:
+            if line.startswith(">"):
+                strains.add(line[1:].strip())
+    meta = pd.read_csv(metadata_tsv, sep="\t", low_memory=False)
+    filtered = meta[meta["strain"].isin(strains)]
+    filtered.to_csv(output_tsv, sep="\t", index=False)
+
+
+def extract_metadata_post_refine(tree_nwk, metadata_tsv, output_tsv):
+    """Extract metadata for strains that survived clock filtering."""
+    tree = Phylo.read(tree_nwk, "newick")
+    tips = {tip.name for tip in tree.get_terminals()}
+    meta = pd.read_csv(metadata_tsv, sep="\t", low_memory=False)
+    filtered = meta[meta["strain"].isin(tips)]
+    filtered.to_csv(output_tsv, sep="\t", index=False)

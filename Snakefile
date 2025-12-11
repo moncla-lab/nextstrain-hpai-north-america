@@ -111,7 +111,7 @@ def min_length(w):
     return(length)
 
 
-each_exclude = "host=laboratoryderived host=ferret host=unknown host=other host=host country=? region=? h5_label_clade!=2.3.4.4b"
+each_exclude = "host=laboratoryderived host=ferret host=unknown host=other host=host country=? region=?"
 asia_exclude = "region='north america' region='africa' region='antarctica' region='south america' region='europe'"
 
 exclude_where = {
@@ -169,13 +169,18 @@ def group_by_strategy(wildcards):
 
 
 def query_param(wildcards):
-    """Return full --query argument string for special subsets, empty string for others"""
-    queries = {
-        'h5n5': "--query \"subtype == 'h5n5'\"",
-        'na-cattle-resolved': "--query \"host == 'Cattle' and region == 'North America' and location != 'Usa' and not date.str.contains('XX')\"",
-        'na-cattle-unresolved': "--query \"host == 'Cattle' and region == 'North America' and (location == 'Usa' or date.str.contains('XX'))\"",
+    """Return full --query argument string. All subsets get clade filter, some get additional filters."""
+    clade_filter = "h5_label_clade.isin(['2.3.4.4b', 'Am-nonGsGD'])"
+    subset_queries = {
+        'h5n5': "subtype == 'h5n5'",
+        'na-cattle-resolved': "host == 'Cattle' and region == 'North America' and location != 'Usa' and not date.str.contains('XX')",
+        'na-cattle-unresolved': "host == 'Cattle' and region == 'North America' and (location == 'Usa' or date.str.contains('XX'))",
     }
-    return queries.get(wildcards.subset, "")
+    subset_query = subset_queries.get(wildcards.subset)
+    if subset_query:
+        return f'--query "{subset_query} and {clade_filter}"'
+    else:
+        return f'--query "{clade_filter}"'
 
 
 """This rule specifies how to subsample data for the build, which is highly
@@ -235,6 +240,16 @@ rule concatenate:
         sequences="results/{region}/filtered_{segment}.fasta"
     shell:
         "cat {input} | seqkit rmdup -n > {output.sequences}"
+
+rule metadata_post_filter:
+    """Extract metadata for strains that survived filtering and concatenation."""
+    input:
+        sequences = rules.concatenate.output.sequences,
+        metadata = rules.metadata_annotation.output[0]
+    output:
+        metadata = "results/{region}/metadata_post_filter_{segment}.tsv"
+    run:
+        extract_metadata_post_filter(input.sequences, input.metadata, output.metadata)
 
 rule align:
     message:
@@ -308,6 +323,16 @@ rule refine:
             --date-inference {params.date_inference} \
             --clock-filter-iqd {params.clock_filter_iqd}
         """
+
+rule metadata_post_refine:
+    """Extract metadata for strains that survived clock filtering."""
+    input:
+        tree = rules.refine.output.tree,
+        metadata = rules.metadata_annotation.output[0]
+    output:
+        metadata = "results/{region}/metadata_post_refine_{segment}.tsv"
+    run:
+        extract_metadata_post_refine(input.tree, input.metadata, output.metadata)
 
 rule ancestral:
     message: "Reconstructing ancestral sequences and mutations"
@@ -435,6 +460,8 @@ rule export:
     input:
         tree = rules.refine.output.tree,
         metadata = rules.metadata_annotation.output[0],
+        metadata_post_filter = rules.metadata_post_filter.output.metadata,
+        metadata_post_refine = rules.metadata_post_refine.output.metadata,
         node_data = node_data_by_wildcards,
         auspice_config = rules.auspice_config.output[0],
         colors = rules.combine_colors.output,
@@ -462,3 +489,9 @@ rule clean:
         "auspice"
     shell:
         "rm -rfv {params}"
+
+onstart:
+    shell("date '+Start: %Y-%m-%d %H:%M:%S' > time.txt")
+
+onsuccess:
+    shell("date '+End: %Y-%m-%d %H:%M:%S' >> time.txt")
