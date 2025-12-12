@@ -63,9 +63,23 @@ Then add, commit, and push like usual.
 
 ## Metadata Enhancement
 
-Metadata files have been modified to add migratory flyway assignments, as well as higher resolution species and order data, using the script and csv files available within the metadata_mod_scripts folder. 
+Metadata files have been modified to add migratory flyway assignments, as well as higher resolution species and order data, using the script and csv files available within the metadata\_mod\_scripts folder. 
 "species.csv" provide order assigments to sequences based on parsing out the "animal" from the strain name (meta_mod scripts provide code to do this). Further groupings are done by creating lists of orders and defining these via lists in this script and a new column called "species-grouped". 
 
 2 versions of the metadata modifying scripts are available here for if you are looping through with a separate metadata file for each gene (looped) or a single metadata file (1file). Wildcards and input files will need to be adjusted accordingly in the Snakefile.
 
 Within this script, domestic status is updated via matching by sequence ID to a file "NA-H5Nx-2021-2023-seqmerge.tsv" with high resolution of domestic status data. This file however cannot be shared due to strain information derived from GISAID.
+
+## Domesticity Classification Strategy
+
+We implement a two-tiered strategy to classify avian samples as domestic or wild:
+
+ 1. Per-Sample GISAID Annotations (Highest Priority)
+	- Uses existing domestic_status field from Fauna/GISAID metadata
+	- Only accepts clean "wild"/"domestic" values (skips "?" markers)
+	- Covers < 10% of samples, highest accuracy when present
+
+2. Species-Level Classifications (Fallback)
+  - Uses hand-curated species lookup table (config/species_lookup.tsv)
+  - Maps animal names (e.g., "goose" → "wild", "chicken" → "domestic")
+  - Covers more samples, strategically targetting high-frequency species
