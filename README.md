@@ -25,7 +25,7 @@ git submodule update --init
 ### Activate the environment
 
 ```bash
-conda activate nextstrain-hpai-north-america
+conda activate nextstrain-hpai
 ```
 
 ### Run pipeline:
@@ -46,6 +46,36 @@ auspice view --datasetDir auspice
 ```
 nextstrain remote upload nextstrain.org/groups/moncla-lab/h5nx-northamerica ./auspice/*
 ```
+
+## Customizing Reference Sequences
+
+The pipeline automatically downloads reference sequences from NCBI based on the configuration in `config/references.tsv`.
+
+### Default References
+
+By default, the pipeline uses A/Goose/Guangdong/1/96 (H5N1) RefSeq sequences (NC_* accessions), which are curated by NCBI and recommended for robust phylodynamics analysis.
+
+### Using Different References
+
+To use different reference sequences:
+
+1. Edit `config/references.tsv` and replace the `ncbi_accession` values with your desired NCBI accession numbers
+2. Re-run the pipeline - it will automatically download the new references
+
+Example `config/references.tsv`:
+```
+segment	ncbi_accession
+pb2	YOUR_ACCESSION_1
+pb1	YOUR_ACCESSION_2
+pa	YOUR_ACCESSION_3
+ha	YOUR_ACCESSION_4
+np	YOUR_ACCESSION_5
+na	YOUR_ACCESSION_6
+mp	YOUR_ACCESSION_7
+ns	YOUR_ACCESSION_8
+```
+
+The pipeline will download these sequences and save them as GenBank files in the `results/` directory following the pattern: `results/{segment}/reference_sequence.gb`
 
 ## Submodule Management
 

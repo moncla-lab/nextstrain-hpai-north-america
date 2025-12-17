@@ -1,8 +1,9 @@
 import json
+import os
 
 import numpy as np
 import pandas as pd
-from Bio import Phylo, SeqIO
+from Bio import Phylo, SeqIO, Entrez
 import matplotlib.colors as mcolors
 
 # Import species annotation functions from standalone script
@@ -173,3 +174,52 @@ def extract_metadata_post_refine(tree_nwk, metadata_tsv, output_tsv):
     meta = pd.read_csv(metadata_tsv, sep="\t", low_memory=False)
     filtered = meta[meta["strain"].isin(tips)]
     filtered.to_csv(output_tsv, sep="\t", index=False)
+
+
+def download_refseq_references(references_tsv='config/references.tsv', output_dir='results', email=None):
+    """
+    Download RefSeq reference sequences from NCBI and save as GenBank files.
+
+    Parameters:
+    -----------
+    references_tsv : str
+        Path to TSV file with columns 'segment' and 'ncbi_accession'
+    output_dir : str
+        Base directory to save the GenBank files (files saved to {output_dir}/{segment}/reference_sequence.gb)
+    email : str, optional
+        Email address for NCBI Entrez (not required but recommended for courtesy)
+    """
+    if email:
+        Entrez.email = email
+
+    # Read the references file
+    refs_df = pd.read_csv(references_tsv, sep='\t')
+
+    print(f"Downloading {len(refs_df)} RefSeq reference sequences...")
+
+    for _, row in refs_df.iterrows():
+        segment = row['segment']
+        accession = row['ncbi_accession']
+
+        # Generate output path: {output_dir}/{segment}/reference_sequence.gb
+        segment_dir = os.path.join(output_dir, segment)
+        os.makedirs(segment_dir, exist_ok=True)
+        output_path = os.path.join(segment_dir, "reference_sequence.gb")
+
+        print(f"  {segment}: {accession} -> {output_path}")
+
+        try:
+            # Download from NCBI
+            handle = Entrez.efetch(db="nucleotide", id=accession, rettype="gb", retmode="text")
+            record_text = handle.read()
+            handle.close()
+
+            # Write to file
+            with open(output_path, 'w') as f:
+                f.write(record_text)
+
+        except Exception as e:
+            print(f"    ERROR downloading {accession}: {e}")
+            continue
+
+    print("Download complete!")

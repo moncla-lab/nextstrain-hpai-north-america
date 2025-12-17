@@ -43,7 +43,7 @@ rule files:
         input_metadata = "data/h5nx/metadata-with-clade.tsv",
         dropped_strains = "config/exclude_strains.txt",
         include_strains = "config/include_strains.txt",
-        reference = "config/reference_sequence_{segment}_A_goose_CR_2021.gb", #H3N8 from 1997
+        reference = "results/{segment}/reference_sequence.gb",
         auspice_config = "config/auspice_config.json",
         colors = "config/colors.tsv",
         description = "config/description.md"
@@ -61,6 +61,19 @@ rule unzip_h5_data:
         sequences=expand(files.input_sequences, segment=SEGMENTS)
     shell:
         'unzip -o h5-data-updates/h5nx.zip -d data/'
+
+rule download_references:
+    message: "Downloading RefSeq reference sequences from NCBI"
+    input:
+        references_config = "config/references.tsv"
+    output:
+        reference_files = expand("results/{segment}/reference_sequence.gb", segment=SEGMENTS)
+    run:
+        from na_hpai import download_refseq_references
+        download_refseq_references(
+            references_tsv=input.references_config,
+            output_dir="results"
+        )
 
 rule metadata_annotation:
     input:
@@ -395,7 +408,7 @@ rule auspice_config:
     input:
         files.auspice_config
     output:
-        "config/{segment}/auspice_config.json"
+        "results/{segment}/auspice_config.json"
     run:
         auspice_segment_config(input[0], output[0], wildcards.segment)
 
