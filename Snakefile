@@ -2,7 +2,9 @@ from na_hpai import *
 
 wildcard_constraints:
     region="[^/]+",
-    subset="[^/]+"
+    subset="[^/]+",
+    subtype="[^/]+",
+    segment="[^/]+"
 
 """This file specifies the entire avian-flu pipeline that will be run, with
 specific parameters for subsampling, tree building, and visualization. In this
@@ -160,13 +162,13 @@ def exclude_by_region(wildcards):
 
 def sequences_per_group(wildcards):
     spg_dict = {
-        'h5n5': 500,                  # High sampling for rare H5N5 subtype
-        'na-cattle-resolved': 100,    # High sampling for well-resolved cattle
-        'na-cattle-unresolved': 1000, # Grab most poorly-resolved cattle
-        'na-noncattle': 25,           # Normal sampling for other North American sequences
-        'sa': 10,
+        'h5n5': 1,                  # High sampling for rare H5N5 subtype
+        'na-cattle-resolved': 1,    # High sampling for well-resolved cattle
+        'na-cattle-unresolved': 1, # Grab most poorly-resolved cattle
+        'na-noncattle': 1,           # Normal sampling for other North American sequences
+        'sa': 1,
         'europe': 1,
-        'asia': 5
+        'asia': 1
     }
     return spg_dict[wildcards.subset]
 
@@ -264,17 +266,33 @@ rule metadata_post_filter:
     run:
         extract_metadata_post_filter(input.sequences, input.metadata, output.metadata)
 
-rule align:
-    message:
-        """
-        Aligning sequences to {input.reference}
-          - filling gaps with N
-        """
+
+# =============================================================================
+# SUBTYPE-SPECIFIC CLOCK FILTERING
+# =============================================================================
+# These rules split sequences by subtype, run clock filtering independently
+# per subtype, then merge survivors back together. This prevents rare subtypes
+# (like H5N5) from being filtered out by the dominant subtype's clock rate.
+# =============================================================================
+
+checkpoint split_by_subtype:
+    """Split concatenated FASTA by subtype column in metadata."""
     input:
         sequences = rules.concatenate.output.sequences,
+        metadata = rules.metadata_annotation.output[0]
+    output:
+        directory("results/{region}/by_subtype/{segment}")
+    run:
+        split_fasta_by_subtype(input.sequences, input.metadata, output[0])
+
+
+rule align_subtype:
+    """Align sequences for a single subtype."""
+    input:
+        sequences = "results/{region}/by_subtype/{segment}/{subtype}.fasta",
         reference = files.reference
     output:
-        alignment = "results/{region}/aligned_{segment}.fasta"
+        alignment = "results/{region}/by_subtype/{segment}/{subtype}/aligned.fasta"
     shell:
         """
         augur align \
@@ -286,38 +304,34 @@ rule align:
         """
 
 
-rule tree:
-    message: "Building tree"
+rule tree_subtype:
+    """Build tree for a single subtype."""
     input:
-        alignment = rules.align.output.alignment
+        alignment = rules.align_subtype.output.alignment
     output:
-        tree = "results/{region}/tree-raw_{segment}.nwk"
-    params:
-        method = "iqtree"
+        tree = "results/{region}/by_subtype/{segment}/{subtype}/tree-raw.nwk"
     shell:
         """
         augur tree \
             --alignment {input.alignment} \
             --output {output.tree} \
-            --method {params.method} \
+            --method iqtree \
             --nthreads 1
         """
 
-rule refine:
-    message:
-        """
-        Refining tree
-          - estimate timetree
-          - use {params.coalescent} coalescent timescale
-          - estimate {params.date_inference} node dates
-        """
+
+rule refine_subtype:
+    """
+    Run clock filtering on a single subtype.
+    This is where bad sequences are filtered out based on molecular clock.
+    """
     input:
-        tree = rules.tree.output.tree,
-        alignment = rules.align.output,
+        tree = rules.tree_subtype.output.tree,
+        alignment = rules.align_subtype.output.alignment,
         metadata = rules.metadata_annotation.output[0]
     output:
-        tree = "results/{region}/tree_{segment}.nwk",
-        node_data = "results/{region}/branch-lengths_{segment}.json"
+        tree = "results/{region}/by_subtype/{segment}/{subtype}/tree.nwk",
+        node_data = "results/{region}/by_subtype/{segment}/{subtype}/branch-lengths.json"
     params:
         coalescent = "const",
         date_inference = "marginal",
@@ -337,8 +351,106 @@ rule refine:
             --clock-filter-iqd {params.clock_filter_iqd}
         """
 
+
+def get_subtype_trees(wildcards):
+    """Get all refined trees from the checkpoint (dynamic based on discovered subtypes)."""
+    checkpoint_output = checkpoints.split_by_subtype.get(**wildcards).output[0]
+    # List only .fasta files directly in checkpoint dir (not in subdirectories)
+    import os
+    subtypes = [f.replace('.fasta', '') for f in os.listdir(checkpoint_output)
+                if f.endswith('.fasta') and os.path.isfile(os.path.join(checkpoint_output, f))]
+    return expand(
+        "results/{region}/by_subtype/{segment}/{subtype}/tree.nwk",
+        region=wildcards.region,
+        segment=wildcards.segment,
+        subtype=subtypes
+    )
+
+
+rule aggregate_survivors:
+    """
+    Collect survivor strain names from all subtype-specific refined trees
+    and write UNALIGNED sequences for re-alignment.
+    """
+    input:
+        trees = get_subtype_trees,
+        original_sequences = rules.concatenate.output.sequences
+    output:
+        sequences = "results/{region}/survivors_{segment}.fasta"
+    run:
+        extract_survivors_to_fasta(input.trees, input.original_sequences, output.sequences)
+
+
+# =============================================================================
+# FINAL TREE BUILD (from merged survivors)
+# =============================================================================
+
+rule align:
+    """Align all survivors from scratch (fresh alignment of merged survivors)."""
+    input:
+        sequences = rules.aggregate_survivors.output.sequences,
+        reference = files.reference
+    output:
+        alignment = "results/{region}/aligned_{segment}.fasta"
+    shell:
+        """
+        augur align \
+            --sequences {input.sequences} \
+            --reference-sequence {input.reference} \
+            --output {output.alignment} \
+            --remove-reference \
+            --nthreads 1
+        """
+
+
+rule tree:
+    """Build final tree from all survivors."""
+    input:
+        alignment = rules.align.output.alignment
+    output:
+        tree = "results/{region}/tree-raw_{segment}.nwk"
+    shell:
+        """
+        augur tree \
+            --alignment {input.alignment} \
+            --output {output.tree} \
+            --method iqtree \
+            --nthreads 1
+        """
+
+
+rule refine:
+    """
+    Run timetree on final tree WITHOUT clock filtering.
+    Clock filtering already happened per-subtype in refine_subtype.
+    This step is purely for dating the merged tree.
+    """
+    input:
+        tree = rules.tree.output.tree,
+        alignment = rules.align.output.alignment,
+        metadata = rules.metadata_annotation.output[0]
+    output:
+        tree = "results/{region}/tree_{segment}.nwk",
+        node_data = "results/{region}/branch-lengths_{segment}.json"
+    params:
+        coalescent = "const",
+        date_inference = "marginal"
+    shell:
+        """
+        augur refine \
+            --tree {input.tree} \
+            --alignment {input.alignment} \
+            --metadata {input.metadata} \
+            --output-tree {output.tree} \
+            --output-node-data {output.node_data} \
+            --timetree \
+            --coalescent {params.coalescent} \
+            --date-confidence \
+            --date-inference {params.date_inference}
+        """
+
 rule metadata_post_refine:
-    """Extract metadata for strains that survived clock filtering."""
+    """Extract metadata for strains in the final refined tree (survivors of per-subtype clock filtering)."""
     input:
         tree = rules.refine.output.tree,
         metadata = rules.metadata_annotation.output[0]

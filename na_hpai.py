@@ -223,3 +223,92 @@ def download_refseq_references(references_tsv='config/references.tsv', output_di
             continue
 
     print("Download complete!")
+
+
+# Minimum sequences required to build a meaningful tree for clock filtering
+# (augur refine needs enough data points for reliable timetree estimation)
+MIN_SEQUENCES_FOR_TREE = 10
+
+
+def split_fasta_by_subtype(sequences_fasta, metadata_tsv, output_dir):
+    """
+    Split FASTA file by subtype column from metadata.
+
+    Creates one FASTA per unique subtype: {output_dir}/{subtype}.fasta
+    Skips subtypes with fewer than MIN_SEQUENCES_FOR_TREE sequences.
+
+    Parameters:
+    -----------
+    sequences_fasta : str
+        Path to input FASTA file (unaligned or aligned)
+    metadata_tsv : str
+        Path to metadata TSV with 'strain' and 'subtype' columns
+    output_dir : str
+        Directory to write per-subtype FASTA files
+    """
+    # Load metadata to get strain -> subtype mapping
+    meta = pd.read_csv(metadata_tsv, sep="\t", low_memory=False)
+    strain_to_subtype = dict(zip(meta['strain'], meta['subtype']))
+
+    os.makedirs(output_dir, exist_ok=True)
+
+    # Group sequences by subtype
+    subtype_seqs = {}
+    for record in SeqIO.parse(sequences_fasta, "fasta"):
+        subtype = strain_to_subtype.get(record.id)
+        # Handle missing/unknown subtypes
+        if pd.isna(subtype) or subtype == '' or subtype is None:
+            subtype = 'unknown'
+        subtype = str(subtype).lower()  # Normalize to lowercase
+
+        if subtype not in subtype_seqs:
+            subtype_seqs[subtype] = []
+        subtype_seqs[subtype].append(record)
+
+    # Write each subtype to its own file (if enough sequences)
+    written_subtypes = []
+    skipped_subtypes = []
+    for subtype, seqs in subtype_seqs.items():
+        if len(seqs) >= MIN_SEQUENCES_FOR_TREE:
+            output_path = os.path.join(output_dir, f"{subtype}.fasta")
+            SeqIO.write(seqs, output_path, "fasta")
+            written_subtypes.append(f"{subtype}({len(seqs)})")
+        else:
+            skipped_subtypes.append(f"{subtype}({len(seqs)})")
+
+    print(f"Split into {len(written_subtypes)} subtypes: {', '.join(written_subtypes)}")
+    if skipped_subtypes:
+        print(f"Skipped (too few sequences): {', '.join(skipped_subtypes)}")
+
+
+def extract_survivors_to_fasta(tree_files, original_fasta, output_fasta):
+    """
+    Extract survivor strain names from refined trees and write
+    corresponding sequences from original UNALIGNED FASTA.
+
+    Parameters:
+    -----------
+    tree_files : list of str
+        Paths to refined tree files (Newick format)
+    original_fasta : str
+        Path to original unaligned FASTA (pre-alignment)
+    output_fasta : str
+        Path to write survivor sequences
+    """
+    # Collect all survivor strain names from all trees
+    survivors = set()
+    for tree_file in tree_files:
+        tree = Phylo.read(tree_file, "newick")
+        for tip in tree.get_terminals():
+            survivors.add(tip.name)
+
+    print(f"Found {len(survivors)} unique survivors across {len(tree_files)} subtype trees")
+
+    # Extract sequences from original (unaligned) FASTA
+    survivor_seqs = []
+    for record in SeqIO.parse(original_fasta, "fasta"):
+        if record.id in survivors:
+            survivor_seqs.append(record)
+
+    SeqIO.write(survivor_seqs, output_fasta, "fasta")
+    print(f"Wrote {len(survivor_seqs)} survivor sequences to {output_fasta}")
