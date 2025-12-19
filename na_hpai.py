@@ -297,12 +297,17 @@ def extract_survivors_to_fasta(tree_files, original_fasta, output_fasta):
     """
     # Collect all survivor strain names from all trees
     survivors = set()
+    skipped = 0
     for tree_file in tree_files:
+        # Skip empty tree files (from failed clock filtering)
+        if os.path.getsize(tree_file) == 0:
+            skipped += 1
+            continue
         tree = Phylo.read(tree_file, "newick")
         for tip in tree.get_terminals():
             survivors.add(tip.name)
 
-    print(f"Found {len(survivors)} unique survivors across {len(tree_files)} subtype trees")
+    print(f"Found {len(survivors)} unique survivors across {len(tree_files)} subtype trees ({skipped} failed clock filtering)")
 
     # Extract sequences from original (unaligned) FASTA
     survivor_seqs = []

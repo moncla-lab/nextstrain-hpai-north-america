@@ -162,13 +162,13 @@ def exclude_by_region(wildcards):
 
 def sequences_per_group(wildcards):
     spg_dict = {
-        'h5n5': 1,                  # High sampling for rare H5N5 subtype
-        'na-cattle-resolved': 1,    # High sampling for well-resolved cattle
-        'na-cattle-unresolved': 1, # Grab most poorly-resolved cattle
-        'na-noncattle': 1,           # Normal sampling for other North American sequences
-        'sa': 1,
+        'h5n5': 500,                  # High sampling for rare H5N5 subtype
+        'na-cattle-resolved': 100,    # High sampling for well-resolved cattle
+        'na-cattle-unresolved': 1000, # Grab most poorly-resolved cattle
+        'na-noncattle': 25,           # Normal sampling for other North American sequences
+        'sa': 10,
         'europe': 1,
-        'asia': 1
+        'asia': 5
     }
     return spg_dict[wildcards.subset]
 
@@ -323,7 +323,7 @@ rule tree_subtype:
 rule refine_subtype:
     """
     Run clock filtering on a single subtype.
-    This is where bad sequences are filtered out based on molecular clock.
+    Falls back to raw tree if timetree fails (rare subtypes pass unfiltered).
     """
     input:
         tree = rules.tree_subtype.output.tree,
@@ -348,7 +348,10 @@ rule refine_subtype:
             --coalescent {params.coalescent} \
             --date-confidence \
             --date-inference {params.date_inference} \
-            --clock-filter-iqd {params.clock_filter_iqd}
+            --clock-filter-iqd {params.clock_filter_iqd} \
+        || (echo "{wildcards.segment}/{wildcards.subtype}: clock filtering failed, dropping sequences" >> results/{wildcards.region}/clock_filter_failures.log && \
+            touch {output.tree} && \
+            echo '{{}}' > {output.node_data})
         """
 
 
