@@ -51,7 +51,7 @@
       "type": "categorical"
     },
     {
-      "key": "domestic_status",
+      "key": "domesticstatus",
       "title": "Domestic Status",
       "type": "categorical"
     },
@@ -101,7 +101,7 @@
     "country",
     "subtype",
     "division",
-    "domestic_status",
+    "domesticstatus",
     "flyway",
     "order"
   ],
