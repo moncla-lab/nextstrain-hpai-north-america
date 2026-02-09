@@ -160,7 +160,7 @@ blackscoter	blackscoter	Melanitta americana	duck	anseriformes	wild	clara_nam,cla
 blackskimmer	blackskimmer	Rynchops niger	seabird	charadriiformes	wild	clara_nam,clara_birds,clara_global
 blackswan	blackswan	Cygnus atratus	swan	anseriformes	wild	clara_nam,clara_birds,clara_global
 blackswift	blackswift	Cypseloides niger	swift	apodiformes	wild	clara_nam,clara_global
-blackthroatedcrane	blackneckedcrane	Grus nigricollis	crane	gruiformes	wild 	jordan,clara_global
+blackthroatedcrane	blackneckedcrane	Grus nigricollis	crane	gruiformes	wild	jordan,clara_global
 blackturnstone	blackturnstone	Arenaria melanocephala	wader	charadriiformes	wild	clara_nam,clara_global
 blackvulture	blackvulture	Coragyps atratus	raptor	accipitriformes	wild	clara_nam,clara_birds,clara_global
 blhgull						jordan
@@ -295,7 +295,7 @@ commonketrel	common_kestrel		raptor	falconiformes		clara_birds
 commonkingfisher						jordan
 commonloon	commonloon	Gavia immer	duck	gaviiformes	wild	clara_nam,clara_global
 commonmagpie	common_green_magpie		passerine	passeriformes		clara_birds
-commonmerganser	commonmerganser	Mergus merganser	duck	anseriformes	wild 	clara_nam
+commonmerganser	commonmerganser	Mergus merganser	duck	anseriformes	wild	clara_nam
 commonmoorhen						jordan
 commonmurre	commonmurre	Uria aalge	gull	charadriiformes	wild	clara_nam,clara_global
 commonmyna	common_myna		passerine	passeriformes		clara_birds
@@ -712,7 +712,7 @@ netta_rufina	red-crested_pochard		duck	anseriformes		clara_birds
 nightheron						jordan
 nightingale	nightingale		passerine	passeriformes		clara_birds
 northen_pintail	northern_pintail		duck	anseriformes		clara_birds
-northernfulmar	northernfulmar	Fulmarus glacialis	seabird	procellariiformes	wild 	clara_nam,clara_global
+northernfulmar	northernfulmar	Fulmarus glacialis	seabird	procellariiformes	wild	clara_nam,clara_global
 northerngannet	northerngannet	Morus bassanus	seabird	suliformes	wild	clara_nam,clara_birds,clara_global
 northerngiantpetrel						jordan
 northerngoshawk	northern_goshawk		raptor	accipitriformes		clara_birds,clara_global
@@ -827,7 +827,7 @@ redheadduck	redheadduck	Aythya americana	duck	anseriformes	wild	clara_nam,clara_
 redkite						jordan
 redknot	red_knot	Calidris canutus	wader	charadriiformes	wild	clara_birds,jordan,clara_global
 redneckedgrebe	redneckedgrebe	Podiceps grisegena	grebe	podicipediformes	wild	clara_nam,clara_global
-redneckedphalarope	redneckedphalarope	Phalaropus lobatus	wader	charadriiformes	wild 	clara_nam,clara_global
+redneckedphalarope	redneckedphalarope	Phalaropus lobatus	wader	charadriiformes	wild	clara_nam,clara_global
 redshoulderedhawk	redshoulderedhawk	Buteo lineatus	raptor	accipitriformes	wild	clara_nam,clara_birds,clara_global
 redtailedhawk	redtailedhawk	Buteo jamaicensis	raptor	accipitriformes	wild	clara_nam,clara_birds,clara_global
 redwingedblackbird	redwingedblackbird	Agelaius phoeniceus	passerine	passeriformes	wild	clara_nam
@@ -1070,3 +1070,5 @@ yellowleggedgull	yellow-legged_gull	Larus michahellis	gull	charadriiformes	wild	
 yellowleggendgull						jordan,clara_global
 zoopelican						jordan,clara_global
 cattle	cattle	Bos taurus	cattle	artiodactyla	domestic	clara_nam
+dairycattle	cattle	Bos taurus	cattle	artiodactyla	domestic	clara_nam
+dairycow	cattle	Bos taurus	cattle	artiodactyla	domestic	clara_nam

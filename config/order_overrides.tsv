@@ -13,10 +13,11 @@ coyote	carnivora
 greyseal	carnivora
 wildmink	carnivora
 virginiaopossum	didelphimorphia
-bottlenosedolphin	artiodactyl
-dolphin	artiodactyl
-dairycattle	artiodactyl
-goat	artiodactyl
+bottlenosedolphin	artiodactyla
+dolphin	artiodactyla
+dairycattle	artiodactyla
+dairycow	artiodactyla
+goat	artiodactyla
 lesserscaup	anseriformes
 greattailedgrackle	passeriformes
 americanraven	passeriformes
