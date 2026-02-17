@@ -1,5 +1,9 @@
 import json
 import os
+import sys
+
+# this is for compatibility with other builds like the CEIRR build
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import numpy as np
 import pandas as pd
