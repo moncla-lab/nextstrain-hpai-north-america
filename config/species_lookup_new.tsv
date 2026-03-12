@@ -1,0 +1,1072 @@
+	strain_host	corrected_host	latin_name	category	order	domesticstatus	source
+0	?anserbrachyrhynchus	pinkfootedgoose	Anser brachyrhynchus	goose	anseriformes	wild	jordan,clara_global
+1	aalopochenaegyptiaca	egyptiangoose	Alopochen aegyptiaca	goose	anseriformes	wild	jordan,clara_global
+2	african_goose	africangoose		goose	anseriformes	domestic	clara_birds
+3	africanbarnowl	westernbarnowl	Tyto alba	owl	strigiformes	wild	jordan
+4	africanblackoystercatcher	africanoystercatcher	Haematopus moquini	wader	charadriiformes	wild	jordan
+5	africancrownedcrane	africancrownedcrane	Balearica regulorum	crane	gruiformes	wild	clara_nam
+6	africanfisheagle	africanfisheagle	Icthyophaga vocifer	eagle	accipitriformes	wild	jordan
+7	africangoose	africangoose	Anser cygnoides domesticus	goose	anseriformes	domestic	clara_nam,clara_birds,clara_global
+8	africanoystercatcher	africanoystercatcher	Haematopus moquini	wader	charadriiformes	wild	jordan
+9	africanpenguin	africanpenguin	Spheniscus demersus		sphenisciformes	unknown	jordan
+10	aix_sponsa	woodduck	Aix sponsa	duck	anseriformes	wild 	clara_birds
+11	amazonparrot	amazonparrot	Amazona	parrot	psittaciformes	unknown	clara_nam,clara_global
+12	american_coot	americancoot	Fulica americana	coot	gruiformes	wild	clara_birds
+13	american_green_winged_teal	americangreenwingedteal		duck	anseriformes	wild	clara_birds
+14	american_oystercatcher	americanoystercatcher		wader	charadriiformes	wild 	clara_birds
+15	American_Pekin_duck	pekinduck	Anas platyrhynchos	duck	anseriformes	domestic	clara_birds
+16	american_widgeon	americanwigeon	Mareca americana	duck	anseriformes	wild	clara_birds
+17	american_wigeon	americanwigeon	Mareca americana	duck	anseriformes	wild	clara_birds
+18	americanblackduck	americanblackduck	Anas rubripes	duck	anseriformes	wild	clara_nam,clara_birds,clara_global
+19	americanbluewingedteal	bluewingedteal	Spatula discors	duck	anseriformes	wild	clara_nam,clara_birds
+20	americanbuffgoose	americanbuffgoose	Anser anser domesticus	goose	anseriformes	domestic	clara_nam,clara_birds,clara_global
+21	americancoot	americancoot	Fulica americana	crane	gruiformes	wild	clara_nam,clara_global
+22	americancrow	americancrow	Corvus brachyrhynchos	passerine	passeriformes	wild	clara_nam,clara_birds,clara_global
+23	americangoshawk	americangoshawk	Astur atricapillus	raptor	accipitriformes	wild	clara_nam
+24	americangreen_wingedteal	americangreenwingedteal	Anas carolinensis	duck	anseriformes	wild	clara_birds
+25	americangreen-wingedteal	americangreenwingedteal	Anas carolinensis	duck	anseriformes	wild	clara_birds
+26	americangreenwingedteal	americangreenwingedteal	Anas carolinensis	duck	anseriformes	wild	clara_nam,clara_global
+27	americankestrel	americankestrel	Falco sparverius	raptor	falconiformes	wild	clara_nam,clara_global
+28	americanpelican	americanwhitepelican	Pelecanus erythrorhynchos	pelican	pelecaniformes	wild	clara_nam,clara_birds,clara_global
+29	americanraven	commonraven	Corvus corax 	passerine	passeriformes	wild	clara_nam,clara_global
+30	americanrobin	americanrobin	Turdus migratorius	passerine	passeriformes	wild	clara_nam,clara_global
+31	americanwhitepelican	americanwhitepelican	Pelecanus erythrorhynchos	pelican	pelecaniformes	wild	clara_nam,clara_birds,clara_global
+32	americanwidgeon	americanwigeon	Mareca americana	duck	anseriformes	wild	jordan
+33	americanwigeon	americanwigeon	Mareca americana	duck	anseriformes	wild	clara_nam,clara_birds,clara_global
+34	americanwoodcock	americanwoodcock	Scolopax minor	wader	charadriiformes	wild	jordan
+35	americanwoodstork	americanwoodstork	Mycteria americana	wader	ciconiiformes	wild	clara_nam
+36	anade	duck			unknown	unknown	jordan,clara_global
+37	anas_acuta	northernpintail	Anas acuta	duck	anseriformes	wild	clara_birds
+38	anas_americana	americanwigeon	Mareca americana	duck	anseriformes	wild	clara_birds
+39	anas_carolinensis	americangreenwingedteal	Anas carolinensis	duck	anseriformes	wild	clara_birds
+40	anas_clypeata	northernshoveler	Spatula clypeata	duck	anseriformes	wild	clara_birds
+41	anas_crecca	eurasiangreenwingedteal	Anas crecca	duck	anseriformes	wild	clara_birds
+42	anas_cyanoptera	cinnamonteal		duck	anseriformes	wild	clara_birds
+43	anas_discors	bluewingedteal	Spatula discors	duck	anseriformes	wild	clara_birds
+44	anas_georgica	yellowbilledpintail	Anas georgica	duck	anseriformes	wild	clara_birds
+45	anas_plathyrhynchos	mallard	Anas platyrhynchos	duck	anseriformes	wild	clara_birds
+46	anas_platyrhynchos	mallard	Anas platyrhynchos	duck	anseriformes	wild	clara_birds
+47	anas_platyrhynchos_var._domesticus	domesticmallard	Anas platyrhynchos	duck	anseriformes	domestic	clara_birds
+48	anas_platyrhynchos_x_anas_acuta	mallardpintailhybrid		duck	anseriformes	domestic	clara_birds
+49	anas_querquedula	gargeny	Anas querquedula	duck	anseriformes	wild	clara_birds
+50	anas_rubripes	americanblackduck	Anas rubripes	duck	anseriformes	wild	clara_birds
+51	anas_sp.	duck		duck	anseriformes	unknown	clara_birds
+52	anas_strepera	gadwall	Mareca strepera	duck	anseriformes	wild	clara_birds
+53	anascrecca	eurasiangreenwingedteal	Anas crecca	duck	anseriformes	wild	jordan
+54	anaspenelope	eurasianwigeon	Mareca penelope	duck	anseriformes	wild	clara_global
+55	anasplatyrhynchos	mallard	Anas platyrhynchos	duck	anseriformes	wild	clara_nam,clara_birds,clara_global
+56	anasplatyrhynchosdomestica	domesticduck	Anas platyrhynchos	duck	anseriformes	domestic	clara_birds,jordan,clara_global
+57	anasplatyrhynchosdomesticus	domesticduck	Anas platyrhynchos	duck	anseriformes	domestic	clara_birds,jordan,clara_global
+58	anatinae	wildduck	Anatidae	duck	anseriformes	wild	clara_nam
+59	animal	animal		animal	animal	unknown	clara_birds
+60	anser			goose	anseriformes	unknown	jordan
+61	anser_albifrons	greaterwhitefrontedgoose		goose	anseriformes	wild 	clara_birds
+62	anser_caerulescens	snowgoose	Anser caerulescens	goose	anseriformes	wild	clara_birds
+63	anser_cygnoides	swangoose	Anser cygnoides	goose	anseriformes	unknown	clara_birds
+64	anser_fabalis	beangoose	Anser fabalis	goose	anseriformes	wild	clara_birds
+65	anseralbifrons	greaterwhitefrontedgoose	Anser albifrons	goose	anseriformes	wild	clara_birds,clara_global
+66	anseranser	greylaggoose	Anser anser	goose	anseriformes	unknown	clara_birds,clara_global
+67	anseranserdomesticus	domesticgoose	Anser anser	goose	anseriformes	domestic	clara_birds,clara_global
+68	anserbrachyrhynchus	pinkfootedgoose	Anser brachyrhynchus	goose	anseriformes	wild	clara_birds,jordan
+69	anserbrachyrhynchusanseranser	multispecies				unknown	jordan
+70	ansercygnoides	swangoose	Anser cygnoides	goose	anseriformes	unknown	clara_birds
+71	anserfabalis	beangoose	Anser fabalis	goose	anseriformes	wild	jordan
+72	anseriformes	aquaticbird		waterfowl	anseriformes	unknown	clara_birds
+73	anseriformes_sp.	aquaticbird		avian	anseriformes	unknown	clara_birds
+74	anserindicus	barheadedgoose	Anser indicus	goose	anseriformes	wild	jordan
+75	antarctictern	antarctictern	Sterna vittata	tern	charadriiformes	wild	jordan
+76	aquaticbird	aquaticbird		aquatic_bird	avian	unknown	clara_birds,jordan
+77	aquilafasciata	bonelliseagle	Aquila gasciata	raptor	accipitriformes	wild	jordan
+78	arctictern	arctictern	Sterna paradisaea	tern	charadriiformes	wild	clara_nam,clara_birds,clara_global
+79	ardeaalba	greategret	Ardea alba	egret	pelecaniformes	wild	jordan
+80	ardeacinera	greyheron	Ardea cinerea	heron	pelecaniformes	wild	clara_birds
+81	ardeacinerea	greyheron	Ardea cinerea	heron	pelecaniformes	wild	clara_birds,clara_global
+82	arenaria_interpres	ruddyturnstone	Arenaria interpres	wader	charadriiformes	wild	clara_birds
+83	armeniangull	armeniangull	Larus armenicus	gull	charadriiformes	wild	jordan
+84	artictern	arctictern	Sterna paradisaea	tern	charadriiformes	wild	jordan,clara_global
+85	asianopenbill	asianopenbill	Anastomus oscitans	wader	ciconiiformes	wild	jordan
+86	atlanticpuffin	atlanticpuffin	Fratercula arctica	seabird	charadriiformes	wild	clara_nam
+87	audouinsgull	audouinsgull	Ichthyaetus audouinii	gull	charadriiformes	wild	jordan
+88	australianbrushturkey	australianbrushturkey	Alectura lathami	turkey	galliformes	unknown	jordan,clara_global
+89	aves	aves			unknown	unknown	clara_nam,clara_global
+90	avian	avian		avian	unknown	unknown	clara_nam,clara_birds,clara_global
+91	aythya_collaris	ringneckedduck		duck	anseriformes	wild	clara_birds
+92	aythyafuligula	tuftedduck	Aythya fuligula	duck	anseriformes	wild	clara_birds,jordan,clara_global
+93	babbler	oldworldbabbler		passerine	passeriformes	wild	clara_birds
+94	backheadedgull	blackheadedgull	Chroicocephalus ridibundus	gull	charadriiformes	wild	jordan
+95	backyardbird	backyardbird			unknown	domestic	clara_nam,clara_global
+96	backyardchicken	chicken	Gallus gallus	chicken	galliformes	domestic	jordan,clara_global
+97	backyardduck	backyardduck		duck	anseriformes	domestic	jordan,clara_global
+98	backyardpoultry			unknown	unknown	domestic	jordan
+99	backyardturkey	backyardturkey		turkey	galliformes	domestic	jordan,clara_global
+100	baerspochard	baerspochard	Aythya baeri	duck	anseriformes	unknown	clara_nam
+101	baikalteal	baikalteal	Sibirionetta formosa	duck	anseriformes	wild	clara_nam,clara_birds,clara_global
+102	baldeagle	baldeagle	Haliaeetus leucocephalus	raptor	accipitriformes	wild	clara_nam,clara_birds,clara_global
+103	bandtailedgull	belchergull	Larus belcheri	gull	charadriiformes	wild	jordan,clara_global
+104	bantam	bantam		unknown	galliformes	domestic	clara_birds
+105	bar_headed_goose	barheadedgoose		goose	anseriformes	wild	clara_birds
+106	bar_headedgoose	barheadedgoose		goose	anseriformes	wild	clara_birds
+107	bar-headed_goose_(anser_indicus)	barheadedgoose		goose	anseriformes	wild	clara_birds
+108	bar-headedgoose	barheadedgoose		goose	anseriformes	wild	clara_birds
+109	barheadedgoose	barheadedgoose	Anser indicus	goose	anseriformes	wild	clara_nam,clara_birds,clara_global
+110	barn_swallow	barnswallow		passerine	passeriformes	wild	clara_birds
+111	barnaclegoose	barnaclegoose	Branta leucopsis	goose	anseriformes	wild	clara_birds,clara_global
+112	barnowl	barnowl	Tyto alba	owl	strigiformes	wild	clara_nam,clara_birds,clara_global
+113	barnswallow	barnswallow	Hirundo rustica	passerine	passeriformes	wild	clara_nam,clara_birds
+114	barredowl	barredowl	Strix varia	owl	strigiformes	wild	clara_nam,clara_birds,clara_global
+115	barrowsgoldeneye	barrowsgoldeneye	Bucephala islandica	duck	anseriformes	wild	clara_nam,clara_global
+116	bean_goose	beangoose		goose	anseriformes	wild	clara_birds
+117	beangoose	beangoose		goose	anseriformes	wild	clara_birds,clara_global
+118	beardedvulture	beardedvulture	Gypaetus barbatus	raptor	accipitriformes	wild	clara_birds,jordan,clara_global
+119	belchergull	belchergull	Larus belcheri	gull	charadriiformes	wild	jordan,clara_global
+120	bewick_swan	bewicksswan	Cygnus columbianus bewickii	swan	anseriformes	wild	clara_birds
+121	bewick's_swan	bewicksswan	Cygnus columbianus bewickii	swan	anseriformes	wild	clara_birds
+122	bewicksswan	bewicksswan	Cygnus columbianus bewickii	swan	anseriformes	wild	jordan
+123	bird	avian		avian	avian	unknown	clara_birds
+124	bkswan					unknown	jordan
+125	blachheadedgull	blackheadedgull	Chroicocephalus ridibundus	gull	charadriiformes	wild	jordan
+126	black_crowned_night_heron	blackcrownednightheron	Nycticorax nycticorax	heron	pelecaniformes	wild	clara_birds
+127	black_duck	americanblackduck	Anas rubripes	duck	anseriformes	wild	clara_birds
+128	black_scoter	blackscoter	Melanitta americana	duck	anseriformes	wild	clara_birds
+129	black_swan	blackswan	Cygnus atratus	swan	anseriformes	wild	clara_birds
+130	black-crownednightheron	blackcrownednightheron	Nycticorax nycticorax	heron	pelecaniformes	wild	clara_birds
+131	black-headedgoose	blackheadedgoose	unknown	goose	anseriformes	unknown	clara_birds
+132	black-headedgull	blackheadedgull	Chroicocephalus ridibundus	gull	charadriiformes	wild	clara_birds
+133	black-neckedgrebe	earedgrebe	Podiceps nigricollis	grebe	podicipediformes	wild	clara_birds
+134	blackbackedgull	blackbackedgull		gull	charadriiformes	wild	jordan,clara_global
+135	blackbelliedplover	blackbelliedplover	Pluvialis squatarola	wader	charadriiformes	wild	clara_nam
+136	blackbelliedwhistlingduck	blackbelliedwhistlingduck	Dendrocygna autumnalis	duck	anseriformes	wild	jordan
+137	blackbilledmagpie	blackbilledmagpie	Pica hudsonia	passerine	passeriformes	wild	clara_nam,clara_global
+138	blackbird	blackbird	Turdus merula	passerine	passeriformes	wild	clara_nam,clara_birds,clara_global
+139	blackbrant	blackbrant	Branta bernicla nigricans	goose	anseriformes	wild	clara_nam,clara_global
+140	blackbulbul	blackbulbul	Hypsipetes leucocephalus	passerine	passeriformes	wild	clara_birds
+141	blackchicken	chicken	Gallus gallus	chicken	galliformes	domestic	jordan
+142	blackcrownednightheron	blackcrownednightheron	Nycticorax nycticorax	heron	pelecaniformes	wild	clara_nam,clara_global
+143	blackduck	americanblackduck		duck	anseriformes	wild	clara_birds
+144	blackfacedspoonbill	blackfacedspoonbill	Platalea minor	wader	pelecaniformes	wild	jordan,clara_global
+145	blackheadeadgull	blackheadedgull	Chroicocephalus ridibundus	gull	charadriiformes	wild	jordan,clara_global
+146	blackheadedgull	blackheadedgull	Chroicocephalus ridibundus	gull	charadriiformes	wild	clara_birds,clara_global
+147	blackheadedheron	blackheadedheron	Ardea melanocephala	heron	pelecaniformes	wild	jordan
+148	blackleggedkitiwake	blackleggedkittiwake	Rissa tridactyla	gull	charadriiformes	wild	jordan
+149	blackleggedkittiwake	blackleggedkittiwake	Rissa tridactyla	gull	charadriiformes	wild	clara_nam,clara_global
+150	blackneckcrane	blackneckedcrane	Grus nigricollis	crane	gruiformes	wild 	jordan
+151	blackneckedgrebe	earedgrebe	Podiceps nigricollis	grebe	podicipediformes	wild	clara_birds
+152	blackneckedswan	blackneckswan	Cygnus melancoryphus	swan	anseriformes	unknown	jordan,clara_global
+153	blackneckswan	blackneckswan	Cygnus melancoryphus	swan	anseriformes	unknown	clara_nam
+154	blacknestedgrebe	earedgrebe	Podiceps nigricollis	duck	anseriformes	wild	clara_birds
+155	blackscoter	blackscoter	Melanitta americana	duck	anseriformes	wild	clara_nam,clara_global
+156	blackskimmer	blackskimmer	Rynchops niger	seabird	charadriiformes	wild	clara_nam,clara_birds,clara_global
+157	blackswan	blackswan	Cygnus atratus	swan	anseriformes	wild	clara_nam,clara_birds,clara_global
+158	blackswift	blackswift	Cypseloides niger	swift	apodiformes	wild	clara_nam,clara_global
+159	blackthroatedcrane	blackneckedcrane	Grus nigricollis	crane	gruiformes	wild 	jordan,clara_global
+160	blackturnstone	blackturnstone	Arenaria melanocephala	wader	charadriiformes	wild	clara_nam,clara_global
+161	blackvulture	blackvulture	Coragyps atratus	raptor	accipitriformes	wild	clara_nam,clara_birds,clara_global
+162	blhgull	blackheadedgull	Chroicocephalus ridibundus	gull	charadriiformes	wild	jordan
+163	blue_winged-teal	bluewingedteal	Spatula discors	duck	anseriformes	wild	clara_birds
+164	bluebird	bluebird	Sialia	passerine	passeriformes	wild	jordan
+165	bluecrane	bluecrane	Grus paradisea	crane	gruiformes	wild	jordan
+166	bluegoose	snowgoose	Anser caerulescens	goose	anseriformes	wild	jordan
+167	bluejay	bluejay	Cyanocitta cristata	passerine	passeriformes	wild	clara_nam,clara_global
+168	bluemagpie	redbilledbluemagpie	Urocissa erythroryncha	magpie	passeriformes	wild	clara_birds
+169	bluewingedteal	bluewingedteal	Spatula discors	duck	anseriformes	wild	clara_nam,clara_birds,clara_global
+170	bonapartesgull	bonapartesgull	Chroicocephalus philadelphia	gull	charadriiformes	wild	clara_nam,clara_global
+171	brahmachicken	brahmachicken		chicken	galliformes	domestic	clara_birds,jordan
+172	brandtgoose	brant	Branta bernicla	goose	anseriformes	wild	clara_nam
+173	brant	brant	Branta bernicla	goose	anseriformes	wild	clara_nam,clara_global
+174	branta_leucopsis	barnaclegoose	Branta leucopsis	goose	anseriformes	wild	clara_birds
+175	brantacanadensis	canadagoose	Branta canadensis	goose	anseriformes	wild	clara_birds,jordan,clara_global
+176	brantaleucopsis	barnaclegoose	Branta leucopsis	goose	anseriformes	wild	clara_birds,clara_global
+177	brantgoose	brentgoose	Branta bernicla	goose	anseriformes	wild	clara_birds,jordan,clara_global
+178	brazilianteal	brazilianteal	Amazonetta brasiliensis	duck	anseriformes	unknown	clara_nam
+179	breederchicken	breederchicken	Gallus gallus	chicken	galliformes	domestic	clara_birds,jordan
+180	breederduck	breederduck		duck	anseriformes	domestic	clara_birds,jordan
+181	brentgoose	brentgoose	Branta bernicla	goose	anseriformes	wild	clara_birds,clara_global
+182	brewersblackbird	brewersblackbird	Euphagus cyanocephalus	passerine	passeriformes	wild	clara_nam
+183	broadwingedhawk	broadwingedhawk	Buteo platypterus	raptor	accipitriformes	wild	clara_nam,clara_global
+184	broildrduck	domesticduck		duck	anseriformes	domestic	jordan
+185	broiler	chicken	Gallus gallus	chicken	galliformes	domestic	clara_birds,clara_global
+186	broilerbreederschicken	chicken	Gallus gallus	chicken	galliformes	domestic	clara_nam,clara_global
+187	broilerchicken	chicken	Gallus gallus	chicken	galliformes	domestic	clara_nam,clara_birds,clara_global
+188	broilerduck	broilerduck		duck	anseriformes	domestic	clara_birds,jordan
+189	bronzeturkey	bronzeturkey		turkey	galliformes	domestic	clara_birds,jordan
+190	brown_headed_gull	brownheadedgull		gull	charadriiformes	wild	clara_birds
+191	brown_headedgull	brownheadedgull		gull	charadriiformes	wild	clara_birds
+192	brown-headedgull	brownheadedgull		gull	charadriiformes	wild	clara_birds
+193	brown-headgull	brownheadedgull		gull	charadriiformes	wild	clara_birds
+194	brownbooby	brownbooby	Sula leucogaster	seabird	suliformes	wild	jordan,clara_global
+195	brownheadedgull	brownheadedgull	Chroicocephalus brunnicephalus	gull	charadriiformes	wild	clara_birds,clara_global
+196	brownpelican	brownpelican	Pelecanus occidentalis	pelican	pelecaniformes	wild	clara_nam,clara_global
+197	brownskua	brownskua	Stercorarius antarcticus	seabird	charadriiformes	wild	jordan
+198	bubobubo	eagleowl	Bubo bubo	raptor	accipitriformes	wild	jordan,clara_global
+199	bucefala_clangula	commongoldeneye	Bucephala clangula	duck	anseriformes	wild	clara_birds
+200	bucephala_albeola	bufflehead	Bucephala albeola	duck	anseriformes	wild	clara_birds
+201	bufflehead	bufflehead	Bucephala albeola	duck	anseriformes	wild	clara_nam,clara_birds,clara_global
+202	buffleheadduck	bufflehead	Bucephala albeola	duck	anseriformes	wild	jordan,clara_global
+203	buffneckedibis	buffneckedibis	Theristicus caudatus	wader	pelecaniformes	wild	jordan
+204	bufforpingtonchicken	chicken	Gallus gallus	chicken	galliformes	domestic	jordan
+205	bulbul	bulbul	unknown	passerine	passeriformes	wild	jordan
+206	burrowingowl	burrowingowl	Athene cunicularia	owl	strigiformes	wild	jordan
+207	buteobuteo	commonbuzzard	Buteo buteo	raptor	accipitriformes	wild	clara_birds,clara_global
+208	buzzard	commonbuzzard	Buteo buteo	raptor	accipitriformes	wild	clara_birds,clara_global
+209	cacklinggoose	cacklinggoose	Branta hutchinsii	goose	anseriformes	wild	clara_nam,clara_birds,clara_global
+210	cairina_moschata	muscovyduck	Cairina moschata	duck	anseriformes	unknown	clara_birds
+211	cairinamoschata	muscovyduck	Cairina moschata	duck	anseriformes	unknown	jordan,clara_global
+212	calidris_alba	sanderling	Calidris alba	wader	charadriiformes	wild	clara_birds
+213	calidris_alpina	dunlin	Calidris alpina	wader	charadriiformes	wild	clara_birds
+214	calidris_canutus	redknot	Calidris canutus	wader	charadriiformes	wild	clara_birds
+215	calidris_pusilla	semipalmatedsandpiper	Calidris pusilla	wader	charadriiformes	wild	clara_birds
+216	calidrisalba	sanderling	Calidris alba	wader	charadriiformes	wild	jordan,clara_global
+217	californiacondor	californiacondor	Gymnogyps californianus	raptor	accipitriformes	wild	clara_nam,clara_global
+218	californiagull	californiagull	Larus californicus	gull	charadriiformes	wild	clara_nam,clara_global
+219	camel	camel		camel	camel	unknown	clara_birds
+220	canada_goose	canadagoose	Branta canadensis	goose	anseriformes	wild 	clara_birds
+221	canadagoose	canadagoose	Branta canadensis	goose	anseriformes	wild	clara_nam,clara_birds,clara_global
+222	canine	canine		canine	canine	unknown	clara_birds
+223	canis_lupus_familiaris	canine		canine	canine	unknown	clara_birds
+224	canvasback	canvasback	Aythya valisineria	duck	anseriformes	wild	clara_nam
+225	capebarrengoose	capebarrengoose	Cereopsis novaehollandiae	goose	anseriformes	wild	jordan
+226	capecormorant	capecormorant	Phalacrocorax capensis	seabird	suliformes	wild	jordan
+227	capegannet	capegannet	Morus capensis	seabird	suliformes	wild	jordan
+228	capeteal	capeteal	Anas capensis	duck	anseriformes	unknown	clara_nam,clara_birds,clara_global
+229	captivegoose	goose		goose	anseriformes	unknown	jordan
+230	carolinaduck	woodduck	Aix sponsa	duck	anseriformes	wild	jordan,clara_global
+231	carrioncrow	carrioncrow	Corvus corone	passerine	passeriformes	wild	jordan,clara_global
+232	cascadeduck	cascadeduck		duck	anseriformes	domestic	clara_nam,clara_birds,clara_global
+233	caspiangull	caspiangull	Larus cachinnans	gull	charadriiformes	wild	clara_birds,clara_global
+234	caspiantern	caspiantern	Hydroprogne caspia	tern	charadriiformes	wild	clara_nam,clara_global
+235	cat	feline		feline	carnivora	unknown	clara_birds
+236	catalinamacaw	catalinamacaw	Ara ararauna or Ara macao	parrot	psittaciformes	unknown	clara_nam,clara_global
+237	cattleegret	cattleegret	Ardea ibis	wader	pelecaniformes	wild	clara_nam,clara_birds
+238	ccrow	crow		crow	passeriformes	wild	clara_birds
+239	cgull	gull	unknown	gull	charadriiformes	unknown	jordan
+240	ch	chicken		chicken	galliformes	domestic	clara_birds
+241	chciken	chicken	Gallus gallus	chicken	galliformes	domestic	jordan
+242	chen_canagica	emperorgoose	Anser canagicus	goose	anseriformes	wild	clara_birds
+243	chestnut_teal	chestnutteal	Anas castanea	duck	anseriformes	wild	clara_birds
+244	chestnutmunia	chestnutmunia	Lonchura atricapilla	finch	passeriformes	wild	clara_birds
+245	chestnutteal	chestnutteal	Anas castanea	duck	anseriformes	wild	jordan
+246	chichen	chicken	Gallus gallus	chicken	galliformes	domestic	jordan,clara_global
+247	chick	chicken	Gallus gallus	chicken	galliformes	domestic	jordan
+248	chicken	chicken	Gallus gallus	chicken	galliformes	domestic	clara_nam,clara_birds,clara_global
+249	chickencobb	chicken	Gallus gallus	chicken	galliformes	domestic	jordan
+250	chickenl	chicken	Gallus gallus	chicken	galliformes	domestic	clara_birds,jordan
+251	chiken	chicken	Gallus gallus	chicken	galliformes	domestic	clara_birds,clara_global
+252	chileanflamingo	chileanflamingo	Phoenicopterus chilensis	wader	phoenicopteriformes	unknown	clara_nam
+253	chiloewigeon	chiloewigeon	Mareca sibilatrix	duck	anseriformes	wild	clara_birds,jordan
+254	chinesepondheron	chinesepondheron	Ardeola bacchus	heron	pelecaniformes	wild 	clara_birds
+255	chineseringneckpheasant	commonpheasant	Phasianus colchicus	pheasant	galliformes	wild	clara_nam,clara_birds,clara_global
+256	chinstrappenguin	chinstrappenguin	Pygoscelis antarcticus	penguin	sphenisciformes	wild	jordan
+257	chlidoniashybrida	whiskeredtern	Chlidonias hybrida	tern	charadriiformes	wild	jordan
+258	chroicocephalus_ridibundus	blackheadedgull	Chroicocephalus ridibundus	gull	charadriiformes	wild	clara_birds
+259	chroicocephalusridibundus	blackheadedgull	Chroicocephalus ridibundus	gull	charadriiformes	wild	clara_birds,jordan,clara_global
+260	chukar	chukar	Alectoris chukar	partridge	galliformes	wild	clara_birds
+261	chukkar	chukar	Alectoris chukar	partridge	galliformes	wild	clara_birds,jordan
+262	ciconiaciconia	whitestork	Ciconia ciconia	stork	ciconiiformes	wild	clara_birds,clara_global
+263	cignusolor	muteswan	Cygnus olor	goose	anseriformes	wild	clara_birds,clara_global
+264	cinereousvulture	cinereousvulture	Aegypius monachus	raptor	accipitriformes	wild	clara_birds
+265	cinnamonteal	cinnamonteal	Spatula cyanoptera	duck	anseriformes	wild	clara_nam,clara_global
+266	ck	chicken	Gallus gallus	chicken	galliformes	domestic	clara_birds
+267	clangula_hyemalis	longtailedduck	Clangula hyemalis	duck	anseriformes	wild	clara_birds
+268	cloacalswabece1	unknown	unknown	unknown	unknown	unknown	jordan
+269	columbapalumbus	commonwoodpigeon	Columba palumbus	pigeon	columbiformes	wild	clara_birds,jordan,clara_global
+270	commercialchicken	chicken	Gallus gallus	chicken	galliformes	domestic	jordan
+271	commomteal	eurasianteal	Anas crecca	teal	anseriformes	wild	jordan
+272	common_goldeneye	commongoldeneye	Bucephala clangula	duck	anseriformes	wild	clara_birds
+273	common_pochard	commonpochard	Aythya ferina	duck	anseriformes	wild	clara_birds
+274	common_shelduck	commonshelduck	Tadorna tadorna	duck	anseriformes	wild	clara_birds
+275	common_teal	eurasianteal	Anas crecca	teal	anseriformes	wild	clara_birds
+276	commonbarnowl	barnowl	Tyto alba	owl	strigiformes	wild	clara_nam,clara_global
+277	commonbussard	commonbuzzard	Buteo buteo	raptor	accipitriformes	wild	clara_birds
+278	commonbuzzard	commonbuzzard	Buteo buteo	raptor	accipitriformes	wild	clara_birds,clara_global
+279	commoncoot	commoncoot	Fulica atra	coot	gruiformes	wild	clara_birds,clara_global
+280	commoncormorant	greatcormorant	Phalacrocorax carbo	seabird	suliformes	wild	jordan
+281	commoncrane	commoncrane	Grus grus	crane	gruiformes	wild	clara_birds,clara_global
+282	commoneider	commoneider	Somateria mollissima	duck	anseriformes	wild	clara_nam,clara_birds,clara_global
+283	commoneiders	commoneider	Somateria mollissima	duck	anseriformes	wild	clara_nam,clara_global
+284	commongoldeneye	commongoldeneye	Bucephala clangula	duck	anseriformes	wild	clara_nam,clara_birds,clara_global
+285	commongrackle	commongrackle	Quiscalus quiscula	passerine	passeriformes	wild	clara_nam,clara_global
+286	commongull	commongull	Larus canus	gull	charadriiformes	wild	clara_birds,clara_global
+287	commonkestel	commonkestrel	Falco tinnunculus	raptor	falconiformes	wild	jordan
+288	commonkestral	commonkestrel	Falco tinnunculus	raptor	falconiformes	wild	clara_birds
+289	commonkestrel	commonkestrel	Falco tinnunculus	raptor	falconiformes	wild	clara_birds,clara_global
+290	commonketrel	commonkestrel	Falco tinnunculus	raptor	falconiformes	wild	clara_birds
+291	commonkingfisher	eurasiankingfisher	Alcedo atthis	kingfisher	coraciiformes	wild	jordan
+292	commonloon	commonloon	Gavia immer	duck	gaviiformes	wild	clara_nam,clara_global
+293	commonmagpie	commongreenmagpie	Cissa chinensis	passerine	passeriformes	wild	clara_birds
+294	commonmerganser	commonmerganser	Mergus merganser	duck	anseriformes	wild 	clara_nam
+295	commonmoorhen	waterhen	Gallinula chloropus	wader	gruiformes	wild	jordan
+296	commonmurre	commonmurre	Uria aalge	gull	charadriiformes	wild	clara_nam,clara_global
+297	commonmyna	commonmyna	Acridotheres tristis	passerine	passeriformes	wild	clara_birds
+298	commonpheasant	commonpheasant	Phasianus colchicus	pheasant	galliformes	wild	clara_birds,clara_global
+299	commonpochard	commonpochard	Aythya ferina	duck	anseriformes	wild	clara_birds
+300	commonporchard	commonpochard	Aythya ferina	duck	anseriformes	wild	jordan
+301	commonquail	quail	Coturnix coturnix	quail	galliformes	unknown	jordan,clara_global
+302	commonraven	commonraven	Corvus corax	passerine	passeriformes	wild	clara_nam,clara_birds,clara_global
+303	commonshelduck	commonshelduck	Tadorna tadorna	duck	anseriformes	wild	jordan,clara_global
+304	commonsnipe	commonsnipe	Gallinago gallinago	wader	charadriiformes	wild	jordan
+305	commonteal	eurasianteal	Anas crecca	duck	anseriformes	wild	clara_birds,clara_global
+306	commontern	commontern	Sterna hirundo	tern	charadriiformes	wild	clara_nam,clara_birds,clara_global
+307	comongoldeneye	commongoldeneye	Bucephala clangula	duck	anseriformes	wild	jordan
+308	condor	condor	unknown	raptor	charadriiformes	wild	clara_birds
+309	coopershawk	coopershawk	Accipiter cooperii	raptor	accipitriformes	wild	clara_nam,clara_birds,clara_global
+310	coopersshawk	coopershawk	Accipiter cooperii	raptor	accipitriformes	wild	clara_nam,clara_global
+311	coot	coot	Fulica	coot	gruiformes	wild	clara_birds,clara_global
+312	copsychussaularis	orientalmagpierobin	Copsychus saularis	passerine	passeriformes	wild	jordan
+313	coragypsatratus	blackvulture	Coragyps atratus	raptor	accipitriformes	wild	jordan
+314	cormorant	cormorant	Phalacrocoracidae	cormorant	suliformes	wild	clara_nam,clara_birds,clara_global
+315	corvus_frugilegus	rook		passerine	passeriformes	wild	clara_birds
+316	corvuscorvus			passerine	passeriformes	wild	jordan,clara_global
+317	corvusmonedula	eurasianjackdaw	Coloeus monedula	passerine	passeriformes	wild	jordan,clara_global
+318	corvusossifragus	fishcrow	Corvus ossifragus	crow	passeriformes	wild	clara_nam,clara_global
+319	coscorobaswan	coscorobaswan	Coscoroba coscoroba	swan	anseriformes	wild	jordan,clara_global
+320	coturnix	quail		quail	galliformes	unknown	clara_birds
+321	crane	crane	Gruidae	crane	gruiformes	wild	clara_nam,clara_birds,clara_global
+322	crested_eagle	crestedeagle	Morphnus guianensus	raptor	accipitriformes	wild	clara_birds
+323	crestedcaracara	crestedcaracara	Caracara plancus	raptor	falconiformes	wild	clara_nam,clara_global
+324	crestedeagle	crestedeagle	Morphnus guianensus	raptor	accipitriformes	wild	clara_birds
+325	crestedgoshawk	crestedgoshawk	Lophospiza trivirgata	raptor	accipitriformes	wild	clara_birds
+326	crestedjay	crestedjayshrike	Platylophus galericulatus	passerine	passeriformes	wild	jordan
+327	crestedmyna	crestedmyna	Acridotheres cristatellus	passerine	passeriformes	wild	clara_birds
+328	crestedscreamer	crestedscreamer	Chauna torquata	wader	anseriformes	unknown	clara_nam
+329	crow	crow	Corvus brachyrhynchos	passerine	passeriformes	wild	clara_nam,clara_birds,clara_global
+330	crownedcormorant	crownedcormorant	Microcarbo coronatus	cormorant	suliformes	wild	jordan
+331	crownedcranezoo	greycrownedcrane	Balearica regulorum	crane	gruiformes	unknown	jordan,clara_global
+332	curlew	curlew		wader	charadriiformes	wild	clara_birds,clara_global
+333	cygnus			swan	anseriformes	unknown	jordan,clara_global
+334	cygnus_columbianus	tundraswan	Cygnus columbianus	swan	anseriformes	wild	clara_birds
+335	cygnus_cygnus	whooperswan	Cygnus cygnus	swan	anseriformes	wild	clara_birds
+336	cygnus_olor	muteswan	Cygnus olor	swan	anseriformes	wild	clara_birds
+337	cygnusatratus	blackswan	Cygnus atratus	swan	anseriformes	wild	jordan
+338	cygnuscolumbianus	tundraswan	Cygnus columbianus	swan	anseriformes	wild	jordan,clara_global
+339	cygnuscygnus	whooperswan	Cygnus cygnus	swna	anseriformes	wild	clara_birds,clara_global
+340	cygnusolor	muteswan	Cygnus olor	swan	anseriformes	wild	clara_birds,clara_global
+341	dack	duck		duck	anseriformes	unknown	clara_birds
+342	dalmatianpelican	dalmatianpelican	Pelecanus crispus	pelican	pelecaniformes	unknown	clara_nam,clara_birds,clara_global
+343	darkeyedjunco	darkeyedjunco	Junco hyemalis	passerine	passeriformes	wild	clara_nam
+344	daurianstarling	daurianstarling	Agropsar sturninus	passerine	passeriformes	wild	clara_birds
+345	decoyduck					unknown	jordan
+346	dendrocygna_viduata	whitefacedwhistlingduck	Dendrocygna viduata	duck	anseriformes	wild	clara_birds
+347	dk	avian		avian	avian	unknown	clara_birds
+348	dog	canine		canine	canine	unknown	clara_birds
+349	domestic_duck	duck		duck	anseriformes	domestic	clara_birds
+350	domestic_green_winged_teal	americangreenwingedteal	Anas carolinensis	duck	anseriformes	domestic	clara_birds
+351	domestic_green-winged_teal	americangreenwingedteal	Anas carolinensis	duck	anseriformes	domestic	clara_birds
+352	domesticchicken	chicken	Gallus gallus	chicken	galliformes	domestic	jordan
+353	domesticduck	domesticduck		duck	anseriformes	domestic	clara_nam,clara_birds,clara_global
+354	domesticgoose	domesticgoose	Anser anser domesticus or anser cygnoides domesticus	goose	anseriformes	domestic	clara_nam,clara_birds,clara_global
+355	domesticgreen_wingedteal	americangreenwingedteal	Anas carolinensis	duck	anseriformes	domestic	clara_birds
+356	domesticgreen-wingedteal	americangreenwingedteal	Anas carolinensis	duck	anseriformes	domestic	clara_birds
+357	domesticmallard	mallard	Anas platyrhynchos	duck	anseriformes	domestic	clara_birds,jordan
+358	domesticmallardduck	mallard	Anas platyrhynchos	duck	anseriformes	domestic	clara_birds
+359	domesticturkey	domesticturkey	Meleagris gallopavo	turkey	galliformes	domestic	clara_nam,clara_birds,clara_global
+360	donkey	donkey		donkey	equine	unknown	clara_birds
+361	doublecrestedco	doublecrestedcormorant	Phalacrocorax auritus	cormorant	suliformes	wild	jordan
+362	doublecrestedcormorant	doublecrestedcormorant	Phalacrocorax auritus	cormorant	suliformes	wild	clara_nam,clara_birds,clara_global
+363	dove	dove		dove	columbiformes	wild	clara_nam,clara_birds,clara_global
+364	dovekie	dovekie	Alle alle	seabird	charadriiformes	wild	clara_nam
+365	duck	duck		duck	anseriformes	unknown	clara_nam,clara_birds,clara_global
+366	duck_broiler	duck		duck	anseriformes	domestic	clara_birds
+367	duckbroiler	duck		duck	anseriformes	domestic	clara_birds,jordan
+368	ducks					unknown	jordan
+369	dunlin	dunlin	Calidris alpina	wader	charadriiformes	wild	clara_nam,clara_global
+370	eagle	eagle		raptor	accipitriformes	wild	clara_nam,clara_birds,clara_global
+371	eagleowl	eurasianeagleowl	Bubo bubo	owl	strigiformes	wild	clara_birds,clara_global
+372	earedgrebe	earedgrebe	Podiceps nigricollis	grebe	podicipediformes	wild	clara_nam,clara_birds,clara_global
+373	easternbuzzard	easternbuzzard	Buteo japonicus	raptor	accipitriformes	wild	clara_birds,jordan,clara_global
+374	easternscreechowl	easternscreechowl	Megascops asio	owl	strigiformes	wild	clara_nam
+375	eg	avian		avian	avian	unknown	clara_birds
+376	egret	egret		heron	pelecaniformes	wild	clara_birds,clara_global
+377	egrettagarzetta	littleegret	Egretta garzetta	heron	pelecaniformes	wild	clara_birds,jordan,clara_global
+378	egyptiangoose	egyptiangoose	Alopochen aegyptiaca	goose	anseriformes	wild	clara_nam,clara_birds,clara_global
+379	eider	commoneider	Somateria mollissima	duck	anseriformes	wild	clara_nam,clara_global
+380	embdengoose	embdengoose	Anser anser domesticus or anser cygnoides domesticus	goose	anseriformes	domestic	clara_nam,clara_birds,clara_global
+381	emperor_goose	emperorgoose	Anser canagicus	goose	anseriformes	wild	clara_birds
+382	emperorgoose	emperorgoose	Anser canagicus	goose	anseriformes	wild	jordan
+383	emu	emu	Dromaius novaehollandiae	emu	casuariiformes	domestic	clara_nam,clara_birds,clara_global
+384	emy	emu	Dromaius novaehollandiae	emu	casuariiformes	domestic	jordan
+385	environment	environment		environment	environmen	unknown	clara_birds
+386	eq	equine		equine	equine	unknown	clara_birds
+387	equi_2	equine		equine	equine	unknown	clara_birds
+388	equine	equine		equine	equine	unknown	clara_birds
+389	equus_caballus	equine		equine	equine	unknown	clara_birds
+390	equus_ferus_caballus	equine		equine	equine	unknown	clara_birds
+391	Eurasian_coot	eurasiancoot	Fulica atra	coot	gruiformes	wild	clara_birds
+392	eurasian_eagle_owl	eurasianeagleowl	Bubo bubo	owl	strigiformes	wild	clara_birds
+393	eurasiancollareddove	eurasiancollareddove	Streptopelia decaocto	dove	columbiformes	wild	clara_nam,clara_global
+394	eurasiancoot	eurasiancoot	Fulica atra	coot	gruiformes	wild	jordan
+395	eurasiancurlew	eurasiancurlew	Numenius arquata	wader	charadriiformes	wild	clara_birds,clara_global
+396	eurasianeagelowl	eurasianeagleowl	Bubo bubo	owl	strigiformes	wild	clara_birds
+397	eurasianeagleowl	eurasianeagleowl	Bubo bubo	owl	strigiformes	wild	clara_birds,clara_global
+398	eurasiangoshawk	eurasiangoshawk	Astur gentilis	raptor	accipitriformes	wild	jordan
+399	eurasianherringgull	eurasianherringgull	Larus argentatus	gull	charadriiformes	wild	jordan
+400	eurasianjay	eurasianjay	Garrulus glandarius	passerine	passeriformes	wild	jordan,clara_global
+401	eurasianmagpie	eurasianmagpie	Pica pica	passerine	passeriformes	wild	jordan,clara_global
+402	eurasianoystercatcher	eurasianoystercatcher	Haematopus ostralegus	wader	charadriiformes	wild	jordan,clara_global
+403	eurasiansparrowhawk	eurasiansparrowhawk	Accipiter nisus	raptor	accipitriformes	wild	clara_birds,clara_global
+404	eurasianspoonbill	eurasianspoonbill	Platalea leucorodia	spoonbill	pelecaniformes	wild	clara_birds,clara_global
+405	eurasianteal	eurasiangreenwingedteal	Anas crecca	duck	anseriformes	wild	clara_birds,clara_global
+406	eurasianwigeon	eurasianwigeon	Mareca penelope	duck	anseriformes	wild	clara_birds,clara_global
+407	eurasianwoodcock	eurasianwoodcock	Scolopax rusticola	wader	charadriiformes	wild	jordan
+408	europeanbeeeater	europeanbeeeater	Merops apiaster	beeeater	coraciiformes	wild	jordan
+409	europeanherringgull	eurasianherringgull	Larus argentatus	gull	charadriiformes	wild	clara_birds,clara_global
+410	europeanherringgullnorway	eurasianherringgull	Larus argentatus	gull	charadriiformes	wild	jordan
+411	europeanrobin	europeanrobin	Erithacus rubecula	passerine	passeriformes	wild	jordan
+412	europeanstarling	europeanstarling	Sturnus vulgaris	passerine	passeriformes	wild	clara_nam
+413	europeanteal	eurasiangreenwingedteal	Anas crecca	duck	anseriformes	wild	clara_birds
+414	europeanturtledove	europeanturtledove	Streptopelia turtur	dove	columbiformes	wild	jordan
+415	europeanwhitestork	whitestork	Ciconia ciconia	stork	ciconiiformes	wild	jordan
+416	eurwig	eurasianwigeon	Mareca penelope	duck	anseriformes	wild	jordan
+417	exotic_brid	exoticbird		avian	avian	unknown	clara_birds
+418	falcatedduck	falcatedduck	Mareca falcata	duck	anseriformes	wild	clara_birds,jordan
+419	falcon	falcon	Falco 	raptor	falconiformes	wild	clara_nam,clara_birds,clara_global
+420	falcoperegrinus	peregrinefalcon	Falco peregrinus	raptor	falconiformes	wild	clara_birds,clara_global
+421	falcorusticolus	gyrfalcon	Falco rusticolus	raptor	falconiformes	wild	clara_nam,clara_global
+422	fancychicken	chicken	Gallus gallus	chicken	galliformes	domestic	clara_nam,clara_birds
+423	feline	feline		feline	feline	unknown	clara_birds
+424	felis_catus	feline		feline	feline	unknown	clara_birds
+425	feralpigeon	pigeon		pigeon	columbiformes	wild	clara_birds
+426	ferret	ferret		ferret	ferret	unknown	clara_birds
+427	ferruginousduck	ferruginousduck	Aythya nyroca	duck	anseriformes	wild	jordan
+428	ferruginoushawk	ferruginoushawk	Buteo regalis	raptor	accipitriformes	wild	clara_nam
+429	finch	finch	Fringillidae	passerine	passeriformes	wild	clara_nam,clara_birds
+430	finistere	swine		swine	swine	unknown	clara_birds
+431	fishcrow	fishcrow	Corvus ossifragus	crow	passeriformes	wild	clara_nam,clara_global
+432	fisheagle	africanfisheagle	Icthyophaga vocifer	eagle	accipitriformes	wild	jordan
+433	flamingo	flamingo		wader	phoenicopteriformes	unknown	jordan,clara_global
+434	forsterstern	forsterstern	Sterna forsteri	tern	charadriiformes	wild	clara_nam
+435	fowl	fowl		fowl	galliformes	unknown	clara_birds
+436	franklingull	franklinsgull	Leucophaeus pipixcan	gull	charadriiformes	wild	clara_nam,clara_global
+437	franklinsgull	franklinsgull	Leucophaeus pipixcan	gull	charadriiformes	wild	clara_nam,clara_global
+438	fulmar			seabird	procellariiformes	wild	jordan,clara_global
+439	fulvouswhistlingduck	fulvouswhistlingduck	Dendrocygna bicolor	duck	anseriformes	wild	clara_nam
+440	g.h	avian		avian	avian	unknown	clara_birds
+441	gadwall	gadwall	Mareca strepera	duck	anseriformes	wild	clara_nam,clara_birds,clara_global
+442	gadwall_duck	gadwall	Mareca strepera	duck	anseriformes	wild	clara_birds
+443	gadwallduck	gadwall	Mareca strepera	duck	anseriformes	wild	clara_nam,clara_birds,clara_global
+444	gallinulachloropus	waterhen	Gallinula chloropus	wader	gruiformes	wild	jordan
+445	gallus	chicken	Gallus gallus	chicken	galliformes	domestic	clara_nam
+446	gallus_gallus	chicken		chicken	galliformes	domestic	clara_birds
+447	gallusgallus	chicken	Gallus gallus	chicken	galliformes	domestic	clara_nam,clara_birds,clara_global
+448	gallusgallusdomesticus	chicken	Gallus gallus	chicken	galliformes	domestic	clara_nam,clara_global
+449	gannet	gannet	Morus	seabird	suliformes	wild	clara_nam,clara_global
+450	garganey	garganey	Spatula querquedula	duck	anseriformes	wild	clara_birds,jordan,clara_global
+451	garrulusglandarius	eurasianjay	Garrulus glandarius	passerine	passeriformes	wild	jordan,clara_global
+452	gcgrebe			grebe	podicipediformes	wild	jordan
+453	geese	goose		goose	anseriformes	unknown	clara_birds,clara_global
+454	gf	avian		avian	avian	unknown	clara_birds
+455	gh	avian		avian	avian	unknown	clara_birds,jordan
+456	glaucous_gull	glaucousgull	Larus hyperboreus	gull	charadriiformes	wild	clara_birds
+457	glaucousgull	glaucousgull	Larus hyperboreus	gull	charadriiformes	wild	clara_nam,clara_global
+458	glaucouswingedgull	glaucouswingedgull	Larus glaucescens	gull	charadriiformes	wild	clara_nam,clara_birds,clara_global
+459	glossyibis	glossyibis	Plegadis falcinellus	wader	pelecaniformes	wild	clara_nam
+460	go			unknown	unknown	unknown	jordan
+461	goldeneagle	goldeneagle	Aquila chrysaetos	raptor	accipitriformes	wild	clara_nam,clara_birds,clara_global
+462	goldeneyeduck	commongoldeneye	Bucephala clangula	duck	anseriformes	wild	clara_birds
+463	goldenmountainthrush	goldenmountainthrush	Turdus plebejus	passerine	passeriformes	wild	clara_birds
+464	goldenpheasant	goldenpheasant	Chrysolophus pictus	pheasant	galliformes	unknown	clara_birds
+465	goosander	commonmerganser	Mergus merganser	duck	anseriformes	wild 	clara_birds
+466	goose	goose		goose	anseriformes	unknown	clara_nam,clara_birds,clara_global
+467	goshawk	goshawk	Astur	raptor	accipitriformes	wild	clara_birds,clara_global
+468	grackle	grackle		passerine	passeriformes	wild	clara_nam,clara_global
+469	gray-crowedcrane	africancrownedcrane	Balearica regulorum	crane	gruiformes	wild	clara_birds
+470	graygull	graygull	Leucophaeus modestus	gull	charadriiformes	wild	clara_birds,jordan,clara_global
+471	grayheron	greyheron	Ardea cinerea	heron	pelecaniformes	wild	clara_birds,clara_global
+472	graylaggoose	greylaggoose	Anser anser	goose	anseriformes	unknown	clara_nam,clara_birds,clara_global
+473	grbkbdgull	greatblackbackedgull	Larus marinus	gull	charadriiformes	wild	jordan
+474	great_black_headed_gull	pallassgull	Ichthyaetus ichthyaetus	gull	charadriiformes	wild	clara_birds
+475	great_cormorant	greatcormorant	Phalacrocorax carbo	seabird	suliformes	wild	clara_birds
+476	great_created_grebe	greatcrestedgrebe	Podiceps cristatus	grebe	podicipediformes	wild	clara_birds
+477	great_crested_grebe	greatcrestedgrebe	Podiceps cristatus	grebe	podicipediformes	wild	clara_birds
+478	great_egret	greategret	Ardea alba	egret	pelecaniformes	wild	clara_birds
+479	greatbarbet	greatbarbet	Psilopogon virens	barbet	piciformes	wild	clara_birds
+480	greatblack_headedgull	pallassgull	Ichthyaetus ichthyaetus	gull	charadriiformes	wild	clara_birds
+481	greatblack-headedgull	pallassgull	Ichthyaetus ichthyaetus	gull	charadriiformes	wild	clara_birds
+482	greatblackbackedgull	greatblackbackedgull	Larus marinus	gull	charadriiformes	wild	clara_nam,clara_birds,clara_global
+483	greatblackbackedgulll	greatblackbackedgull	Larus marinus	gull	charadriiformes	wild	clara_nam,clara_global
+484	greatblackbakedgull	greatblackbackedgull	Larus marinus	gull	charadriiformes	wild	clara_nam,clara_global
+485	greatblackheadedgull	greatblackbackedgull	Larus marinus	gull	charadriiformes	wild	clara_birds
+486	greatblueheron	greatblueheron	Ardea herodias	heron	pelecaniformes	wild	clara_nam,clara_birds,clara_global
+487	greatcormorant	greatcormorant	Phalacrocorax carbo	seabird	suliformes	wild	clara_birds,clara_global
+488	greatcrested-grebe	greatcrestedgrebe	Podiceps cristatus	grebe	podicipediformes	wild	clara_birds
+489	greatcrestedgrebe	greatcrestedgrebe	Podiceps cristatus	grebe	podicipediformes	wild	clara_birds,clara_global
+490	greatdrestedgrebe	greatcrestedgrebe	Podiceps cristatus	grebe	podicipediformes	wild	clara_birds
+491	greategret	greategret	Ardea alba	egret	pelecaniformes	wild	clara_nam,clara_birds,clara_global
+492	greatercanadagoose	canadagoose	Branta canadensis	goose	anseriformes	wild 	jordan,clara_global
+493	greaterrhea	greaterrhea	Rhea americana	rhea	rheiformes	unknown	clara_nam,clara_global
+494	greatersagegrouse	greatersagegrouse	Centrocercus urophasianus	groundbird	galliformes	wild	clara_nam
+495	greaterscaup	greaterscaup	Aythya marila	duck	anseriformes	wild	clara_nam,clara_birds,clara_global
+496	greaterwhitefrontedgoose	greaterwhitefrontedgoose	Anser albifrons	goose	anseriformes	wild	clara_nam,clara_birds,clara_global
+497	greateryellowlegs	greateryellowlegs	Tringa melanoleuca	wader	charadriiformes	wild	clara_nam,clara_global
+498	greatgrabe	greatgrebe	Podiceps major	grebe	podicipediformes	wild	jordan,clara_global
+499	greatgrebe	greatgrebe	Podiceps major	grebe	podicipediformes	wild	jordan,clara_global
+500	greatgreyowl	greatgreyowl	Strix nebulosa	owl	strigiformes	wild	clara_nam,clara_global
+501	greathornedowl	greathornedowl	Bubo virginianus	owl	strigiformes	wild	clara_nam,clara_birds,clara_global
+502	greatshearwater	greatshearwater	Ardenna gravis	seabird	procellariiformes	wild	clara_nam
+503	greatskua	greatskua	Stercorarius skua	seabird	charadriiformes	wild	jordan,clara_global
+504	greattailedgrackle	greattailedgrackle	Quiscalus mexicanus	passerine	passeriformes	wild	clara_nam,clara_global
+505	greattit	greattit	Parus major	passerine	passeriformes	wild	clara_birds
+506	greatwhitepelican	greatwhitepelican	Pelecanus onocrotalus	pelican	pelecaniformes	wild	clara_birds
+507	grebe	grebe		grebe	podicipediformes	wild	clara_birds,clara_global
+508	green-winged_teal(anas_crecca)	eurasiangreenwingedteal	Anas crecca	duck	anseriformes	wild	clara_birds
+509	greenfinch	greenfinch	Chloris	passerine	passeriformes	wild	jordan
+510	greenheron	greenheron	Butorides virescens	heron	pelecaniformes	wild	clara_nam,clara_birds,clara_global
+511	greenpeafowl	greenpeafowl	Pavo muticus	peafowl	galliformes	wild	clara_birds
+512	greenpheasant	greenpheasant	Phasianus versicolor	pheasant	galliformes	wild	jordan
+513	greensandpiper	greensandpiper	Tringa ochropus	wader	charadriiformes	wild	jordan,clara_global
+514	greenwingedteal	americangreenwingedteal	Anas carolinensis	duck	anseriformes	wild	clara_nam,clara_birds,clara_global
+515	grey_heron	greyheron	Ardea cinerea	heron	pelecaniformes	wild	clara_birds
+516	grey_teal	greyteal	Anas gracilis	duck	anseriformes	wild	clara_birds
+517	greyduck	pacificblackduck	Anas superciliosa	duck	anseriformes	wild	clara_birds
+518	greyfacedbuzzard	greyfacedbuzzard	Butastur indicus	raptor	accipitriformes	wild	jordan
+519	greygo	greylaggoose	Anser anser	goose	anseriformes	unknown	jordan
+520	greygoose	greylaggoose	Anser anser	goose	anseriformes	unknown	clara_birds,clara_global
+521	greyheadedgull	greyheadedgull	Chroicocephalus cirrocelphalus	gull	charadriiformes	wild	jordan
+522	greyheron	greyheron	Ardea cinerea	heron	pelecaniformes	wild	clara_birds,clara_global
+523	greylaggoose	greylaggoose	Anser anser	goose	anseriformes	unknown	clara_birds,clara_global
+524	greyteal	greyteal	Anas gracilis	duck	anseriformes	wild	jordan
+525	griffonvulture	griffonvulture	Gyps fulvus	raptor	accipitriformes	wild	jordan,clara_global
+526	gs	avian		avian	avian	unknown	clara_birds
+527	guanaycormorant	guanaycormorant	Leucocarbo bougainvilliorum	cormorant	suliformes	wild	jordan,clara_global
+528	guillemot			guillemot	charadriiformes	wild	jordan,clara_global
+529	guinea_fowl	guineafowl	Numididae sp.	guineafowl	galliformes	unknown	clara_birds
+530	guineafowl	guineafowl	Numididae sp.	guineafowl	galliformes	unknown	clara_nam,clara_birds,clara_global
+531	gull	gull		gull	charadriiformes	wild	clara_nam,clara_birds,clara_global
+532	gull1	gull		gull	charadriiformes	wild	jordan
+533	gull10	gull		gull	charadriiformes	wild	jordan
+534	gullbilledtern	gullbilledtern	Gelochelidon nilotica	tern	charadriiformes	wild	jordan,clara_global
+535	gullspp	gull		gull	charadriiformes	wild	clara_nam
+536	gypaetusbarbatus	beardedvulture	Gypaetus barbatus	raptor	accipitriformes	wild	clara_birds,jordan,clara_global
+537	gyrfalcon	gyrfalcon	Falco rusticolus	raptor	falconiformes	wild	clara_nam,clara_global
+538	haematopusostralegus	eurasianoystercatcher	Haematopus ostralegus	wader	charadriiformes	wild	jordan,clara_global
+539	harbor_seal	harborseal		seal	seal	wild	clara_birds
+540	harrishawk	harrishawk	Parabuteo unicintus	raptor	accipitriformes	wild	clara_nam,clara_global
+541	harrisshawk	harrishawk	Parabuteo unicintus	raptor	accipitriformes	wild	clara_nam,clara_global
+542	hartlaubsgull	hartlaubsgull	Chroicocephalus hartlaubii	gull	charadriiformes	wild	jordan
+543	hatay			unknown	unknown	unknown	jordan
+544	hawaiiangoose	hawaiiangoose	Branta sandvicensis	goose	anseriformes	wild	clara_birds,jordan,clara_global
+545	hawk	hawk		raptor	accipitriformes	wild	clara_nam,clara_birds,clara_global
+546	helmetedguineafowl	helmetedguineafowl	Numida meleagris	guineafowl	galliformes	wild	jordan
+547	hen	chicken	Gallus gallus	chicken	galliformes	domestic	clara_birds,clara_global
+548	henharrier	chicken	Gallus gallus	chicken	galliformes	domestic	jordan,clara_global
+549	hens	chicken	Gallus gallus	chicken	galliformes	domestic	jordan,clara_global
+550	heringgull	herringgull	Larus argentatus	gull	charadriiformes	wild	clara_nam,clara_global
+551	heron	heron	Ardeidae	heron	pelecaniformes	wild	clara_nam,clara_birds,clara_global
+552	herringgull	herringgull	Larus argentatus	gull	charadriiformes	wild	clara_nam,clara_birds,clara_global
+553	herringull	herringgull	Larus argentatus	gull	charadriiformes	wild	clara_nam,clara_global
+554	hill_myna	commonhillmyna	Gracula religiosa	passerine	passeriformes	wild	clara_birds
+555	hillmyna	commonhillmyna	Gracula religiosa	passerine	passeriformes	wild	clara_birds
+556	hoabara	houbarabustard	Chlamydotis undulata	bustard	otidiformes	wild	clara_birds
+557	hobbyfalcon	hobby		falcon	falconiformes	wild	jordan,clara_global
+558	hollandpigeon	pigeon	Columba livia	dove	columbiformes	unknown	jordan
+559	hongkong			unknown	unknown	unknown	jordan
+560	hooded_crane	hoodedcrane	Grus monacha	crane	gruiformes	wild	clara_birds
+561	hooded_merganser	hoodedmerganser	Lophodytes cucullatus	duck	anseriformes	wild	clara_birds
+562	hoodedcrane	hoodedcrane	Grus monacha	crane	gruiformes	wild	clara_birds,clara_global
+563	hoodedmerganser	hoodedmerganser	Lophodytes cucullatus	duck	anseriformes	wild	clara_nam,clara_global
+564	hoodedvulture	hoodedvulture	Necrosyrtes monachus	raptor	accipitriformes	wild	clara_birds
+565	hornedgrebe	hornedgrebe	Podiceps auritus	grebe	podicipediformes	wild	clara_nam,clara_global
+566	horse	equine		equine	equine	unknown	clara_birds
+567	houbarabustard	houbarabustard	Chlamydotis undulata	bustard	otidiformes	wild	clara_birds
+568	housecrow	housecrow	Corvus splendens	crow	passeriformes	wild	clara_birds
+569	housesparrow	housesparrow	Passer domesticus	passerine	passeriformes	wild	clara_nam,clara_birds,clara_global
+570	humboldtpenguin	humboldtpenguin	Spheniscus humboldti	penguin	sphenisciformes	wild	jordan,clara_global
+571	ibis			wader	pelecaniformes	wild	jordan
+572	icelandgull	icelandgull	Larus glaucoides	gull	charadriiformes	wild	clara_nam
+573	ichtyaetusmelanocephalus	mediterraneangull	Ichtyaetus Melanocephalus	gull	charadriiformes	wild	jordan,clara_global
+574	incatern	incatern	Larosterna inca	tern	charadriiformes	wild	jordan,clara_global
+575	indian_runner_duck	indianrunnerduck	Anas platyrhynchos domesticus	duck	anseriformes	domestic	clara_birds
+576	indianpeafowl	commonpeafowl	Pavo cristatus	peafowl	galliformes	wild	jordan
+577	indianrunnerduck	indianrunnerduck	Anas platyrhynchos domesticus	duck	anseriformes	domestic	clara_nam,clara_birds,clara_global
+578	indianrunnerducks	indianrunnerduck	Anas platyrhynchos domesticus	duck	anseriformes	domestic	clara_nam,clara_global
+579	jackalbuzzard	jackalbuzzard	Buteo rufofuscus	raptor	accipitriformes	wild	jordan
+580	jackdaw	jackdaw	Coloeus	crow	passeriformes	wild	jordan
+581	japanese_white_eye	warblingwhiteeye	Zosterops japonicus	passerine	passeriformes	wild	clara_birds
+582	japanesewhite-eye	warblingwhiteeye	Zosterops japonicus	passerine	passeriformes	wild	clara_birds
+583	japanesewhiteeye	warblingwhiteeye	Zosterops japonicus	passerine	passeriformes	wild	clara_birds
+584	junglecrow	largebilledcrow	Corvus macrorhynchos	passerine	passeriformes	wild	clara_birds,jordan,clara_global
+585	juvenileswan	swan		swan	anseriformes	unknown	clara_birds
+586	kalijpheasant	kalijpheasant	Lophura leucomelanos	pheasant	galliformes	wild	clara_birds
+587	kaljipheasant	kalijpheasant	Lophura leucomelanos	pheasant	galliformes	wild	clara_birds
+588	kelpgull	kelpgull	Larus dominicanus	seabird	charadriiformes	wild	jordan,clara_global
+589	kestral	kestral		falcon	falconiformes	wild	jordan
+590	kestrel	kestrel		raptor	falconiformes	wild	clara_birds,clara_global
+591	khakicampbellduck	khakicampbell	Anas platyrhynchos domesticus	duck	anseriformes	domestic	clara_nam
+592	kingvulture	kingvulture	Sarcoramphus papa	raptor	cathartiformes	unknown	clara_nam,clara_global
+593	kittiwake	kittiwake		seabird	charadriiformes	wild	jordan,clara_global
+594	knotwader			wader	charadriiformes	wild	clara_birds,jordan,clara_global
+595	kookaburra	kookaburra	Dacelo	kingfisher	coraciiformes	unknown	clara_nam
+596	korean_native_chicken	koreannativechicken	Gallus gallus	chicken	galliformes	domestic	clara_birds
+597	koreannativechicken	koreannativechicken	Gallus gallus	chicken	galliformes	domestic	jordan,clara_global
+598	ladyamherstspheasant	ladyamherstspheasant	Chrysolophus amherstiae	pheasant	galliformes	domestic	clara_nam,clara_birds,clara_global
+599	lapwing			wader	charadriiformes	wild	jordan,clara_global
+600	large_billedcrow	largebilledcrow	Corvus macrorhynchos	passerine	passeriformes	wild	clara_birds
+601	large-billedcrow	largebilledcrow	Corvus macrorhynchos	passerine	passeriformes	wild	clara_birds
+602	largebilledcrow	largebilledcrow	Corvus macrorhynchos	passerine	passeriformes	wild	clara_birds,clara_global
+603	laridae	gull		gull	charadriiformes	wild	clara_nam,clara_global
+604	larkbunting	larkbunting	Calamospiza melanocorys	passerine	passeriformes	wild	clara_nam
+605	larksparrow	larksparrow	Chondestes grammacus	passerine	passeriformes	wild	clara_nam
+606	larus			gull	charadriiformes	wild	jordan,clara_global
+607	larus_argentatus	eurasianherringgull	Larus argentatus	gull	charadriiformes	wild	clara_birds
+608	larus_atricilla	laughinggull	Leucophaeus atricilla	gull	charadriiformes	wild	clara_birds
+609	larus_glaucescens	glaucouswingedgull	Larus glaucescens	gull	charadriiformes	wild	clara_birds
+610	larus_hyperboreus	glaucousgull	Larus hyperboreus	gull	charadriiformes	wild	clara_birds
+611	larusargentatus	eurasianherringgull	Larus argentatus	gull	charadriiformes	wild	clara_birds,clara_global
+612	laruscachinnans	caspiangull	Larus cachinnans	gull	charadriiformes	wild	jordan
+613	laruscanus	commongull	Larus canus	gull	charadriiformes	wild	clara_birds,clara_global
+614	larusmarinus	greatblackbackedgull	Larus marinus	gull	charadriiformes	wild	jordan,clara_global
+615	larusmichaellis	yellowleggedgull	Larus michahellis	gull	charadriiformes	wild	jordan
+616	larusmichahellis	yellowleggedgull	Larus michahellis	gull	charadriiformes	wild	jordan
+617	larusridibundus	blackheadedgull	Larus ridibundus	gull	charadriiformes	wild	clara_birds,clara_global
+618	laughinggull	laughinggull	Leucophaeus atricilla	gull	charadriiformes	wild	clara_nam,clara_global
+619	layer	chicken	Gallus gallus	chicken	galliformes	domestic	clara_birds,clara_global
+620	layerchicken	chicken	Gallus gallus	chicken	galliformes	domestic	clara_nam,clara_birds,clara_global
+621	layinghen	chicken	Gallus gallus	chicken	galliformes	domestic	clara_birds,clara_global
+622	lblbagull	lesserblackbackedgull	Larus fuscus	gull	charadriiformes	wild	jordan
+623	leastsandpiper	leastsandpiper	Calidris minutilla	wader	charadriiformes	wild	jordan
+624	lesser_scaup	lesserscaup	Aythya affinis	duck	anseriformes	wild	clara_birds
+625	lesserblackbackedgull	lesserblackbackedgull	Larus fuscus	gull	charadriiformes	wild	clara_birds,clara_global
+626	lesserflamingo	lesserflamingo	Phoenicopterus minor	wader	phoenicopteriformes	unknown	clara_nam
+627	lesserkestrel	lesserkestrel	Falco naumanni	raptor	falconiformes	wild	clara_birds
+628	lesserscaup	lesserscaup	Aythya affinis	duck	anseriformes	wild	clara_nam,clara_global
+629	lessersnowgoose	lessersnowgoose	Anser caerulescens	goose	anseriformes	wild	clara_nam,clara_birds,clara_global
+630	lessersnowgooseblue	lessersnowgooseblue	Anser caerulescens	goose	anseriformes	wild	clara_nam,clara_global
+631	lessersnowgoosewhite	lessersnowgoosewhite	Anser caerulescens	goose	anseriformes	wild	clara_nam,clara_global
+632	lesserwhitefrontedgoose	lesserwhitefrontedgoose	Anser erythropus	goose	anseriformes	wild	clara_nam,clara_global
+633	leucophaeus_atricilla	laughinggull	Leucophaeus atricilla	gull	charadriiformes	wild	clara_birds
+634	little_egret	littleegret	Egretta garzetta	heron	pelecaniformes	wild	clara_birds
+635	little_grebe	littlegrebe	Tachybaptus ruficollis	grebe	podicipediformes	wild	clara_birds
+636	littlecuckoo-dove	littlecuckoodove	Macropygia ruficeps	dove	columbiformes	wild	clara_birds
+637	littleegret	littleegret	Egretta garzetta	heron	pelecaniformes	wild	clara_birds
+638	littlegrebe	littlegrebe	Tachybaptus ruficollis	grebe	podicipediformes	wild	clara_birds
+639	littlegull	ilttlegull	Hydrocoloeus minutus	gull	charadriiformes	wild	jordan,clara_global
+640	littleowl	littleowl	Athene noctua	owl	strigiformes	wild	clara_birds,clara_global
+641	littletern	littletern	Sternula albifrons	tern	charadriiformes	wild	jordan,clara_global
+642	long-tailedshrike	longtailedshrike	Lanius schach	passerine	passeriformes	wild	clara_birds
+643	longearedowl	longearedowl	Asio otus	owl	strigiformes	wild	clara_nam,clara_global
+644	longtail_duck	longtailedduck	Clangula hyemalis	duck	anseriformes	wild	clara_birds
+645	longtailedduck	longtailedduck	Clangula hyemalis	duck	anseriformes	wild	clara_nam
+646	longtailedskua	longtailedjaeger	Stercorarius longicaudus		charadriiformes	wild	jordan,clara_global
+647	lorikeet	lorikeet	Trichoglossus moluccanus	parrot	psittaciformes	unknown	clara_nam
+648	lusciniacyane	siberianbluerobin	Larvivora cyane	passerine	passeriformes	wild	jordan
+649	magpie	magpie	Corvidae	passerine	passeriformes	wild	clara_nam,clara_birds,clara_global
+650	magpie_robin	magpierobin	Copsychus	passerine	passeriformes	wild	clara_birds
+651	magpierobin	magpierobin	Copsychus	passerine	passeriformes	wild	clara_birds
+652	mal	mallard	Anas platyrhynchos	duck	anseriformes	wild	jordan
+653	mallard	mallard	Anas platyrhynchos	duck	anseriformes	wild	clara_nam,clara_birds,clara_global
+654	mallard_duck	mallard	Anas platyrhynchos	duck	anseriformes	wild	clara_birds
+655	mallard-black_duck_hybrid	mallardblackduckhybrid		duck	anseriformes	unknown	clara_birds
+656	mallard(anas_platyrhynchos)	mallard	Anas platyrhynchos	duck	anseriformes	wild	clara_birds
+657	mallardblackduckhybrid	mallardblackduckhybrid		duck	anseriformes	unknown	jordan
+658	mallarddenmark	mallard	Anas platyrhynchos	duck	anseriformes	wild	jordan
+659	mallardduck	mallard	Anas platyrhynchos	duck	anseriformes	wild	clara_nam,clara_birds,clara_global
+660	mandarin_duck	mandarinduck	Aix galericulata	duck	anseriformes	wild	clara_birds
+661	mandarinduck	mandarinduck	Aix galericulata	duck	anseriformes	wild	clara_birds,clara_global
+662	maned_goose	australianwoodduck	Chenonetta jubata	duck	anseriformes	wild	clara_birds
+663	manxshearwater	manxshearwater	Puffinus puffinus	seabird	procellariiformes	wild	clara_nam,clara_global
+664	marabou_stork	maraboustork	Leptoptilos crumenifer	stork	ciconiiformes	wild	clara_birds
+665	maraboustork	maraboustork	Leptoptilos crumenifer	stork	ciconiiformes	wild	clara_birds
+666	marmaronettaangustirostris	marbledduck	Marmaronetta angustirostris	duck	anseriformes	wild	jordan
+667	mediterraneangull	mediterraneangull	Ichthyaetus melanocephalus	gull	charadriiformes	wild	jordan,clara_global
+668	melanitta_nigra	commonscoter	Melanitta_nigra	duck	anseriformes	wild	clara_birds
+669	meleagrisgallopavo	wildturkey	Meleagris gallopavo	turkey	galliformes	unknown	clara_birds,jordan,clara_global
+670	merganser	merganser	Mergus	duck	anseriformes	wild	clara_nam,clara_global
+671	mergus	duck		duck	anseriformes	unknown	clara_nam,clara_global
+672	mergusalbellus	smew	Mergus albellus	duck	anseriformes	wild	clara_birds
+673	merlin	merlin	Falco columbarius	raptor	falconiformes	wild	clara_nam
+674	mewgull	commongull	Larus canus	gull	charadriiformes	wild	jordan
+675	mexicanduck	mexicanduck	Anas diazi	duck	anseriformes	wild	jordan
+676	migratorybird	migratorybird		avian	avian	unknown	clara_birds
+677	migratoryduck	duck		duck	anseriformes	unknown	clara_birds
+678	migratorywaterfowl	unknown		unknown	unknown	unknown	jordan
+679	mink	mink		mink	mink	wild	clara_birds
+680	mixed	multispecies		unknown	unknown	unknown	clara_nam,clara_global
+681	mixeddomesticanatidae			unknown	anseriformes	domestic	jordan,clara_global
+682	mixeddomesticphasianidae			unknown	galliformes	domestic	jordan,clara_global
+683	mixedwildbirds	mixedwildbirds		avian	avian	wild	clara_birds,jordan,clara_global
+684	moorhen	moorhen		moorhen	gruiformes	wild	clara_birds,clara_global
+685	morusbassanus	northerngannet	Morus bassanus	seabird	suliformes	wild	clara_birds,jordan,clara_global
+686	mottledduck	mottledduck	Anas fulvigula	duck	anseriformes	wild	clara_nam,clara_global
+687	mountain_hawk_eagle	mountainhawkeagle	Nisaetus nipalensis	raptor	accipitriformes	wild	clara_birds
+688	mountainhawk-eagle	mountainhawkeagle	Nisaetus nipalensis	raptor	accipitriformes	wild	clara_birds
+689	mountainhawkeagle	mountainhawkeagle	Nisaetus nipalensis	raptor	accipitriformes	wild	jordan
+690	mourningdove	mourningdove	Zenaida macroura	dove	columbiformes	wild	clara_nam
+691	mswan		unknown	swan	anseriformes	unknown	jordan
+692	mulardduck	mulardduck	Anas platyrhynchos _ Cairina moschata	duck	anseriformes	domestic	jordan
+693	mule_duck	mulardduck	Anas platyrhynchos _ Cairina moschata	duck	anseriformes	domestic	clara_birds
+694	muleduck	mulardduck	Anas platyrhynchos _ Cairina moschata	duck	anseriformes	domestic	jordan,clara_global
+695	multispecies	multispecies			unknown	unknown	clara_nam,clara_global
+696	munia	munia		passerine	passeriformes	wild	clara_birds
+697	muscovy	muscovyduck	Cairina moschata	duck	anseriformes	unknown	clara_birds
+698	muscovy_duck	muscovyduck	Cairina moschata	duck	anseriformes	unknown	clara_birds
+699	muscovyduck	muscovyduck	Cairina moschata	duck	anseriformes	unknown	clara_nam,clara_birds,clara_global
+700	mute_swan	muteswan	Cygnus olor	goose	anseriformes	wild	clara_birds
+701	muteswan	muteswan	Cygnus olor	goose	anseriformes	wild	clara_nam,clara_birds,clara_global
+702	mynah	myna		passerine	passeriformes	wild	clara_birds
+703	mynas	myna		passerine	passeriformes	wild	clara_birds
+704	nasuanasua	coati	Nasua nasua	coati	raccoon	wild	jordan
+705	nativechicken	chicken	Gallus gallus	chicken	galliformes	unknown	jordan,clara_global
+706	nenegoose	hawaiiangoose	Branta sandvicensis	goose	anseriformes	wild	jordan,clara_global
+707	neotropiccormorant	neotropiccormorant	Phalacrocorax brasilianus	cormorant	suliformes	wild	clara_nam,clara_birds,clara_global
+708	netta_rufina	redcrestedpochard	Netta rufina	duck	anseriformes	wild	clara_birds
+709	nightheron	nightheron		heron	pelecaniformes	wild	jordan
+710	nightingale	nightingale	Luscinia megarhynchos	passerine	passeriformes	wild	clara_birds
+711	northen_pintail	northernpintail	Anas acuta	duck	anseriformes	wild	clara_birds
+712	northernfulmar	northernfulmar	Fulmarus glacialis	seabird	procellariiformes	wild 	clara_nam,clara_global
+713	northerngannet	northerngannet	Morus bassanus	seabird	suliformes	wild	clara_nam,clara_birds,clara_global
+714	northerngiantpetrel	northerngiantpetrel	Macronectes halli	seabird	procellariiformes	wild	jordan
+715	northerngoshawk	goshawk		raptor	accipitriformes	wild	clara_birds,clara_global
+716	northernharrier	northernharrier	Circus hudsonius	hawk	accipitriformes	wild	clara_nam,clara_global
+717	northernlapwing	northernlapwing	Vanellus vanellus	wader	charadriiformes	wild	jordan
+718	northernpintail	northernpintail	Anas acuta	duck	anseriformes	wild	clara_nam,clara_birds,clara_global
+719	northernsawwhetowl	northernsawwhetowl	Aegolius acadicus	owl	strigiformes	wild	clara_nam
+720	northernshoveler	northernshoveler	Spatula clypeata	duck	anseriformes	wild	clara_nam,clara_birds,clara_global
+721	northwesterncrow	americancrow	Corvus brachyrhynchos	passerine	passeriformes	wild	clara_nam,clara_birds,clara_global
+722	notherngannet	northerngannet	Morus bassanus	gannet	suliformes	wild	clara_birds,jordan,clara_global
+723	numeniusarquata	eurasiancurlew	Numenius arquata	wader	charadriiformes	wild	jordan,clara_global
+724	open_bill_stork	asianopenbill	Anastomus oscitans	stork	ciconiiformes	wild	clara_birds
+725	open_billed_stork	asianopenbill	Anastomus oscitans	stork	ciconiiformes	wild	clara_birds
+726	open_billedstork	asianopenbill	Anastomus oscitans	stork	ciconiiformes	wild	clara_birds
+727	open_billstork	asianopenbill	Anastomus oscitans	stork	ciconiiformes	wild	clara_birds
+728	open-billedstork	asianopenbill	Anastomus oscitans	stork	ciconiiformes	wild	clara_birds
+729	open-billibis	asianopenbill	Anastomus oscitans	stork	ciconiiformes	wild	clara_birds
+730	open-billstork	asianopenbill	Anastomus oscitans	stork	ciconiiformes	wild	clara_birds
+731	openbill	asianopenbill	Anastomus oscitans	stork	ciconiiformes	wild	clara_birds
+732	openbill_stork	asianopenbill	Anastomus oscitans	stork	ciconiiformes	wild	clara_birds
+733	openbillstork	asianopenbill	Anastomus oscitans	stork	ciconiiformes	wild	clara_birds
+734	orientalmagpierobin	orientalmagpierobin	Copsychus saularis	passerine	passeriformes	wild	clara_birds
+735	ornamentalbird			unknown	unknown	unknown	jordan
+736	osprey	osprey	Pandion haliaetus	hawk	accipitriformes	wild	clara_nam,clara_global
+737	ostrich	ostrich	Struthio camelus	ostrich	struthioniformes	unknown	clara_nam,clara_birds
+738	ostriches	ostrich	Struthio camelus	ostrich	struthioniformes	unknown	jordan
+739	other_avian	avian		avian	avian	unknown	clara_birds
+740	otusscops	eurasianscopsowl	Otus scops	owl	strigiformes	wild	clara_birds,jordan,clara_global
+741	owl	owl	Strigidae	owl	strigiformes	wild	clara_nam,clara_birds,clara_global
+742	oxyura_jamaicensis	ruddyduck	Oxyura jamaicensis	duck	anseriformes	wild	clara_birds
+743	oystercatcher	oystercatcher		wader	charadriiformes	wild	clara_birds,clara_global
+744	pacific_golden_plover	pacificgoldenplover	Pluvialis fulva	wader	charadriiformes	wild	clara_birds
+745	pacificblackduck	pacificblackduck	Anas superciliosa	duck	anseriformes	wild	jordan
+746	pacificloon	pacificloon	Gavia pacifica	duck	gaviiformes	wild	clara_nam
+747	paintedstork	paintedstork	Mycteria leucocephala	stork	ciconiiformes	wild	jordan
+748	parasiticjaeger	parasiticjaeger	Stercorarius parasiticus	gull	charadriiformes	wild	clara_nam,clara_global
+749	parrot	parrot	Psittacidae	parrot	psittaciformes	unknown	clara_nam,clara_global
+750	partridge	partridge	Phasianidae	partridge	galliformes	unknown	clara_nam,clara_birds,clara_global
+751	pavo	peafowl	Pavo	peafowl	galliformes	wild	jordan,clara_global
+752	pavocristatus	commonpeafowl	Pavo cristatus	peafowl	galliformes	wild	jordan,clara_global
+753	peacefuldove	peacefuldove	Geopelia placida	dove	columbiformes	unknown	clara_birds
+754	peacock	peafowl	Pavo	peafowl	galliformes	unknown	clara_nam,clara_birds,clara_global
+755	peafowl	peafowl	Pavo	peafowl	galliformes	unknown	clara_nam,clara_birds,clara_global
+756	pekinduck	pekinduck	Anas platyrhynchos	duck	anseriformes	domestic	clara_nam,clara_birds,clara_global
+757	pekingduck	pekinduck	Anas platyrhynchos	duck	anseriformes	domestic	clara_birds
+758	pelecanus	pelican	Pelecanidae	pelican	pelecaniformes	wild	jordan,clara_global
+759	pelecanusconspicillatus	australianpelican	Pelecanus conspicillatus	pelican	pelecaniformes	unknown	clara_birds,clara_global
+760	pelecanuscrispus	dalmatianpelican	Pelecanus crispus	pelican	pelecaniformes	wild	clara_birds,clara_global
+761	pelecanusoccidentalis	brownpelican	Pelecanus occidentalis	pelican	pelecaniformes	wild	jordan,clara_global
+762	pelecanusthagus	peruvianpelican	Pelecanus thagus	pelican	pelecaniformes	wild	jordan
+763	pelican	pelican	Pelecanidae	pelican	pelecaniformes	wild	clara_nam,clara_birds,clara_global
+764	penguin	penguin	Spheniscidae	penguin	sphenisciformes	wild	jordan
+765	peregrine	peregrinefalcon	Falco peregrinus	raptor	falconiformes	wild	clara_birds
+766	peregrine_falcon	peregrinefalcon	Falco peregrinus	raptor	falconiformes	wild	clara_birds
+767	peregrinefalcon	peregrinefalcon	Falco peregrinus	raptor	falconiformes	wild	clara_nam,clara_birds,clara_global
+768	perigrinefalcon	peregrinefalcon	Falco peregrinus	raptor	falconiformes	wild	jordan
+769	peru				unknown	unknown	jordan,clara_global
+770	peruveanbooby	peruvianbooby	Sula variegata	seabird	suliformes	wild	jordan,clara_global
+771	Peruvian_pelican	peruvianpelican	Pelecanus thagus	pelican	pelecaniformes	wild	clara_birds
+772	peruvianbooby	peruvianbooby	Sula variegata	seabird	suliformes	wild	jordan,clara_global
+773	pet_bird	petbird		avian	avian	unknown	clara_birds
+774	pfalcon	peregrinefalcon	Falco peregrinus	raptor	falconiformes	wild	jordan
+775	ph	avian		avian	avian	unknown	clara_birds
+776	phalacrocorax	cormorant	Phalacrocorax	cormorant	suliformes	wild	clara_birds
+777	phalacrocoraxcarbo	greatcormorant	Phalacrocorax carbo	cormorant	suliformes	wild	clara_birds,clara_global
+778	phasianuscolchicus	commonpheasant	Phasianus colchicus	pheasant	galliformes	unknown	clara_birds,clara_global
+779	pheasant	pheasant		pheasant	galliformes	unknown	clara_nam,clara_birds,clara_global
+780	picapica	eurasianmagpie	Pica pica	passerine	passeriformes	wild	jordan,clara_global
+781	pied_megpie			passerine	passeriformes	wild	clara_birds
+782	piedbilledgrebe	piedbilledgrebe	Podilymbus podiceps	grebe	podicipediformes	wild	clara_nam
+783	piedmegpie			passerine	passeriformes	wild	clara_birds
+784	pig	swine		swine	swine	unknown	clara_birds
+785	pigeon	pigeon	Columba	dove	columbiformes	wild	clara_nam,clara_birds,clara_global
+786	pink-eared_duck	pinkearedduck	Malacorhynchus membranaceus	duck	anseriformes	wild	clara_birds
+787	pinkfootedgoose	pinkfootedgoose	Anser brachyrhynchus	goose	anseriformes	wild	jordan,clara_global
+788	pintail	northernpintail	Anas acuta	duck	anseriformes	wild	clara_nam,clara_birds,clara_global
+789	pintail_duck	northernpintail	Anas acuta	duck	anseriformes	wild	clara_birds
+790	plushcrestedjay	plushcrestedjay	Cyanocorax chrysops	passerine	passeriformes	unknown	clara_nam
+791	pluvialisdominica	americangoldenplover	Pluvialis dominica	wader	charadriiformes	wild	jordan
+792	pochard	commonpochard	Aythya ferina	duck	anseriformes	wild	clara_birds
+793	pochardduck	commonpochard	Aythya ferina	duck	anseriformes	wild	jordan
+794	podicepscristatus	greatcrestedgrebe	Podiceps cristatus	grebe	podicipediformes	wild	jordan
+795	polarskua	southpolarskua	Stercorarius maccormicki	seabird	charadriiformes	wild	jordan,clara_global
+796	pomeraniangoose	pomeraniangoose	Anser anser domesticus 	goose	anseriformes	domestic	jordan,clara_global
+797	poultry	chicken	Gallus gallus	chicken	galliformes	domestic	clara_nam,clara_global
+798	prairiefalcon	prairiefalcon	Falco mexicanus	raptor	falconiformes	wild	clara_nam
+799	procellariaaequinoctialis	whitechinnedpetrel	Procellaria aequinoctialis	seabird	procellariiformes	wild	jordan
+800	psittacine	parrot		parrot	psittaciformes	unknown	clara_birds
+801	punateal	punateal	Spatula puna	duck	anseriformes	wild	clara_nam
+802	qa	avian		unknown	unknown	unknown	clara_birds
+803	qu	avian		unknown	unknown	unknown	clara_birds
+804	quail	quail		quail	galliformes	unknown	clara_nam,clara_birds,clara_global
+805	radjahshelduck	radjahshelduck	Radjah radjah	duck	anseriformes	wild	jordan
+806	rails	rail	Rallidae	wader	gruiformes	wild	jordan
+807	raptor	raptor		raptor	accipitriformes	wild	jordan
+808	raven	raven	Corvus	passerine	passeriformes	wild	clara_nam,clara_global
+809	raxorbill	razorbill	Alca torda	gull	charadriiformes	wild	clara_nam,clara_global
+810	razorbill	razorbill	Alca torda	gull	charadriiformes	wild	clara_nam,clara_global
+811	rbpochard	redcrestedpochard	Netta rufina	duck	anseriformes	wild	clara_birds
+812	red_crested_pochard	redcrestedpochard	Netta rufina	duck	anseriformes	wild	clara_birds
+813	red-billedstarling	redbilledstarling	Spodiopsar sericeus	passerine	passeriformes	wild	clara_birds
+814	red-crested_pochard	redcrestedpochard	Netta rufina	duck	anseriformes	wild	clara_birds
+815	red-fronted_coot	redfrontedcoot	Fulica rufifrons	coot	gruiformes	wild	clara_birds
+816	red-gartered_coot	redgarteredcoot	Fulica armillata	coot	gruiformes	wild	clara_birds
+817	red-necked_grebe	redneckedgrebe	Podiceps grisegena	grebe	podicipediformes	wild	clara_birds
+818	red-necked_stint	redneckedstint	Calidris ruficollis	wader	charadriiformes	wild	clara_birds
+819	redbackedhawk	variablehawk	Geranoaetus polyosoma	raptor	accipitriformes	wild	clara_birds,jordan,clara_global
+820	redbreastedgoose	redbreastedgoose	Branta ruficollis	goose	anseriformes	unknown	clara_nam
+821	redbreastedmerganser	redbreastedmerganser	Mergus serrator	duck	anseriformes	wild	clara_nam,clara_birds,clara_global
+822	redcrownedcrane	redcrownedcrane	Grus japonensis	crane	gruiformes	wild	clara_birds,jordan,clara_global
+823	redhead	redheadduck	Aythya americana	duck	anseriformes	wild	clara_nam,clara_birds,clara_global
+824	redheadduck	redheadduck	Aythya americana	duck	anseriformes	wild	clara_nam,clara_global
+825	redkite	redkite	Milvus milvus	raptor	accipitriformes	wild	jordan
+826	redknot	redknot	Calidris canutus	wader	charadriiformes	wild	clara_birds,jordan,clara_global
+827	redneckedgrebe	redneckedgrebe	Podiceps grisegena	grebe	podicipediformes	wild	clara_nam,clara_global
+828	redneckedphalarope	redneckedphalarope	Phalaropus lobatus	wader	charadriiformes	wild 	clara_nam,clara_global
+829	redshoulderedhawk	redshoulderedhawk	Buteo lineatus	raptor	accipitriformes	wild	clara_nam,clara_birds,clara_global
+830	redtailedhawk	redtailedhawk	Buteo jamaicensis	raptor	accipitriformes	wild	clara_nam,clara_birds,clara_global
+831	redwingedblackbird	redwingedblackbird	Agelaius phoeniceus	passerine	passeriformes	wild	clara_nam
+832	rhea	rhea	Rhea	rhea	rheiformes	unknown	clara_nam,clara_birds,clara_global
+833	ringbilledgull	ringbilledgull	Larus delawarensis	gull	charadriiformes	wild	clara_nam,clara_global
+834	ringneckedduck	ringneckedduck	Aythya collaris	duck	anseriformes	wild	clara_nam,clara_birds,clara_global
+835	ringneckedpheasant	commonpheasant	Phasianus colchicus	pheasant	galliformes	wild	clara_nam,clara_global
+836	ringtailedhawk	northernharrier	Circus hudsonius	raptor	accipitriformes	wild	clara_nam
+837	rissatridactyla	blackleggedkittiwake	Rissa tridactyla	gull	charadriiformes	wild	jordan,clara_global
+838	robin	americanrobin	Turdus migratorius	passerine	passeriformes	wild	clara_birds
+839	rockpigeon	rockpigeon	Columba livia	pigeon	columbiformes	wild	clara_nam,clara_global
+840	rollers	roller	Coracias	roller	coraciiformes	wild	clara_birds
+841	rook	rook	Corvus frugilegus	passerine	passeriformes	wild	clara_birds
+842	rooster	chicken	Gallus gallus	chicken	galliformes	unknown	clara_birds,clara_global
+843	roseatespoonbill	roseatespoonbill	Platalea ajaja	wader	pelecaniformes	wild	clara_nam
+844	rosssgoose	rosssgoose	Anser rossii	goose	anseriformes	wild	clara_nam,clara_global
+845	rossssgoose	rosssgoose	Anser rossii	goose	anseriformes	wild	clara_nam
+846	rosybilledpochard	rosybilledpochard	Netta peposaca	duck	anseriformes	wild	jordan
+847	roughleggedhawk	roughleggedhawk	Buteo lagopus 	raptor	accipitriformes	wild	clara_nam,clara_birds,clara_global
+848	royaltern	royaltern	Thalasseus maximus	tern	charadriiformes	wild	clara_nam,clara_global
+849	rthawk	redtailedhawk	Buteo jamaicensis	raptor	accipitriformes	wild	clara_nam,clara_global
+850	rubbyshelduck	ruddyshelduck	Tadorna ferruginea	duck	anseriformes	wild	clara_birds
+851	ruddy_shelduck	ruddyshelduck	Tadorna ferruginea	duck	anseriformes	wild	clara_birds
+852	ruddyduck	ruddyduck	Oxyura jamaicensis	duck	anseriformes	wild	clara_nam,clara_global
+853	ruddyshelduck	ruddyshelduck	Tadorna ferruginea	duck	anseriformes	wild	clara_birds
+854	ruddyturnstone	ruddyturnstone	Arenaria interpres	wader	charadriiformes	wild	clara_nam,clara_birds,clara_global
+855	ruffedgrouse	ruffedgrouse	Bonasa umbellus	groundbird	galliformes	wild	clara_nam
+856	ruralchicken	chicken	Gallus gallus	chicken	galliformes	unknown	jordan,clara_global
+857	ruralduck	duck		duck	anseriformes	unknown	jordan,clara_global
+858	ruralgoose	goose		goose	anseriformes	unknown	jordan,clara_global
+859	rurallayinghen	chicken	Gallus gallus	chicken	galliformes	domestic	jordan,clara_global
+860	ruralturkey	turkey	Meleagris gallopavo	turkey	galliformes	unknown	jordan,clara_global
+861	sabinesgull	sabinesgull	Xema sabini	gull	charadriiformes	wild	clara_nam,clara_global
+862	sacredibis	africansacredibis	Threskiornis aethiopicus	ibis	pelecaniformes	wild	jordan
+863	saker_falcon	sakerfalcon	Falco cherrug	raptor	falconiformes	wild	clara_birds
+864	sakerfalcon	sakerfalcon	Falco cherrug	raptor	falconiformes	wild	clara_birds
+865	sanderling	sanderling	Calidris alba	wader	charadriiformes	wild	clara_nam,clara_birds,clara_global
+866	sandhillcrane	sandhillcrane	Antigone canadensis	crane	gruiformes	wild	clara_nam,clara_global
+867	sandpiper	sandpiper	Scolopacidae	wader	charadriiformes	wild	clara_birds,jordan
+868	sandwichtern	sandwichtern	Thalasseus sandvicensis	tern	charadriiformes	wild	clara_nam,clara_birds,clara_global
+869	savannahsparrow	savannahsparrow	Passerculus sandwichensis	passerine	passeriformes	wild	clara_nam
+870	saysphoebe	saysphoebe	Sayornis saya	passerine	passeriformes	wild	clara_nam
+871	scaly-breastedmunia	scalybreastedmunia	Lonchura punctulata	passerine	passeriformes	wild	clara_birds
+872	scalysidedmerganser	scalysidedmerganser	Mergus squamatus	duck	anseriformes	unknown	clara_nam
+873	scarletibis	scarletibis	Eudocimus ruber	wader	pelecaniformes	unknown	clara_nam
+874	sck	avian		unknown	unknown	unknown	clara_birds
+875	scoter	scoter	Melanitta	duck	anseriformes	wild	clara_nam,clara_global
+876	seabird	seabird		seabird	unknown	wild	jordan
+877	seaeagle	seaeagle		raptor	accipitriformes	wild	clara_birds,jordan,clara_global
+878	seagull	gull		gull	charadriiformes	wild	clara_birds,clara_global
+879	seal	seal	Pinniped	seal	seal	wild	clara_birds
+880	sebastopolgoose	sebastopolgoose	Anser anser domesticus 	goose	anseriformes	domestic	clara_nam,clara_birds,clara_global
+881	semipalmated_sandpiper	semipalmatedsandpiper	Calidris pusilla	wader	charadriiformes	wild	clara_birds
+882	sharpshinnedhawk	sharpshinnedhawk	Accipiter striatus	raptor	accipitriformes	wild	clara_nam,clara_global
+883	shearwater	shearwater		seabird	procellariiformes	wild	jordan
+884	shelduck	shelduck		duck	anseriformes	wild	jordan
+885	shorebird	shorebird		wader	charadriiformes	wild	clara_birds
+886	shortbilledgull	shortbilledgull	Larus brachyrhynchus	gull	charadriiformes	wild	clara_nam,clara_global
+887	shortearedowl	shortearedowl	Asio flammeus	owl	strigiformes	wild	clara_nam,clara_global
+888	shorttailedshearwaters	shorttailedshearwater	Ardenna tenuirostris	seabird	procellariiformes	wild	clara_nam,clara_global
+889	shoveler	shoveler		duck	anseriformes	wild	clara_birds,jordan,clara_global
+890	shoveller	shoveler		duck	anseriformes	wild	jordan
+891	shovellerduck	shoveler		duck	anseriformes	wild	jordan
+892	shrike	shrike	Laniidae	passerine	passeriformes	wild	clara_birds
+893	silkiechicken	silkiechicken	Gallus gallus	chicken	galliformes	domestic	clara_nam,clara_birds,clara_global
+894	silkychicken	silkiechicken	Gallus gallus	chicken	galliformes	domestic	clara_birds
+895	silver-earedmesia	silverearedmesia	Leiothrix argentauris	passerine	passeriformes	wild	clara_birds
+896	silverearedmesia	silverearedmesia	Leiothrix argentauris	passerine	passeriformes	wild	clara_birds
+897	silverpheasant	silverpheasant	Lophura nycthemera	pheasant	galliformes	unknown	clara_nam,clara_birds,clara_global
+898	silverteal	silverteal	Spatula versicolor	duck	anseriformes	wild	jordan
+899	slaty-backedgull	slatybackedgull	Larus schistisagus	gull	charadriiformes	wild	clara_birds
+900	slatybackedgull	slatybackedgull	Larus schistisagus	gull	charadriiformes	wild	clara_birds,jordan,clara_global
+901	slenderbilledgull	slenderbilledgull	Chroicocephalus genei	gull	charadriiformes	wild	jordan,clara_global
+902	slenderbilledparakeet	slenderbilledparakeet	Enicognathus leptorhynchus	parrot	psittaciformes	wild	jordan
+903	smew	smew	Mergellus albellus	duck	anseriformes	wild	clara_nam,clara_birds
+904	snipe	snipe		wader	charadriiformes	wild	jordan
+905	snowgoose	snowgoose	Anser caerulescens	goose	anseriformes	wild	clara_nam,clara_birds,clara_global
+906	snowyegret	snowyegret	Egretta thula	heron	pelecaniformes	wild	clara_nam,clara_global
+907	snowyowl	snowyowl	Bubo scandiacus	owl	strigiformes	wild	clara_nam,clara_birds,clara_global
+908	snowyplover	snowyplover	Anarhynchus nivosus	wader	charadriiformes	wild	clara_nam,clara_global
+909	somateria_fischeri	spectacledeider	Somateria fischeri	duck	anseriformes	wild	clara_birds
+910	sonalichicken	chicken	Gallus gallus	chicken	galliformes	domestic	jordan
+911	songsparrow	songsparrow	Melospiza melodia	passerine	passeriformes	wild	clara_nam
+912	songthrush	songthrush	Turdus philomelos	passerine	passeriformes	wild	clara_birds,clara_global
+913	sooty_tern	sootytern	Onychoprion fuscatus	tern	charadriiformes	wild	clara_birds
+914	southamericantern	southamericantern	Sterna hirundinacea	tern	charadriiformes	wild	jordan
+915	southernfulmar	southernfulmar	Fulmarus glacialoides	seabird	procellariiformes	wild	jordan
+916	southgeorgiashag	southgeorgiashag	Leucocarbo georianus	cormorant	suliformes	wild	jordan
+917	sparrow	sparrow	Passer 	passerine	passeriformes	wild	clara_nam,clara_birds,clara_global
+918	sparrowhawk	eurasiansparrowhawk	Accipiter nisus	raptor	accipitriformes	wild	jordan,clara_global
+919	speckledpigeon	speckledpigeon	Columba guinea	pigeon	columbiformes	wild	jordan
+920	spectacled_eider	spectacledeider	Somateria fischeri	duck	anseriformes	wild	clara_birds
+921	spoonbill	spoonbill	Platalea	wader	pelecaniformes	wild	jordan
+922	spotbillduck	indianspotbilledduck	Anas poecilorhyncha	duck	anseriformes	wild	jordan
+923	spotbilledduck	indianspotbilledduck	Anas poecilorhyncha	duck	anseriformes	wild	clara_birds,jordan,clara_global
+924	spotbilledpelican	spotbilledpelican	Pelecanus philippensis	pelican	pelecaniformes	wild	jordan
+925	spotteddove	spotteddove	Spilopelia chinensis	pigeon	columbiformes	wild	jordan
+926	spottedeagleowl	spottedeagleowl	Bubo africanus	owl	strigiformes	wild	jordan
+927	spur-wingedlapwing	spurwingedlapwing	Vanellus spinosus	wader	charadriiformes	wild	clara_birds
+928	spurwingedgoose	spurwingedgoose	Plectropterus gambensis	goose	anseriformes	wild	clara_birds,jordan
+929	starling	starling		passerine	passeriformes	wild	clara_birds
+930	steamerduck	steamerduck	Tachyeres	duck	anseriformes	wild	jordan
+931	steller's_eider	stellarseider	Polysticta stellari	duck	anseriformes	wild	clara_birds
+932	sternahirundo	commontern	Sterna hirundo	seabird	charadriiformes	wild	jordan,clara_global
+933	stonecurlew	stonecurlew	Burhinidae	wader	charadriiformes	wild	clara_birds
+934	stork	stork		stork	ciconiiformes	wild	clara_birds,clara_global
+935							
+936	streptopeliadecaocto	eurasiancollareddove	Streptopelia decaocto	dove	columbiformes	wild	jordan
+937	strixuralensis	uralowl	Strix uralensis	owl	strigiformes	wild	jordan,clara_global
+938	sulaleucogaster	brownbooby	Sula leucogaster	seabird	suliformes	wild	jordan,clara_global
+939	summertanager	summertanager	Piranga rubra	passerine	passeriformes	wild	clara_nam
+940	surfscoter	surfscoter	Melanitta perspicillata	duck	anseriformes	wild	clara_nam,clara_global
+941	sus_scrofa	swine	Sus scrofa	swine	swine	domestic	clara_birds
+942	sus_scrofa_domesticus	swine	Sus scrofa	swine	swine	domestic	clara_birds
+943	sus_scrofa_scrofa	swine	Sus scrofa	swine	swine	domestic	clara_birds
+944	sw			unknown	unknown	unknown	clara_birds
+945	swainsonshawk	swainsonshawk	Buteo swainsoni	raptor	accipitriformes	wild	clara_nam,clara_global
+946	swallow	swallow		passerine	passeriformes	wild	clara_birds
+947	swam	swan	Cygnus	swan	anseriformes	wild	jordan
+948	swan	swan	Cygnus	swan	anseriformes	wild	clara_nam,clara_birds,clara_global
+949	swangoose	swangoose	Anser cygnoides	goose	anseriformes	unknown	clara_nam
+950	swansonshawk	swainsonshawk	Buteo swainsoni	raptor	accipitriformes	wild	jordan
+951	swiftlet	swiftlet		swift	apodiformes	wild	clara_birds
+952	swifttern	swifttern	Thalasseus bergii	seabird	charadriiformes	wild	jordan
+953	swine	swine	Sus scrofa	swine	swine	domestic	clara_birds,jordan
+954	syrrhaptesparadoxus	pallasssandgrouse	Syrrhaptes paradoxus		grouse	wild	jordan
+955	tachybaptusruficollis	littlegrebe	Tachybaptus ruficollis	grebe	podicipediformes	wild	clara_birds,clara_global
+956	tadorna_feruginea	ruddyshelduck	Tadorna ferruginea	duck	anseriformes	wild	clara_birds
+957	tadorna_tadorna	commonshelduck	Tadorna tadorna	duck	anseriformes	wild	clara_birds
+958	taigabeangoose	taigabeangoose	Anser fabalis	goose	anseriformes	wild	jordan
+959	taiwan			unknown	unknown	unknown	jordan
+960	taiwanesechicken	taiwanesechicken	Gallus gallus	chicken	galliformes	domestic	clara_nam,clara_global
+961	tawnyowl	tawnypwl	Strix aluco	owl	strigiformes	wild	jordan,clara_global
+962	tdk			unknown	unknown	unknown	jordan
+963	teal	teal		duck	anseriformes	wild	clara_nam,clara_birds,clara_global
+964	tern	tern		tern	charadriiformes	wild	jordan,clara_global
+965	thalasseusacuflavidus	calbotstern	Thalasseus flavidus	tern	charadriformes	wild	jordan
+966	thalasseusmaximus	royaltern	Thalasseus maximus	tern	charadriiformes	wild	jordan
+967	thalasseussandvicensis	sandwichtern	Thalasseus sandvicensis	tern	charadriiformes	wild	clara_birds,clara_global
+968	thayersgull	thayersgull	Larus glaucoides thayeri	gull	charadriiformes	wild	clara_nam,clara_global
+969	thickbiilledmurre	thickbilledmurre	Uria lomvia	seabird	charadriiformes	wild	jordan
+970	thickbilledmurre	thickbilledmurre	Uria lomvia	seabird	charadriiformes	wild	jordan
+971	thrush	thrush	Turdidae	passerine	passeriformes	wild	jordan
+972	tree_sparrow	treesparrow	Spizelloides arborea	passerine	passeriformes	wild	clara_birds
+973	treesparrow	treesparrow	Spizelloides arborea	passerine	passeriformes	wild	clara_birds
+974	treeswallow	treeswallow	Tachycineta bicolor	passerine	passeriformes	wild	clara_nam
+975	trumpeterswan	trumpeterswan	Cygnus buccinator	swan	anseriformes	wild	clara_nam,clara_birds,clara_global
+976	tufted_duck	tuftedduck	Aythya fuligula	duck	anseriformes	wild	clara_birds
+977	tuftedduck	tuftedduck	Aythya fuligula	duck	anseriformes	wild	clara_birds,clara_global
+978	tundrabeangoose	tundrabeangoose	Anser serrirostris	goose	anseriformes	wild	jordan
+979	tundraswan	tundraswan	Cygnus columbianus	swan	anseriformes	wild	clara_nam,clara_birds,clara_global
+980	turkey	turkey	Meleagris gallopavo	turkey	galliformes	unknown	clara_nam,clara_birds,clara_global
+981	turkeyvulture	turkeyvulture	Cathartes aura	raptor	accipitriformes	wild	clara_nam,clara_global
+982	turnstone	turnstone	Arenaria	wader	charadriiformes	wild	clara_birds
+983	turtle_dove	turtledove	Streptopelia	dove	columbiformes	wild	clara_birds
+984	turtledove	turtledove	Streptopelia	dove	columbiformes	wild	clara_birds
+985	ty			unknown	unknown	unknown	jordan
+986	tytoalba	barnowl	Tyto alba	owl	strigiformes	wild	jordan,clara_global
+987	uralowl	uralowl	Strix uralensis	owl	strigiformes	wild	jordan,clara_global
+988	velvet_scoter	velvetscoter	Melanitta fusca	duck	anseriformes	wild	clara_birds
+989	village_chicken	chicken	Gallus gallus	chicken	galliformes	unknown	clara_birds
+990	villagechicken	chicken	Gallus gallus	chicken	galliformes	unknown	clara_birds
+991	vonschrencksbittern	vonschrencksbittern	Botaurus eurhythmus	wader	pelecaniformes	wild	jordan
+992	vulture	vulture		raptor	accipitriformes	wild	clara_nam,clara_birds,clara_global
+993	warbler	warbler		passerine	passeriformes	wild	clara_nam
+994	waterchicken	waterhen	Gallinula chloropus	wader	gruiformes	wild	clara_birds
+995	watercock	watercock	Gallicrex cinerea	wader	gruiformes	wild	clara_birds
+996	waterfowl	waterfowl		unknown	anseriformes	unknown	clara_nam,clara_global
+997	wedge-tailed_shearwater	shearwater		seabird	procellariiformes	wild	clara_birds
+998	westerncattleegret	cattleegret	Ardea ibis	wader	pelecaniformes	wild	jordan
+999	westerngrebe	westerngrebe	Aechmophorus occidentalis	grebe	podicipediformes	wild	clara_nam,clara_global
+1000	westerngull	westerngull	Larus occidentalis	gull	charadriiformes	wild	clara_nam,clara_global
+1001	westernjackdaw	westernjackdaw	Coloeus monedula	passerine	passeriformes	wild	jordan,clara_global
+1002	westernkingbird	westernkingbird	Tyrannus verticalis	passerine	passeriformes	wild	clara_nam
+1003	westernmarshharrier	westernmarshharrier	Circus aeruginosus	raptor	accipitriformes	wild	jordan,clara_global
+1004	westernsandpiper	westernsandpiper	Calidris mauri	wader	charadriiformes	wild	clara_nam,clara_global
+1005	westernscreechowl	westernscreechowl	Megascops kennicottii	owl	strigiformes	wild	clara_nam,clara_global
+1006	westernsnowyplover	snowyplover	Anarhynchus nivosus	wader	charadriiformes	wild	clara_nam
+1007	whimbrel	hudsonianwhimbrel	Numenius hudsonicus		charadriiformes	wild	clara_nam
+1008	whiskeredtern	whiskeredtern	Chlidonias hybrida	tern	charadriiformes	wild	jordan
+1009	whistlingduck	whistlingduck	Dendrocygninae	duck	anseriformes	wild	jordan,clara_global
+1010	whistlingswan	tundraswan	Cygnus columbianus	swan	anseriformes	wild	clara_nam,clara_birds
+1011	white_peckin_duck	pekinduck	Anas platyrhynchos	duck	anseriformes	domestic	clara_birds
+1012	white-backedmunia	whitebackedmunia	Lonchura striata	passerine	passeriformes	wild	clara_birds
+1013	white-fronted_goose	greaterwhitefrontedgoose	Anser albifrons	goose	anseriformes	wild	clara_birds
+1014	whitebackedmunia	whitebackedmunia	Lonchura striata	passerine	passeriformes	wild	clara_birds
+1015	whitebackedstilt	blackneckedstilt	Himantopus mexicanus	wader	charadriiformes	wild	jordan
+1016	whitebreastedcormorant	whitebreastedcormorant	Phalacrocorax carbo	cormorant	suliformes	wild	jordan
+1017	whitecrownedsparrow	whitecrownedsparrow	Zonotrichia leucophrys	passerine	passeriformes	wild	clara_nam
+1018	whiteeyedpochard	ferruginousduck	Aythya nyroca	duck	anseriformes	wild	clara_birds,jordan
+1019	whitefacedibis	whitefacedibis	Plegadis chihi	wader	pelecaniformes	wild	clara_nam
+1020	whitefacedwhistlingduck	whitefacedwhistlingduck	Dendrocygna viduata	duck	anseriformes	wild	jordan
+1021	whitefrontedgoose	greaterwhitefrontedgoose	Anser albifrons	goose	anseriformes	wild	clara_birds,clara_global
+1022	whitefrontgoose	greaterwhitefrontedgoose	Anser albifrons	goose	anseriformes	wild	clara_birds,jordan
+1023	whitenapedcrane	whitenapedcrane	Antigone vipio	crane	gruiformes	wild	jordan,clara_global
+1024	whitepeacock	peafowl	Phasianidae	peafowl	galliformes	wild	jordan
+1025	whitepeafowl	peafowl	Phasianidae	peafowl	galliformes	wild	clara_birds
+1026	whitestork	whitestork	Ciconia ciconia	stork	ciconiiformes	wild	clara_birds,clara_global
+1027	whitetailedeagle	whitetailedeagle	Haliaeetus albicilla	raptor	accipitriformes	wild	clara_birds,clara_global
+1028	whitetailedseaeagle	whitetailedeagle	Haliaeetus albicilla	raptor	accipitriformes	wild	jordan
+1029	whitewingedblacktern	whitewingedtern	Chlidonias leucopterus	tern	charadriiformes	wild	jordan
+1030	whitewingeddove	whitewingeddove	Zenaida asiatica	dove	columbiformes	wild	clara_nam,clara_global
+1031	whitewingedscoter	whitewingedscoter	Melanitta deglandi	duck	anseriformes	wild	clara_nam,clara_global
+1032	whooper_swan	whooperswan	Cygnus cygnus	swan	anseriformes	wild	clara_birds
+1033	whooperswan	whooperswan	Cygnus cygnus	swan	anseriformes	wild	clara_birds,clara_global
+1034	whooperswans	whooperswan	Cygnus cygnus	swan	anseriformes	wild	jordan
+1035	whoopingswan	whooperswan	Cygnus cygnus	swan	anseriformes	wild	clara_birds
+1036	wide_bird	avian		avian	avian	wild	clara_birds
+1037	widgeon	wigeon	Mareca	duck	anseriformes	wild	clara_birds,jordan
+1038	wigeon	wigeon	Mareca	duck	anseriformes	wild	jordan,clara_global
+1039	wild_bird	bird		avian	avian	wild	clara_birds
+1040	wild_birds	wildbirds		avian	avian	wild	clara_birds
+1041	wild_boar	swine	Sus scrofa	swine	swine	wild	clara_birds
+1042	wild_chicken	wildchicken	Gallus gallus	chicken	galliformes	unknown	clara_birds
+1043	wild_duck	duck		duck	anseriformes	wild	clara_birds
+1044	wild_waterfowl	waterfowl		waterfowl	anseriformes	wild	clara_birds
+1045	wildbird	wildbird		unknown	unknown	wild	clara_nam,clara_birds,clara_global
+1046	wildbirdsguineafowlmakouegyptiangeese			unknown	unknown	unknown	jordan
+1047	wildbirdsulanebouxii			unknown	unknown	unknown	jordan,clara_global
+1048	wildduck	duck		duck	anseriformes	wild	clara_nam,clara_birds,clara_global
+1049	wildfowl	bird		fowl	galliformes	wild	clara_birds
+1050	wildgeese	goose		goose	anseriformes	wild	clara_birds,jordan,clara_global
+1051	wildgoose	goose		goose	anseriformes	wild	clara_nam,clara_birds,clara_global
+1052	wildhybridduck	duck		duck	anseriformes	wild	clara_nam
+1053	wildpigeon	pigeon		pigeon		wild	jordan
+1054	wildswan	swan		swan	anseriformes	wild	clara_birds
+1055	wildturkey	wildturkey	Meleagris gallopavo	turkey	galliformes	wild	clara_nam,clara_birds,clara_global
+1056	wildwaterbird	waterfowl				wild	jordan
+1057	wildwaterfowl	waterfowl				wild	jordan
+1058	willet	willet	Tringa semipalmata	wader	charadriiformes	wild	clara_nam,clara_global
+1059	withetiledeagle	whitetailedeagle	Haliaeetus albicilla	raptor	accipitriformes	wild	clara_birds,clara_global
+1060	wood_duck	woodduck	Chenonetta jubata or Aix sponsa	duck	anseriformes	wild	clara_birds
+1061	woodduck	woodduck	Chenonetta jubata or Aix sponsa	duck	anseriformes	wild	clara_nam,clara_birds,clara_global
+1062	yellow_billed_duck	yellowbilledduck	Anas undulata	duck	anseriformes	wild	clara_birds
+1063	yellow-billed_pintail	yellowbilledpintail	Anas georgica	duck	anseriformes	wild	clara_birds
+1064	yellowbilledduck	yellowbilledduck	Anas undulata	duck	anseriformes	wild	clara_birds
+1065	yellowbilledpintail	yellowbilledpintail	Anas georgica	duck	anseriformes	wild	jordan
+1066	yellowbilledteal	yellowbilledteal	Anas flavirostris	duck	anseriformes	wild	jordan
+1067	yellowheadedamazon	yellowheadedamazon	Amazona oratrix	parrot	psittaciformes	unknown	jordan
+1068	yellowleggedgull	yellowleggedgull	Larus michahellis	gull	charadriiformes	wild	clara_birds,jordan,clara_global
+1069	yellowleggendgull	yellowleggedgull	Larus michahellis	gull	charadriiformes	wild	jordan,clara_global
+1070	zoopelican	pelican		pelican	pelecaniformes	unknown	jordan,clara_global
