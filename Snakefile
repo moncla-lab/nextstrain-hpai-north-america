@@ -506,7 +506,7 @@ rule traits:
     output:
         node_data = "results/{region}/traits_{segment}.json",
     params:
-        columns = "host region country division flyway domesticstatus",
+        columns = "host region country flyway domesticstatus",
     shell:
         """
         augur traits \
