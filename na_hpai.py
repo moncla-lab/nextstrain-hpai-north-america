@@ -171,10 +171,28 @@ def extract_metadata_post_filter(sequences_fasta, metadata_tsv, output_tsv):
     filtered.to_csv(output_tsv, sep="\t", index=False)
 
 
+def leaf_names(tree):
+    """Collect terminal (tip) names without recursion.
+
+    Bio.Phylo's get_terminals()/find_clades() traverse via recursive DFS and hit
+    RecursionError on deep or ladderized trees. This explicit-stack walk is
+    depth-independent.
+    """
+    names = set()
+    stack = [tree.root]
+    while stack:
+        node = stack.pop()
+        if node.clades:          # internal node -> push children
+            stack.extend(node.clades)
+        else:                    # terminal -> record name
+            names.add(node.name)
+    return names
+
+
 def extract_metadata_post_refine(tree_nwk, metadata_tsv, output_tsv):
     """Extract metadata for strains that survived clock filtering."""
     tree = Phylo.read(tree_nwk, "newick")
-    tips = {tip.name for tip in tree.get_terminals()}
+    tips = leaf_names(tree)
     meta = pd.read_csv(metadata_tsv, sep="\t", low_memory=False)
     filtered = meta[meta["strain"].isin(tips)]
     filtered.to_csv(output_tsv, sep="\t", index=False)
@@ -308,8 +326,7 @@ def extract_survivors_to_fasta(tree_files, original_fasta, output_fasta):
             skipped += 1
             continue
         tree = Phylo.read(tree_file, "newick")
-        for tip in tree.get_terminals():
-            survivors.add(tip.name)
+        survivors.update(leaf_names(tree))
 
     print(f"Found {len(survivors)} unique survivors across {len(tree_files)} subtype trees ({skipped} failed clock filtering)")
 
