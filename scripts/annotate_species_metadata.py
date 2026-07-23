@@ -162,7 +162,7 @@ def annotate_metadata(input_path, output_path, config_dir, flyway_path=None):
     # Merge flyway data (optional)
     if flyway_path:
         flyways = pd.read_csv(flyway_path)
-        metadata = pd.merge(metadata, flyways, how="left", on=["location"])
+        metadata = pd.merge(metadata, flyways, how="left", on=["division"])
 
     # Fill missing orders using overrides
     order_overrides_path = config_dir / 'order_overrides.tsv'
