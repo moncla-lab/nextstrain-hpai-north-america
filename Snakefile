@@ -160,6 +160,20 @@ def exclude_by_region(wildcards):
     return each_exclude + ' ' + subset_exclude
 
 
+#USE THE FOLLOWING for QC/troubleshooting, made the sequences per group all equal to 1
+# def sequences_per_group(wildcards):
+#     spg_dict = {
+#         'h5n5': 1,                  # High sampling for rare H5N5 subtype
+#         'na-cattle-resolved': 1,    # High sampling for well-resolved cattle
+#         'na-cattle-unresolved': 1, # Grab most poorly-resolved cattle
+#         'na-noncattle': 1,           # Normal sampling for other North American sequences
+#         'sa': 1,
+#         'europe': 1,
+#         'asia': 1
+#     }
+#     return spg_dict[wildcards.subset]
+
+# # Use the following for normal running of the pipeline
 def sequences_per_group(wildcards):
     spg_dict = {
         'h5n5': 500,                  # High sampling for rare H5N5 subtype
@@ -171,7 +185,6 @@ def sequences_per_group(wildcards):
         'asia': 5
     }
     return spg_dict[wildcards.subset]
-
 
 def group_by_strategy(wildcards):
     """Use different grouping for unresolved cattle (no month/location)"""
@@ -497,7 +510,7 @@ rule translate:
             --reference-sequence {input.reference} \
             --output {output.node_data}
         """
-
+# Updated rule to exclude division
 rule traits:
     message: "Inferring ancestral traits for {params.columns!s}"
     input:
@@ -516,6 +529,26 @@ rule traits:
             --columns {params.columns} \
             --confidence
         """
+
+# Original  rule
+# rule traits:
+#     message: "Inferring ancestral traits for {params.columns!s}"
+#     input:
+#         tree = rules.refine.output.tree,
+#         metadata = rules.metadata_annotation.output[0]
+#     output:
+#         node_data = "results/{region}/traits_{segment}.json",
+#     params:
+#         columns = "host region country division flyway domesticstatus",
+#     shell:
+#         """
+#         augur traits \
+#             --tree {input.tree} \
+#             --metadata {input.metadata} \
+#             --output {output.node_data} \
+#             --columns {params.columns} \
+#             --confidence
+#         """
 
 """This makes a segment specific config for GenoFlu segment lineages.
 """
